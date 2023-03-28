@@ -1,0 +1,71 @@
+<div class="containerAjoutMenu">
+    <div class="headerAjoutMenu" fxLayoutAlign="end center">
+       <div class="definirMenu" fxLayoutAlign="center center">Modifier un produit</div>
+       <div class="definirMenuIcon" fxLayoutAlign="center center">
+        <span class="material-icons" id="iconCancel" (click)="onClose()">
+            cancel
+        </span>
+       </div>
+    </div>
+    <hr class="ligne"/>
+    <div>
+        <form [formGroup]="editProduitForm" (ngSubmit)="editProduit()">
+            <div fxLayout="row layout-wrap" fxLayoutAlign="start start">
+                <div>
+                    <label for="file-input" class="positionPhoto">
+                        <div>
+                            <span *ngIf="imgURL==null" class="material-icons box-photo icon-photo">
+                                add_a_photo
+                            </span>
+                            <img *ngIf="imgURL" class="box-photo" [src]="imgURL"/>
+                            <input #file id="file-input" class="file" type="file" accept="image/*" (change)="preview(file.files)"/>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <select class="champSelect" formControlName="type">
+                        <option value="" disabled>Types</option>
+                        <option *ngFor="let type of productTypes" value="{{type.id}}">{{type.displayName}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-input">
+                <div>
+                    <input type="text" required class="champInput" formControlName="nom" placeholder="Nom" maxlength="50"/>
+                </div>
+                <div>
+                    <input type="text" class="champInput" formControlName="prix" placeholder="Prix F CFA"/>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-radio">
+                    <label for="entrer">Entrée </label>
+                    <input type="radio" class="radio" id="entrer" formControlName="categorie" value="0"/>
+                </div>
+                <div class="content-radio">
+                    <label for="boisson">Boisson </label>
+                    <input type="radio" class="radio" id="boisson" formControlName="categorie" value="1"/>
+                </div>
+                <div class="content-radio">
+                    <label for="plat">Plat</label>
+                    <input type="radio" class="radio" id="plat" formControlName="categorie" value="2"/>
+                </div>
+                <div class="content-radio">
+                    <label for="dessert">Dessert </label>
+                    <input type="radio" class="radio" id="dessert" formControlName="categorie" value="3"/>
+                </div>
+                <div class="content-radio">
+                    <label for="patisserie">Pâtisserie </label>
+                    <input type="radio" class="radio" id="patisserie" formControlName="categorie" value="4"/>
+                </div>
+            </div>
+            <div>
+                <textarea placeholder="Description du produit" formControlName="description" class="champ" cols="30" rows="10" maxlength="250"></textarea>
+            </div>
+            <div class="content-btnAjout">
+                <input type="submit" value="Valider" class="btnAjout">
+            </div>
+        </form>
+    </div>
+</div>
+

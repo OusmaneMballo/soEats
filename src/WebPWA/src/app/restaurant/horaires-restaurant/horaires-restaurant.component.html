@@ -1,0 +1,23 @@
+<div *ngIf="tabNormalizeHoraire && restaurant.openingHours[0]" class="horaires">
+    <div *ngFor="let openingHour of tabNormalizeHoraire" class="tab-horaire">
+        <div class="jour">
+            {{openingHour.dayOfWeek}}
+        </div>
+        <div class="heure">
+            <span *ngIf="openingHour.horaire!=null; then crenaux1ouvert else crenaux1fermer"></span>
+            <ng-template #crenaux1ouvert>{{openingHour.horaire.slot1.startTime}}-{{openingHour.horaire.slot1.endTime}}</ng-template>
+            <ng-template #crenaux1fermer>Fermé </ng-template>
+        </div>
+   </div> 
+</div>
+<div *ngIf="!restaurant.openingHours[0]"  class="horairesVide" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutAlign="space-around center">
+        <div><span class="jour">Dimanche </span>Fermé/Fermé</div>
+        <div><span class="jour">Lundi </span>Fermé/Fermé</div>
+        <div><span class="jour">Mardi </span>Fermé/Fermé</div>
+        <div><span class="jour">Mercredi </span>Fermé/Fermé</div>
+        <div><span class="jour">Jeudi </span>Fermé/Fermé</div>
+        <div><span class="jour">Vendredi </span>Fermé/Fermé</div>
+        <div><span class="jour">Samedi </span>Fermé/Fermé</div><br/>
+    </div>
+</div>

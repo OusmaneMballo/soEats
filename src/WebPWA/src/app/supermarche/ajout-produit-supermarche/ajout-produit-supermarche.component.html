@@ -1,0 +1,62 @@
+<div class="containerAjoutMenu">
+    <div *ngIf="loaderService.isLoading | async">
+        <mat-spinner class="loader-container" style="color: primary;"></mat-spinner>
+    </div>
+    <div class="headerAjoutMenu" fxLayoutAlign="end center">
+       <div class="definirMenu" fxLayoutAlign="center center">Ajouter un produit</div>
+       <div class="definirMenuIcon" fxLayoutAlign="center center">
+        <span class="material-icons" id="iconCancel" (click)="onClose()">
+            cancel
+        </span>
+       </div>
+    </div>
+    <hr class="ligne"/>
+
+    <div>
+        <form [formGroup]="produitForm" (submit)="addProduit()">
+            <div fxLayout="row layout-wrap" fxLayoutAlign="start start">
+                <div>
+                    <label for="file-input" class="positionPhoto">
+                        <div>
+                            <span *ngIf="imgURL==null" class="material-icons box-photo icon-photo">
+                                add_a_photo
+                            </span>
+                            <img *ngIf="imgURL" class="box-photo" [src]="imgURL"/>
+                            <input #file id="file-input" class="file" type="file" accept="image/*" (change)="preview(file.files)"/>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <div>
+                        <select class="champSelect" formControlName="categorie">
+                            <option value="" [selected]="true" disabled>Catégorie</option>
+                            <option *ngFor="let categorie of categories" value="{{categorie.id}}">{{categorie.displayName}}</option>
+                          </select>
+                    </div>
+                    <div>
+                        <select class="champSelect" formControlName="rayon">
+                            <option value="" [selected]="true" disabled>Rayon</option>
+                            <option *ngFor="let rayon of rayons" value="{{rayon.id}}">{{rayon.displayName}}</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <div class="content-input">
+                <div>
+                    <input type="text" required class="champInput" formControlName="nom" placeholder="Nom" maxlength="50"/>
+                </div>
+                <div>
+                    <input type="text" class="champInput" formControlName="prix" placeholder="Prix F CFA"/>
+                </div>
+            </div>
+            <div>
+                <textarea placeholder="Description du produit" formControlName="description" class="champ" cols="30" rows="5" maxlength="250"></textarea>
+            </div>
+
+            <div class="content-btnAjout">
+                <button class="btnAjout" mat-raised-button [disabled]="disable">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,357 @@
+body{
+  background: #ffffff;
+  height: auto;
+}
+
+.containerCard {
+    width: 100%;
+    height: 70%;   
+}
+
+.headerFix {
+  width: 100%;
+  height: 150px;
+  position: sticky;
+  top:0;
+  z-index: 999;
+}
+
+span {
+  margin-left: auto;
+  margin-right: auto;    
+}
+
+mat-toolbar {
+  background-color: #146356; 
+  color: white;   
+  }
+
+.btn-retour {
+  cursor: pointer;
+  width: 30px;
+  height: 25;
+  font-size: 30px;
+ }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.categories {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #ffffff;
+    
+  } 
+
+  .categoriesParcours{
+    height: 70%;
+    width: 95px;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    margin: 2%;
+  }
+
+
+  .selectCategories{
+    width: 100%;
+    height: 5%;
+    position: relative;
+  }
+
+  .ligneCategories{
+    border: 1px solid #146356;
+    width: 95%;
+  }
+
+  .ligneCategorie{
+    border: 0.5px solid rgba(51, 70, 255, 0.15);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    width: 90%;
+    margin: 0;
+  }
+
+.Select{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #146356;
+    margin: 5px;
+}
+  .containerButton{
+    height: 100%;
+    width: 95px;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+.buttonCategorie{
+    border: 1.35px solid #146356;
+    border-radius: 30px;
+    height: 60%;
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #146356;
+    margin: 10px;
+    flex: 0 0 auto;
+}
+
+.buttonCategorieSelect{
+    border: 1.35px solid #146356;
+    border-radius: 30px;
+    height: 60%;
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin: 10px;
+    flex: 0 0 auto;
+    background-color: #146356;
+}
+
+.containerCategories1{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerCategories2{
+  width: 100%;
+}
+
+.containerCategorie{
+  width: 90%;
+  margin: 7px;
+}
+
+.imgCategorie{
+  width: 59px;
+  height: 58px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+  position: relative;
+}
+
+#iconView{
+  position: absolute;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.507);
+  cursor: pointer;
+}
+
+#imgMenu{
+  cursor: pointer;
+}
+
+.infosCategorie{
+  width: 80%;
+  height: 62px;
+  margin-left: 10px;
+}
+
+p {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0px;
+}
+.description{
+  width: 100%;
+  font-size: 10px;
+  color: rgba(19, 19, 19, 0.616);
+  font-weight: none;
+  line-height: 10px;
+  text-transform: none;
+}
+
+::ng-deep.padding-dialog-details-menu .mat-dialog-container {
+  padding: 0px;
+  width: 443px;
+  height: 550px;
+  background: #FFFFFF;
+}
+
+
+@media only screen and (min-width: 961px){
+
+  body{
+    background-color: #ffffff;
+    height: auto;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+  }  
+
+  .headerFix{
+    width: 100%;
+    height: 170px;
+    position: sticky;
+    top:0;
+    z-index: 999;
+  }
+
+  .categories  {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .categoriesParcours{
+    height: 70%;
+    width: 200px;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    margin: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selectCategories{
+    width: 100%;
+    height: 5%;
+    position: relative;
+  }
+
+  .Select{
+      position: absolute;
+      background-color: #ffffff;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 36px;  
+      text-align: center;
+      text-transform: capitalize;
+      color: #146356;
+      margin: 5px;
+  }
+
+  .containerButton{
+    height: 100%;
+    width: 200px;
+    width: 200px;
+    flex: 0 0 auto;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonCategorie{
+    border: 1.35px solid #146356;
+    border-radius: 15px;
+    height: 60%;
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px; 
+    text-transform: capitalize;
+    color: #146356;
+    margin: 10px;
+    flex: 0 0 auto;
+  }
+
+  .buttonCategorieSelect{
+    border: 1.35px solid #146356;
+    border-radius: 15px;
+    height: 60%;
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px; 
+    text-transform: capitalize;
+    color: #ffffff;
+    margin: 10px;
+    flex: 0 0 auto;
+    background-color: #146356;
+  }
+
+  .containerCategories1{
+    width: 90%;
+   margin-bottom: 50px;
+  }
+
+.containerCategories2{
+  width: 50%;
+}
+
+.ligneCategorie{
+  display: none;
+}
+
+  .imgCategorie{
+    width: 150px;
+    height: 150px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+ 
+
+#iconView{
+    position: absolute;
+    font-size: 70px;
+    color: rgba(255, 255, 255, 0.507);
+    cursor: pointer;
+}
+  
+#imgMenu{
+    cursor: pointer;
+}
+
+  .infosCategorie{
+    width: 80%;
+    height: 155px;
+    margin-left: 15px;
+  }
+
+  p{ 
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .description{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

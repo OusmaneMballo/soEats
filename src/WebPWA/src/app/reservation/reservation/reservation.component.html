@@ -1,0 +1,114 @@
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}">keyboard_backspace</mat-icon>
+    <span>{{restaurant.name}}</span>
+</mat-toolbar>
+  <br>
+  <div class="content">
+    <mat-accordion *ngIf="reservations">
+        <mat-expansion-panel hideToggle [expanded]=true>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <h6>
+                        Demandes de réservations  
+                        <span class="material-icons" id="icon-contact">
+                            swap_vert
+                         </span>                
+                    </h6>
+                </mat-panel-title>   
+            </mat-expansion-panel-header>
+          <div>
+            <pagination-controls id="pagination1" (pageChange)="cp = $event"></pagination-controls>
+            <div class="lignep" fxLayout="row wrap">
+                <div *ngFor="let item of reservations | paginate: {id: 'pagination1', itemsPerPage: 6, currentPage: cp}" class="ligne">
+                    <mat-card   class="example-card">
+                        <mat-card-content>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <div class="col2">{{item.reservatorFirstname}} {{item.reservatorLastname}}</div>
+                                <div class="col1">{{item.reservationDate | date: 'dd/MM/yyyy'}} A {{item.reservationTime}}</div>
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <div class="col1" ><img src="../../assets/icons/tele.png" class="icon">   
+                                    {{item.reservatorPhoneNumber}}</div>
+                                <div class="col1"><img src="../../assets/icons/email.png" class="icon">   
+                                    {{item.reservatorEmail}}</div>
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                               <div class="col1" fxLayoutAlign="space-between center">
+                                   <span class="material-icons" id="iconPeople">
+                                   people
+                                   </span>  
+                                   Places : {{item.numberOfPlaces}}
+                               </div>
+                            </div>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <div fxLayout="row" fxLayoutAlign="space-around center" class="row2" fxLayoutGap='5px'>
+                                <button class="buttonValider" (click)="validation(item)"><p class="btntitre">Valider</p></button>
+                                <button class="buttonAnnuler" (click)="annulation(item)"><p class="btntitre">Annuler</p></button>   
+                            </div>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>  
+    </div>
+    </mat-expansion-panel>
+    </mat-accordion>
+      <br>
+     <mat-accordion>
+        <mat-expansion-panel hideToggle [expanded]="panelOpenState">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h6>Réservations traitées     
+                    <span class="material-icons" id="icon-contact">
+                        swap_vert
+                     </span>                 
+                </h6>
+          </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <div>
+            <div class="lignep"> 
+                <pagination-controls id="pagination2" (pageChange)="cp1 = $event"></pagination-controls>
+                <div class="lignep" fxLayout="row wrap">
+                    <div *ngFor="let item1 of reservationsTraiter | paginate: {id: 'pagination2', itemsPerPage: 6, currentPage: cp1}" class="ligne">
+                    <mat-card   class="example-card">
+                     <mat-card-content>
+                         <div fxLayout="row" fxLayoutAlign="space-between center">
+                             <div class="col2">{{item1.reservatorFirstname}} {{item1.reservatorLastname}}</div>
+                             <div class="col1">{{item1.reservationDate | date: 'dd/MM/yyyy'}} A {{item1.reservationTime}}</div>
+                         </div>
+                         <div fxLayout="row" fxLayoutAlign="space-between center">
+                             <div class="col1" ><img src="../../assets/icons/tele.png" class="icon">   
+                                 {{item1.reservatorPhoneNumber}}</div>
+                             <div class="col1"><img src="../../assets/icons/email.png" class="icon">   
+                                 {{item1.reservatorEmail}}</div>
+                         </div>
+                         <div fxLayout="row" fxLayoutAlign="space-between center">
+                            <div class="col1" fxLayoutAlign="space-between center">
+                                <span class="material-icons" id="iconPeople">
+                                people
+                                </span>  
+                                Places : {{item1.numberOfPlaces}}
+                            </div>
+                         </div>
+                     </mat-card-content>
+                     <mat-card-actions *ngIf="item1.reservationStatus==1" class="validercard">
+                        <div fxLayout="row" fxLayoutAlign="center center" class="bascard2">
+                            <p class="buttonValider1 btntitre1">Validée</p> 
+                        </div>
+                    </mat-card-actions>
+                    <mat-card-actions *ngIf="item1.reservationStatus==2" class="annulercard">
+                        <div fxLayout="row" fxLayoutAlign="center center" class="bascard2">
+                            <p class="buttonAnnuler1 btntitre1">Annulée</p>   
+                        </div>
+                    </mat-card-actions>
+                 </mat-card>
+                 </div>
+            </div>
+        </div>
+        </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+        
+  </div>
+  

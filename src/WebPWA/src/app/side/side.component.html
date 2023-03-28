@@ -1,0 +1,18 @@
+<app-navbar (toggleSideBarforMe)='sideBarToggler()' (toggleSideBarforPanier)='sideBarPanier()'></app-navbar>
+<mat-drawer-container>
+    <mat-drawer class="menuDrawer" mode='over' [opened]='sideBarOpen'>
+        <div id="band">
+            <span class="txt-menu">Menu</span>
+        </div>
+        <app-sidenav></app-sidenav> 
+    </mat-drawer>
+    <mat-drawer class="panierDrawer" mode='over' [opened]='panierOpen' position="end" >
+        <app-panier *ngIf="panierOpen"></app-panier> 
+    </mat-drawer>
+    <mat-drawer-content>
+        <div id="main">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </mat-drawer-content>
+</mat-drawer-container>

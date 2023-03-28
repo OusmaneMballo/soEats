@@ -1,0 +1,237 @@
+.head{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.head > div{
+    text-align: center;
+}
+
+.title{
+    color: #3346FF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.title2{
+    color: #3346FF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box > div{
+    width: 564px;
+    height: 350px;
+    margin: 10px;
+}
+
+.img{
+    width: 100%;
+    height: 330px;
+}
+
+.champ{
+    width: 245px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding-left: 15px;
+    border-radius: 100px;
+}
+
+.msg-error{
+    margin-bottom: 0px;
+    margin-top: 2px;
+    font-size: 11px;
+    color: rgb(197, 34, 34);
+}
+
+.msg{
+    width: 245px;
+    height: 140px;
+    padding-left: 15px;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+textarea::placeholder{
+    color: #8893f5ec;
+    font-size: 20px;
+}
+textarea:focus{
+    outline:  none;
+}
+
+input::placeholder{
+    color: #8893f5ec;
+    font-size: 20px;
+}
+
+input:focus {
+    outline:  none;
+}
+
+.btn{
+    width: 140px;
+    height: 35px;
+    padding-top: 4.5px;
+    background: #3346FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.champ-form{
+    width: 300px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #afb6fa3b;
+    border-radius: 15px;
+}
+
+.champ-form > div{
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact > div{
+    align-items: center;
+    width: 60%;
+    margin:10px;
+    padding-left: 5px;
+    height: auto;
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.cnt-txt{
+    margin-left: 5px;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 600px){
+    .img{
+        width: 360px;
+        height: 360px;
+    }
+
+    .champ-form{
+        width: 500px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #afb6fa3b;
+        border-radius: 15px;
+    }
+    
+    .champ-form > div{
+        width: 425px;
+        margin: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .champ{
+        width: 300px;
+        height: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+        border: none;
+        padding-left: 15px;
+        border-radius: 100px;
+    }
+
+    .msg{
+        width: 400px;
+        height: 180px;
+        padding-left: 15px;
+        border-radius: 20px;
+    }
+
+    .contact > div{
+        align-items: center;
+        width: 30%;
+    }
+
+}
+
+@media screen and (min-width: 800px){
+    .img{
+        width: 380px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .img{
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1130px){
+
+    .contact > div{
+        align-items: center;
+        width: 22%;
+    }
+}
+
+@media screen and (min-width: 1230px){
+    
+    .contact > div{
+        align-items: center;
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 1340px){
+    
+    .contact > div{
+        align-items: center;
+        width: 17%;
+    }
+}
+
+@media screen and (min-width: 1630px){
+    
+    .contact > div{
+        align-items: center;
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 1730px){
+    
+    .contact > div{
+        align-items: center;
+        width: 10%;
+    }
+}

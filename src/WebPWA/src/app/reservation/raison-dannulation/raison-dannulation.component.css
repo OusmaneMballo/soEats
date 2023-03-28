@@ -1,0 +1,140 @@
+.containerPaiement{
+    width: 100%;
+}
+
+label{
+display: none;
+position: absolute;
+font-size: 13px;
+}
+
+
+.iconsContainer{
+height: 65px;
+width: 150px;
+position: relative;
+}
+
+.icons{
+height: 80%;
+width: 100%;
+position: relative;
+}
+
+.iconsValid{
+height: 10%;
+width: 88%;
+position: absolute;
+top: 85%;
+}
+
+.validation{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+color: #a11c1c;
+font-weight: 500;
+}
+
+#icon-validation{
+color: #a11c1c;
+font-size: 10px;
+margin-right: 3px;
+}
+
+
+.footer{
+width: 100%;
+height: 55px;
+margin-bottom:5%;
+}
+
+.confirmerbtn{
+ width: 35%;
+ height: 60%;
+ padding-bottom: 1%;
+ padding-top: 1%;
+ background: #146356;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ border-radius: 25px;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 17px;
+ line-height: 27px;
+ color: white;
+}
+.header{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 25%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 0%;
+    background-color: #146356;
+}
+textarea{
+    height: 150px;
+    width: 350px;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+@media only screen and (min-width: 961px){
+    .containerPaiement{
+        width: 100%;
+    }
+    
+    .header{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 25%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 0%;
+    background-color: #146356;
+    }
+    
+    textarea{
+        height: 150px;
+        width: 350px;
+        border-radius: 10px;
+        font-family: Poppins;
+        font-style: normal;
+
+    }
+
+    .footer{
+    width: 100%;
+    height: 55px;
+    margin-bottom:5%;
+    }
+    
+    .confirmerbtn{
+    width: 35%;
+    height: 70%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: white;
+    }
+   
+ 
+}

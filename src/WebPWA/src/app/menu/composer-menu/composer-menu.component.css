@@ -1,0 +1,358 @@
+.containerComposerMenu{
+    width: 100%;
+    height: 100%;
+    background: #FFFFEE;
+}
+
+.form{
+    width: 100%;
+    height: 100%
+}
+
+.headerAjoutMenu{
+    width: 100%;
+    height: 10%;
+}
+
+.loader-container{
+    position: absolute; /* postulat de départ */
+    width: 100%;
+    height: 100%;
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+    color: primary;
+}
+
+.definirMenu{
+    width: 80%;
+    height: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #146356;
+    margin-left: 9%;
+}
+
+.definirMenuIcon{
+    width: 20%;
+    height: 100%;
+}
+
+#iconCancel{
+    color: #146356;
+    font-size: large;
+    cursor: pointer;
+}
+
+.ligne{
+    width: 100%;
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    margin: 0;
+  }
+
+.containerInfoMenu{
+    height: 30%;
+    width: 85%;
+}
+
+.bodyDialoglabel{
+    height: 85%;
+    width: 25%;
+    position: relative;
+}
+
+.label{
+    height: 100%;
+    width: 100%;
+}
+
+.bodyDialog{
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    margin: 1%;
+    margin-top: 10%;
+    cursor: pointer;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#add-logo{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.previewLogo{
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.bodyDialoglabel > input
+{
+    display: none;
+}
+
+.containerInput{
+    height: 100%;
+    width: 70%;
+}
+
+.typeInput{
+    width: 20%;
+    height: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #146356;
+    text-align: center;
+}
+
+input{
+    width: 90%;
+    height: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    outline: none;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;  
+    text-align: left;
+    padding-left: 1rem;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+
+input::placeholder{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    }
+
+    .input{
+        width: 100%;
+        height: 38%;
+        position: relative;
+    }
+
+    .icons{
+        height: 65%;
+        width: 100%;
+    }
+
+    .iconsValid{
+        height: 35%;
+        width: 88%;
+      }
+      
+      .validation{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        color: #a11c1c;
+        font-weight: 500;
+      }
+
+       
+  #icon-validation{
+    color: #a11c1c;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+      
+
+    .fcfa{
+        font-family: Poppins;
+        font-style: normal;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 17px;
+        margin: 12px;
+        color: #146356;
+    }
+
+::ng-deep.padding-dialog-products .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 20px;
+    width: 100px;
+    height: 300px;
+  }
+
+  .containerCheckbox{
+    width: 85%;
+    height: 50%;
+    color: #000000;
+    margin: 2%;
+    cursor: pointer;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .tabsCategories{
+    width: 100%;
+    height: 41px;
+    color:#FFFFFF;
+    border-radius: 5px;
+    overflow: 0 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.showOK{
+    width: 200px;
+    height: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgb(255, 255, 255);
+}
+
+.noShow{
+    width: 200px;
+    height: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.containerProduct{
+    width: 100%;
+    height: 90%;
+    overflow:auto;
+}
+
+.products{
+     width: 95%;
+     height: 10px;
+}
+
+.listProducts{
+    width: 95%;
+    height: 60px;
+    background-color: bisque;
+    margin: 10px;
+    background: #EBEDEE;
+    border-radius: 10px;
+}
+
+.footer{
+    width: 100%;
+    height: 13%;
+}
+
+.confirmerbtn{
+    width: 40%;
+    height: 50%;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: white;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;  
+}
+
+mat-list-option{
+    margin-top: 5%;
+}
+
+
+.p {
+    font-family: Poppins;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    width: 85px;
+    height: 100%;
+}
+
+
+
+
+@media only screen and (min-width: 961px){
+
+    
+    .listProducts{
+        width: 30%;
+    }
+    .loader-container{
+        position: absolute; /* postulat de départ */
+        width: 100%;
+        height: 100%;
+        top: 50%; left: 50%; /* à 50%/50% du parent référent */
+        transform: translate(-50%, -50%);
+        color: primary;
+    }
+    
+    .p {
+        font-size: 15px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        margin: 10px;
+        width: 95px;
+        height: 100%;
+    }
+
+    .input{
+        width: 50%;
+    }
+    
+    .definirMenu{
+        width: 90%;
+        font-size: 18px
+    }
+    
+    .definirMenuIcon{
+        width: 10%;
+    }
+    
+    #iconCancel{
+        font-size: x-large;
+    }
+
+    .confirmerbtn{
+        width: 18%;
+        height: 60%;
+        border-radius: 25px;
+    }
+
+}

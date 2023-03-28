@@ -1,0 +1,84 @@
+<div class="headerDetailsMenu" fxLayoutAlign="end end">
+    <span class="material-icons" id="iconCancel" (click)="onClose()">
+        cancel
+    </span>
+</div>
+<div class="containerDetailsMenu">
+   <div class="containerPhotoMenu" fxLayout="column" fxLayoutAlign="center center">
+      <img  [src]= "data.menu.imageUrl" class="img">
+      <p class="nameMenu">{{data.menu.name}}</p>
+   </div>
+   <div class="containerProductsMenu" fxLayout="column" fxLayoutAlign="start center">
+   <div class="enteteProducts" fxLayout="row wrap">
+        <div class="entete"> &nbsp; &nbsp; &nbsp; Entrée</div>
+        
+        <div class="entete"> &nbsp; &nbsp; &nbsp; Plat</div>
+
+        <div class="entete"> &nbsp; &nbsp; &nbsp; Dessert</div>
+
+        <div class="entete"> &nbsp; &nbsp; &nbsp; Boisson</div>
+
+        <div class="entete"> &nbsp; &nbsp; &nbsp; Patisserie</div>
+   </div>      
+    <div class="list"  fxLayoutAlign="center start">
+        <mat-list >  
+            <div *ngIf="affichProduits('Entree')" >
+                <mat-list-item *ngFor="let p of affichProduits('Entree')" >
+                    <span fxLayout="row wrap" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+            <div *ngIf="!affichProduits('Entree').length" class="vide" fxLayoutAlign="start center ">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -
+            </div>
+        </mat-list>
+
+        <mat-list >       
+            <div *ngIf="affichProduits('Plat').length" >
+                <mat-list-item *ngFor="let p of affichProduits('Plat')" >
+                    <span fxLayout="row wrap" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+            <div *ngIf="!affichProduits('Plat').length" class="vide" fxLayoutAlign="start center ">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-
+            </div>
+        </mat-list>
+
+        <mat-list >      
+            <div *ngIf="affichProduits('Dessert').length" >
+                <mat-list-item *ngFor="let p of affichProduits('Dessert')" >
+                    <span fxLayout="row wrap" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+            <div *ngIf="!affichProduits('Dessert').length" class="vide" fxLayoutAlign="start center ">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -
+            </div>
+        </mat-list>
+
+        <mat-list >           
+            <div *ngIf="affichProduits('Boisson').length" >
+                <mat-list-item *ngFor="let p of affichProduits('Boisson')" >
+                    <span fxLayout="row wrap" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+            <div *ngIf="!affichProduits('Boisson').length" class="vide" fxLayoutAlign="start center ">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -
+            </div>
+        </mat-list>
+
+        <mat-list >      
+            <div *ngIf="affichProduits('Patisserie').length" >
+                <mat-list-item *ngFor="let p of affichProduits('Patisserie')" >
+                    <span fxLayout="row wrap" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+            <div *ngIf="!affichProduits('Patisserie').length" class="vide" fxLayoutAlign="start center " >
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -
+            </div>
+        </mat-list>
+
+    </div>
+   </div>
+</div>
+<div class="footer" fxLayoutAlign="center center">
+    Prix : {{data.menu.price}} FCFA
+</div>

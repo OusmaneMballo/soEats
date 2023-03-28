@@ -1,0 +1,145 @@
+<body >
+<div class="headerFix" fxLayout='column' fxLayoutAlign="start center">
+    <mat-toolbar *ngIf="restaurant.name">
+        <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurant/{{restaurant.slugId}}">keyboard_backspace</mat-icon>
+        <span>Carte {{restaurant.name}}</span>
+    </mat-toolbar>
+    <div class="categories">
+            <div class="categoriesParcours" fxLayout='row'>
+                <div *ngIf="menus.length" class="containerButton">
+                    <button  *ngIf="show === null || show === Menu" class="buttonCategorieSelect" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Menu)" >Menu</button>
+                    <button  *ngIf="show != Menu && show != null" class="buttonCategorie" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Menu)" >Menu</button>                   
+                </div>
+                <div *ngIf="productsEntree.length" class="containerButton">
+                    <button  *ngIf="show === Entree" class="buttonCategorieSelect" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Entree)" >Entrée</button>
+                    <button  *ngIf="show != Entree" class="buttonCategorie" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Entree)" >Entrée</button>    
+                </div>
+                <div *ngIf="productsPlat.length" class="containerButton">
+                    <button  *ngIf="show === Plat" class="buttonCategorieSelect" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Plat)" >Plat</button>
+                    <button  *ngIf="show != Plat" class="buttonCategorie" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Plat)" >Plat</button>             
+                </div>
+                <div *ngIf="productsBoisson.length" class="containerButton">
+                    <button  *ngIf="show === Boisson" class="buttonCategorieSelect" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Boisson)" >Boisson</button>
+                    <button  *ngIf="show != Boisson" class="buttonCategorie" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Boisson)" >Boisson</button>
+                </div>
+                <div *ngIf="productsPatisserie.length" class="containerButton">
+                    <button  *ngIf="show === Patisserie" class="buttonCategorieSelect"  mat-raised-button fxLayoutAlign="center center" (click)="scroll(Patisserie)" >Patisserie</button>
+                    <button  *ngIf="show != Patisserie" class="buttonCategorie" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Patisserie)" >Patisserie</button>            
+                </div>
+                <div *ngIf="productsDessert.length" class="containerButton">
+                    <button  *ngIf="show === Dessert" class="buttonCategorieSelect" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Dessert)" >Dessert</button>
+                    <button  *ngIf="show != Dessert" class="buttonCategorie" mat-raised-button fxLayoutAlign="center center" (click)="scroll(Dessert)" >Dessert</button>         
+                </div>
+            </div>
+    </div>
+</div>
+<div class="containerCard" fxLayout='column' fxLayoutAlign="start center">
+        <div  #Menu fxLayout='row wrop' class="containerCategories1" fxLayoutAlign="start center">
+            <div *ngIf="menus.length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                <hr class="ligneCategories"/>
+                <p mat-flat-button class="Select" > &nbsp; Menu &nbsp; </p>
+            </div>
+            <div *ngFor="let m of menus" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="containerCategorie" fxLayoutAlign="center center">
+                    <div class="imgCategorie" fxLayoutAlign="center center"  (click)="openDialogDetailsMenu(m, cardId)">
+                        <img class="imgCategorie" id="imgMenu" [src]="m.imageUrl"/> 
+                        <span class="material-icons" id="iconView">
+                            visibility
+                        </span>
+                    </div>
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{m.name}}</p>
+                       <p>{{m.price}} FCFA</p>
+                    </div>
+                </div>
+                <hr class="ligneCategorie"/>
+            </div>
+        </div>
+        <div #Entree fxLayout='row wrop' class="containerCategories1" fxLayoutAlign="start center">
+            <div *ngIf="productsEntree.length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                <hr class="ligneCategories"/>
+                <p mat-flat-button class="Select" > &nbsp; Entrée &nbsp; </p>
+            </div>
+            <div *ngFor="let p of productsEntree" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="containerCategorie" fxLayoutAlign="center center">
+                    <img class="imgCategorie" [src]="p.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{p.name}}</p>
+                       <p>{{p.price}} FCFA</p>
+                       <p class="description">{{p.description}}</p>
+                    </div>
+
+                </div>
+                <hr class="ligneCategorie"/>
+            </div>
+        </div>
+        <div #Plat fxLayout='row wrop' class="containerCategories1" fxLayoutAlign="start center">
+            <div *ngIf="productsPlat.length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                <hr class="ligneCategories"/>
+                <p mat-flat-button class="Select" > &nbsp; Plat &nbsp; </p>
+            </div>
+            <div *ngFor="let p of productsPlat" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="containerCategorie" fxLayoutAlign="center center">
+                    <img class="imgCategorie" [src]="p.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{p.name}}</p>
+                       <p>{{p.price}} FCFA</p>
+                       <p class="description">{{p.description}}</p>
+                    </div>
+                </div>
+                <hr class="ligneCategorie"/>
+            </div>
+        </div>
+        <div #Boisson fxLayout='row wrop' class="containerCategories1" fxLayoutAlign="start center">
+            <div *ngIf="productsBoisson.length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                <hr class="ligneCategories"/>
+                <p mat-flat-button class="Select" > &nbsp; Boisson &nbsp; </p>
+            </div>
+            <div *ngFor="let p of productsBoisson" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="containerCategorie" fxLayoutAlign="center center">
+                    <img class="imgCategorie" [src]="p.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{p.name}}</p>
+                       <p>{{p.price}} FCFA</p>
+                       <p class="description">{{p.description}}</p>
+                    </div>
+                </div>
+                <hr class="ligneCategorie"/>
+            </div>
+        </div>
+        <div #Patisserie fxLayout='row wrop' class="containerCategories1" fxLayoutAlign="start center">
+            <div *ngIf="productsPatisserie.length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                <hr class="ligneCategories"/>
+                <p mat-flat-button class="Select" > &nbsp; Patisserie &nbsp; </p>
+            </div>
+            <div *ngFor="let p of productsPatisserie" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="containerCategorie" fxLayoutAlign="center center">
+                    <img class="imgCategorie" [src]="p.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{p.name}}</p>
+                       <p>{{p.price}} FCFA</p>
+                       <p class="description">{{p.description}}</p>
+                    </div>
+                </div>
+                <hr class="ligneCategorie"/>
+            </div>
+        </div>
+        <div #Dessert fxLayout='row wrop' class="containerCategories1" fxLayoutAlign="start center">
+            <div *ngIf="productsDessert.length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                <hr class="ligneCategories"/>
+                <p mat-flat-button class="Select" > &nbsp; Dessert &nbsp; </p>
+            </div>
+            <div *ngFor="let p of productsDessert" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="containerCategorie" fxLayoutAlign="center center">
+                    <img class="imgCategorie" [src]="p.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{p.name}}</p>
+                       <p>{{p.price}} FCFA</p>
+                       <p class="description">{{p.description}}</p>
+                    </div>
+                </div>
+                <hr class="ligneCategorie"/>
+            </div>
+        </div>
+</div>
+</body>

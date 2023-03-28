@@ -1,0 +1,51 @@
+<div fxLayout="column" fxLayoutAlign="center center ">
+  <div class="header" fxLayoutAlign="center center">
+      Créer votre restaurant
+   
+  </div>
+  <div class="body" fxLayoutAlign="center center" fxLayout='column'>
+       <form class="form" #FormCreateResto=ngForm  (ngSubmit)="createRestaurant()" fxLayout='column' fxLayoutAlign="center center"> 
+        <div class="formInfoRestau" fxLayout='column' fxLayoutAlign="center center">
+          <mat-form-field appearance="outline">
+            <mat-label>Nom du restaurant</mat-label>
+            <input [(ngModel)]="restaurant.name" name="name" matInput required #restaurant.name>
+            <mat-icon matSuffix>store</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Catégorie</mat-label>
+            <mat-select [formControl]="categoriesSelected" multiple required>
+              <mat-select-trigger>
+                {{categoriesSelected.value ? categoriesSelected.value[0].displayName : ''}}
+                <span *ngIf="categoriesSelected.value?.length > 1" class="example-additional-selection">
+                  (+{{categoriesSelected.value.length - 1}} {{categoriesSelected.value?.length === 2 ? 'autre' : 'autres'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let categorie of restaurantCategorie" [value]="categorie">{{categorie.displayName}}</mat-option>
+            </mat-select>
+            <mat-icon matSuffix>class</mat-icon>
+          </mat-form-field>
+         <mat-form-field appearance="outline">
+          <mat-label>Numéro de téléphone</mat-label>
+          <input [(ngModel)]="restaurant.phoneNumber" type="tel" name="phoneNumber" matInput maxlength="14" required #phoneNumber>
+          <mat-icon matSuffix>call</mat-icon>
+          <p *ngIf="errorInput=='errorTel'" class="msg-error">Numero de téléphone invalide!</p>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Adresse</mat-label>
+            <input [(ngModel)]="restaurant.address" name="address" matInput required #restaurant.address>
+            <mat-icon matSuffix>domain</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Adresse mail</mat-label>
+            <input [(ngModel)]="restaurant.email" type="email" name="email" matInput required #email>
+            <mat-icon matSuffix>mail</mat-icon>
+            <p *ngIf="errorInput=='errorEmail'" class="msg-error">Adresse mail invalide!</p>
+          </mat-form-field>
+        </div>
+        <div class="footer" fxLayoutAlign="center end">
+          <button class="confirmerbtn" mat-raised-button [disabled]="disable">Confirmer</button>
+        </div>
+      </form>
+</div>
+</div>
+

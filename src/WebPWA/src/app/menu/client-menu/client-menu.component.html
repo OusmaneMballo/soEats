@@ -1,0 +1,48 @@
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurant/{{restaurant.slugId}}">keyboard_backspace</mat-icon>
+    <span class="title">
+      <div class="nom-restau" fxLayoutAlign="center center">
+        <p>
+          {{restaurant.name}}
+        </p>
+      </div>
+    </span>
+</mat-toolbar>
+
+<div class="containe-categorie" ngDefaultControl [(ngModel)]="global.data">
+  <div *ngFor="let cat of categorie" (click)="catClick(cat.title)" [ngStyle]="cat.style">{{cat.title}}</div>
+</div>
+<div >
+  <div class="box-containe">
+    <div class="contant-form" *ngFor="let item of global.data.items">
+      
+      <div *ngIf="!item.object.categorie && item.object.categorie!=0" class="containe-menu" (click)="openDialog(item)">
+        <div>
+          <img src="{{item.object.imageUrl}}" class="img-card" alt=""/>
+        </div>
+        <div><p class="produc-name">{{item.object.name}}</p></div>
+        <div *ngIf="item.nombre<=0"><p class="card-price">{{item.object.price}} FCFA</p></div>
+        <div *ngIf="item.nombre>0">
+          <p class="card-price" matBadge="{{item.nombre}}" matBadgeColor="warn">{{item.object.price}} FCFA</p>
+        </div>
+      </div>
+      <div  *ngIf="item.object.categorie>=0" class="boxe-produit" (click)="addPanier(item)">
+        <div class="containe-produit">
+          <div>
+            <img src="{{item.object.imageUrl}}" class="img-card" alt=""/>
+          </div>
+          <div>
+            <p class="produc-name">{{item.object.name}}</p>
+          </div>
+          <div *ngIf="item.nombre<=0"><p class="card-price">{{item.object.price}} FCFA</p></div>
+          <div *ngIf="item.nombre>0">
+            <p class="card-price" matBadge="{{item.nombre}}" matBadgeColor="warn">{{item.object.price}} FCFA</p>
+          </div>
+        </div>
+        <div class="containe-produit">
+          <p class="description">{{item.object.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

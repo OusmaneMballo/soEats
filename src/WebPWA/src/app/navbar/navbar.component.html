@@ -1,0 +1,14 @@
+<mat-toolbar [(ngModel)]="nbrProduit" class="nav shodow">
+    <mat-toolbar-row >
+        <button mat-icon-button (click)='toggleSideBar()'>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div id="logo" routerLink="/" style="background-image: url(assets/logoafricaeats.png)"></div>
+        <!-- <div *ngIf="global.loginDisplay==false" class="panier" fxLayout="column" fxLayoutAlign="center end" matBadge="{{global.totalProduit}}" matBadgeColor="warn">
+            <span id="shopping" class="material-icons" fxLayoutAlign="center center" (click)='toggleSideBarPanier()'>
+                shopping_cart
+            </span>
+        </div> -->
+    </mat-toolbar-row>
+</mat-toolbar>
+

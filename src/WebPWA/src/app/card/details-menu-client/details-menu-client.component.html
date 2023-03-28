@@ -1,0 +1,75 @@
+<div class="headerDetailsMenu" fxLayoutAlign="end end">
+    <span class="material-icons" id="iconCancel" (click)="onClose()">
+        cancel
+    </span>
+</div>
+<div class="containerDetailsMenu">
+   <div class="containerPhotoMenu" fxLayout="column" fxLayoutAlign="center center">
+      <img  [src]= "data.menu.imageUrl" class="img">
+      <p class="nameMenu">{{data.menu.name}}</p>
+   </div>
+   <div class="containerProductsMenu" fxLayout="column" fxLayoutAlign="start center">  
+    <div class="list"  fxLayout="column" fxLayoutAlign="start center">
+        <div *ngIf="affichProduits('Entree').length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+            <hr class="ligneCategories"/>
+            <p  mat-flat-button class="Select" > &nbsp; &nbsp; &nbsp; Entrée &nbsp; &nbsp; &nbsp;</p>
+        </div>
+        <mat-list *ngIf="affichProduits('Entree').length" >             
+            <div >
+                <mat-list-item *ngFor="let p of affichProduits('Entree')" >
+                    <span fxLayout="row" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+        </mat-list>
+        <div *ngIf="affichProduits('Plat').length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+            <hr class="ligneCategories"/>
+            <p  mat-flat-button class="Select" > &nbsp; &nbsp; &nbsp; Plat &nbsp; &nbsp; &nbsp;</p>
+        </div>  
+        <mat-list *ngIf="affichProduits('Plat').length" >     
+                <mat-list-item *ngFor="let p of affichProduits('Plat')" >
+                    <span fxLayout="row " fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>         
+        </mat-list>
+
+        <div  *ngIf="affichProduits('Dessert').length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+            <hr class="ligneCategories"/>
+            <p  mat-flat-button class="Select" > &nbsp; &nbsp; &nbsp; Dessert &nbsp; &nbsp; &nbsp;</p>
+        </div>  
+
+        <mat-list *ngIf="affichProduits('Dessert').length">     
+            <div  >
+                <mat-list-item *ngFor="let p of affichProduits('Dessert')" >
+                    <span fxLayout="row" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+        </mat-list>
+
+        <div *ngIf="affichProduits('Boisson').length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+            <hr class="ligneCategories"/>
+            <p  mat-flat-button class="Select" > &nbsp; &nbsp; &nbsp; Boisson &nbsp; &nbsp; &nbsp;</p>
+        </div>   
+
+        <mat-list *ngIf="affichProduits('Boisson').length">        
+            <div  >
+                <mat-list-item *ngFor="let p of affichProduits('Boisson')" >
+                    <span fxLayout="row" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+        </mat-list>
+        <div *ngIf="affichProduits('Patisserie').length" class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+            <hr class="ligneCategories"/>
+            <p  mat-flat-button class="Select" > &nbsp; &nbsp; &nbsp; Patisserie &nbsp; &nbsp; &nbsp;</p>
+        </div>  
+        <mat-list *ngIf="affichProduits('Patisserie').length">     
+            <div >
+                <mat-list-item *ngFor="let p of affichProduits('Patisserie')" >
+                    <span fxLayout="row" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                </mat-list-item>
+            </div>
+        </mat-list>
+    </div>
+   </div>
+</div>
+<div class="footer" fxLayoutAlign="center center">
+    Prix : {{data.menu.price}} FCFA
+</div>

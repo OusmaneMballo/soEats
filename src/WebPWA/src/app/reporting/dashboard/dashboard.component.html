@@ -1,0 +1,59 @@
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurateurs/{{ownerId}}">keyboard_backspace</mat-icon>
+</mat-toolbar>
+<div>
+    <br/>
+    <table>
+        <tr>
+            <th colspan="8" class="title">
+                RAPPORTS
+            </th>
+        </tr>
+        <tr>
+            <th colspan="4" class="title">
+                <form [formGroup]="reportForm">
+                    Date de debut
+                    <mat-datepicker-toggle id="icons1-icon-form" matSuffix [for]="startpicker"></mat-datepicker-toggle>
+                    <mat-datepicker #startpicker></mat-datepicker>
+                    <input class="date" formControlName="dateDebut" placeholder="jj/mm/aaaa" [matDatepicker]="startpicker" readonly>
+                   
+                    <input class="date" formControlName="dateFin" placeholder="jj/mm/aaaa" [matDatepicker]="endpicker" (dateChange)="getReportStartDateEndDate($event)" readonly>
+                    <mat-datepicker-toggle id="icons1-icon-form" matSuffix [for]="endpicker"></mat-datepicker-toggle>
+                    <mat-datepicker #endpicker></mat-datepicker>
+                    Date de fin
+                </form>
+            </th>
+            <th colspan="4" class="title"></th>
+        </tr>
+        <tr>
+            <th>Restaurants</th>
+            <th>Nombre de commande</th>
+            <th>Chiffre d'affaire</th>
+            <th>Chiffre d'affaire sans promo</th>
+            <th>Chiffre d'affaire avec promo</th>
+            <th>Frais des livraisons</th>
+            <th>Commission So-Eats</th>
+            <th>Budget promo</th>
+        </tr>
+        <tr *ngFor="let r of report">
+            <td>{{r.restaurant.name}}</td>
+            <td>{{r.numberOfOrdersByMonth}}</td>
+            <td>{{r.turnover}}</td>
+            <td>{{r.turnoverWithoutPromotion}}</td>
+            <td>{{r.turnoverWithPromotion}}</td>
+            <td>{{r.amountOfDeliveries}}</td>
+            <td>{{r.commissionSoeat}}</td>
+            <td>{{r.budgetPromotion}}</td>
+        </tr>
+        <tr>
+            <th>TOTAL</th>
+            <th>{{numberOfOrdersByMonth}}</th>
+            <th>{{turnover}}</th>
+            <th>{{turnoverWithoutPromotion}}</th>
+            <th>{{turnoverWithPromotion}}</th>
+            <th>{{amountOfDeliveries}}</th>
+            <th>{{commissionSoeat}}</th>
+            <th>{{budgetPromotion}}</th>
+        </tr>
+    </table>
+  </div>

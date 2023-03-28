@@ -1,0 +1,688 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.flex-container {
+    width: auto;
+    margin: 10px;
+    margin-right: 0px;
+    text-align: center;
+    color: #146356;
+}
+
+.NB{
+    width: 100%;
+    position: relative;
+}
+
+.buttonCreateRestau{
+    width: 100%;
+}
+
+ .confirmer{
+    width: 186px;
+    height: 40px;
+    margin-right: 10px;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+
+.img
+  {
+    width: 306px;
+    height: 327px;
+} 
+.creation{
+    width: 100%;
+    margin-top: 1%;
+    height: 60px;
+    margin-right: 1%;
+  }
+.message{
+  color: #146356;
+  font-size: 25px;
+  margin-top: 1%;
+  }
+  ::ng-deep.myapp-no-padding-dialog .mat-dialog-container {     
+    padding: 0px;
+    border-radius: 25px 25px 25px 25px
+  }
+span{
+    margin-left: auto;
+    margin-right: auto;   
+    font-size: 30px; 
+    }
+mat-toolbar
+{
+    background-color: #146356; 
+    color: white;   
+}
+.child1{
+    position: absolute;
+}
+.child2{
+    z-index: 1;
+}
+
+mat-card{
+    width: 75px;
+    height: 40px;
+    padding: 0;
+    margin-bottom: 135%;
+    margin-left: 75%;
+    margin-top: 0;
+    background-color: rgba(0, 0, 0, 0)
+}
+mat-card-content{
+    width: 75px;
+    height: 40px;
+    padding: 0;
+    margin-bottom: 135%;
+    margin-left: 75%;
+    margin-top: 0;
+}
+.pourcentage{
+    z-index: 2;
+    font-size: 17px;
+    justify-content: center;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: 14px;
+    color: cadetblue;
+}
+mat-progress-spinner{
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 50%;
+}
+::ng-deep .mat-progress-spinner circle {
+    stroke: cadetblue;
+    
+}
+.container {
+    max-width: 420px;
+    margin: 0 0;
+}
+    
+.grid-container {
+    width: 100%;  
+}
+    
+.grid-item {
+    width: 47%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 45%;
+    margin: 1.5%;
+    border-radius: 15px;
+    position: relative;
+}
+    
+.img-restaurant {
+    width: 100%;
+    height: 170px;
+    min-width: 100%;
+    border-radius: 15px;
+}
+    
+    
+.footer-restaus{
+    width: 100%;
+    background: #146356;
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    z-index: 1;
+}
+    
+.nom-restau{
+    width: 200%; 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-top: 11px;
+    margin-left: 8px;
+    font-family: Poppins-Regular;
+}
+    
+.detail{
+    width: 70px;
+    height: 70%;
+    justify-self: end;
+    align-self: end;
+    z-index: 1;
+    position:absolute;
+}
+    
+.detail-restau{
+    width: 100%;
+    border-radius: 100px 0px 0px 100px;
+    color: white;
+    font-family: Poppins-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.5px;
+    line-height: 10px;
+    z-index: 1;
+    cursor: pointer;
+
+}
+    
+    
+.showmore{
+    width: 95%;
+    height: 60px;
+}
+    
+.showMore{
+    width: 33%;
+    height: 50%;
+    color: #ffffff;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+}
+.rowProfilDesc{
+    width: 100%;
+    height: 14px;
+    position: relative;
+    margin-top: 12%;
+}
+.rowProfilDesc .col-35{
+    width: 3%;
+    height: 100%;
+    margin-bottom: 15%;
+    margin-left: 9%;
+    visibility: hidden;
+}
+    
+.rowProfilDesc .col-65{
+    height: 100%;
+    margin-bottom: 15%;
+    margin-left: 15%;     
+} 
+.resto{
+    margin-top: 6%;
+}
+
+@media only screen and (min-width: 350px){
+
+    mat-card-content{
+        width: 75px;
+        height: 40px;
+        padding: 0;
+        margin-bottom: 155%;
+        margin-left: 90%;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 400px){
+    .pourcentage{
+        margin-left: 41%;
+    }
+}
+
+@media only screen and (min-width: 450px){
+
+    mat-card-content{
+        margin-bottom: 165%;
+        margin-left: 115%;
+    }
+    .pourcentage{
+        margin-left: 45%;
+    }
+}
+
+@media only screen and (min-width: 510px){
+
+    mat-card-content{
+        margin-left: 128%;
+    }
+}
+
+@media only screen and (min-width: 550px){
+    .pourcentage{
+        margin-left: 42%;
+    }
+}
+
+@media only screen and (min-width: 600px){
+
+    mat-card-content{
+        margin-left: 155%;
+    }
+
+    .pourcentage{
+        margin-left: 44.5%;
+    }
+}
+
+@media only screen and (min-width: 650px){
+
+    .pourcentage{
+        margin-left: 42%;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 700px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .NB{
+        width: 80%;
+        position: relative;
+    }
+
+    .buttonCreateRestau{
+        width: 20%;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .grid-container{
+        width: 86%;
+    }
+    .resto{
+              
+        margin-top: 4%;
+
+        }
+    
+    .grid-item {
+        width: 31%;
+        overflow: hidden;
+        height: 0;
+        padding-top: 30%;
+        border-radius: 25px;
+        margin: 1%;
+        position: relative;
+    }
+
+    .img-restaurant {
+        min-width: 100%;
+        min-height: 255px;
+        border-radius: 25px;
+    }
+
+    mat-card-content{
+        margin-bottom: 178%;
+        margin-left: 100%;
+    }
+    
+    .footer-restaus{
+        width: 100%;
+        height: 30%;
+        background: #146356;
+        border-radius: 0px 0px 18px 18px;
+        z-index: 2;
+        position:absolute;
+    }
+    .nom-restau{
+        width: 200%; 
+        height: 57%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 13px;
+
+        }
+    
+    .detail{
+        width: 110px;
+        height: 60%;
+        justify-self: end;
+        align-self: end;
+        margin-top: 15px;
+        margin-bottom: 13px;
+    }
+    
+    .detail-restau{
+        width: 100%;
+        height: 65%;
+        border-radius: 100px 0px 0px 100px;
+        color: white;
+        font-family: Poppins-Light;
+        font-style: normal;
+        font-size: 17px;
+        line-height: 23px;
+        z-index: 2;
+    }
+
+    .showmore{
+        width: 86%;
+        height: 90px;
+    }
+
+    .showMore{
+        width: 18%;
+        height: 50%;
+        color: #ffffff;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        font-family: Poppins-Regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 25px;
+    }
+    
+
+.rowProfilDesc .col-65{
+  height: 100%;
+  margin-bottom: 5%;
+  margin-right: 1%;
+  margin-left: 27%;     
+
+
+} 
+    .rowProfilDesc{
+        width: 100%;
+        height: 14px;
+        position: relative;
+        margin-top: 5%;
+    }
+
+    .pourcentage{
+        margin-left: 45%;
+    }
+
+}
+@media only screen and (min-width: 765px){
+    .txt-info{
+        font-size: 12px;
+    }
+    mat-card-content{
+        margin-bottom: 200%;
+        margin-left: 110%;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .txt-info{
+        font-size: 13px;
+    }
+    .pourcentage{
+        margin-left: 43%;
+    }
+}
+
+@media only screen and (min-width: 850px){
+    .txt-info{
+        font-size: 15px;
+    }
+    .pourcentage{
+        margin-left: 40%;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .pourcentage{
+        margin-left: 38%;
+    }
+}
+
+@media only screen and (min-width: 950px){
+    .pourcentage{
+        margin-left: 36%;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1000px) {
+    .txt-info{
+        font-size: 17px;
+    }
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+          }
+        
+        .grid-container{
+            width: 86%;
+            
+        }
+        
+        .grid-item {
+            width: 31%;
+            overflow: hidden;
+            height: 0;
+            padding-top: 30.25%;
+            border-radius: 25px;
+            margin: 1%;
+            position: relative;
+        }
+    
+        .img-restaurant {
+            min-width: 100%;
+            min-height: 340px;
+            border-radius: 25px;
+           
+        }
+
+        mat-card-content{
+            margin-bottom: 285%;
+            margin-left: 153%;
+        }
+
+        .pourcentage{
+            margin-left: 47%;
+        }
+        
+        .footer-restaus{
+            width: 100%;
+            height: 20%;
+            background:#146356;
+            border-radius: 0px 0px 25px 25px;
+            z-index: 1;
+            position:absolute;
+        }
+    
+        .nom-restau{
+            font-family: Poppins-Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-left: 9%;
+            margin-top: 5%;
+            margin-bottom: 8%;
+        }
+        .entetetext{
+            font-family: Poppins-Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-left: 9%;
+            margin-top: 0%;
+        }
+      
+        
+        .detail-restau{
+            width: 100%;
+            color: white;
+            background-color :#146356;
+            font-size: 20px;
+            margin-left: 0%;
+            margin-right: 0%;
+           
+        }
+        .entetebtn{
+            font-family: Poppins-Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-left: 9%;
+            margin-top: 0%;
+        }
+        .rowProfilDesc{
+            width: 100%;
+            height: 14px;
+            position: relative;
+            margin-top: 4%;
+    
+            }
+            .resto{
+              
+                margin-top: 3%;
+        
+                }
+          
+      
+          .rowProfilDesc .col-35{
+            width: 79%;
+            height: 100%;
+            margin-bottom: 4%;
+            margin-left: 9%;
+            visibility: visible;
+
+          }
+          .para{
+            
+        color: #146356;  
+        margin-left: 20%;
+          }
+          .rowProfilDesc .col-65{
+            height: 100%;
+            margin-bottom: 4%;
+            margin-right: 1%;
+    
+          } 
+        
+        
+        .showmore{
+            width: 86%;
+            height: 100px;
+        }
+        .showMore{
+            width: 18%;
+            height: 50%;
+            color: #ffffff;
+            background: #146356;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 100px;
+            font-family: Poppins-Regular;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+@media only screen and (min-width: 1078px){
+    .txt-info{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    .pourcentage{
+        margin-left: 43%;
+    }
+}
+@media only screen and (min-width: 1125px){
+    .txt-info{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    .pourcentage{
+        margin-left: 41%;
+    }
+}
+@media only screen and (min-width: 1220px){
+    .pourcentage{
+        margin-left: 38%;
+    }
+}
+
+@media only screen and (min-width: 1250px){
+    mat-card-content{
+        margin-bottom: 370%;
+        margin-left: 195%;
+    }
+
+    .pourcentage{
+        margin-left: 47%;
+    }
+}
+
+@media only screen and (min-width: 1330px){
+
+    .pourcentage{
+        margin-left: 44%;
+    }
+}
+
+@media only screen and (min-width: 1380px){
+
+    .pourcentage{
+        margin-left: 42%;
+    }
+}
+
+@media only screen and (min-width: 1420px){
+    .pourcentage{
+        margin-left: 40%;
+    }
+}
+@media only screen and (min-width: 1450px){
+    mat-card-content{
+        margin-bottom: 395%;
+        margin-left: 230%;
+    }
+
+    .pourcentage{
+        margin-left: 45%;
+    }
+}
+@media only screen and (min-width: 1500px){
+    .pourcentage{
+        margin-left: 44%;
+    }
+}
+@media only screen and (min-width: 1560px){
+    .pourcentage{
+        margin-left: 38%;
+    }
+}
+@media only screen and (min-width: 1620px){
+    mat-card-content{
+        margin-left: 265%;
+    }
+}
+
+@media only screen and (min-width: 1850px){
+    mat-card-content{
+        margin-bottom: 395%;
+        margin-left: 245%;
+    }
+    .val-pourcentage{
+        margin-left: 39%;
+    }
+}
+}

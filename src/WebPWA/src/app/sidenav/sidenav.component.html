@@ -1,0 +1,35 @@
+<mat-nav-list class="content">
+    <div *ngIf="!global.loginDisplay">
+        <div>
+            <a mat-list-item routerLink="/" class="menu-txt">
+                <mat-icon>home</mat-icon> Accueil
+            </a>
+        </div>
+        <div>
+            <div class="btn-connexion" (click)="login()">
+                <p class="txt-connexion">Se Connecter</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="global.loginDisplay">
+        <div>
+            <a mat-list-item routerLink="/" class="menu-txt">
+                <mat-icon>home</mat-icon> Accueil
+            </a>
+        </div>
+        <div>
+            <a mat-list-item routerLink="restaurateurs/{{ownerId}}" class="user-name">
+                <mat-icon>account_box</mat-icon> {{global.userName}}
+            </a>
+        </div>
+    </div>
+    <div *ngIf="!global.loginDisplay" class="flex-container">
+        <div id="logo" style="background-image: url(assets/logoafricaeats.png)"></div>
+    </div>
+    <div *ngIf="global.loginDisplay" class="flex-container-login">
+        <div class="btn-deconnexion" (click)="logout()">
+            <p class="txt-deconnexion">Se déconnecter</p>
+        </div>
+        <div id="logo" style="background-image: url(assets/logoafricaeats.png)"></div>
+    </div>
+</mat-nav-list>

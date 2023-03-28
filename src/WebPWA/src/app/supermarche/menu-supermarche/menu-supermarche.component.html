@@ -1,0 +1,19 @@
+<div class="menu" fxLayout="row">
+    <div class="menu-login" fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            menu_book
+        </span>
+        Supermarché
+    </div>
+</div>
+<div class="button-menu-content">
+    <div class="flex-container-menu-button">
+        <div class="txt-menu-long" (click)="openDialogAjoutCategorie()">Ajouter une catégorie</div>
+        <div class="txt-menu-long" (click)="openDialogAjoutRayon()">Ajouter un rayon</div>
+    </div>
+    <div class="flex-container-menu-button">
+        <div class="txt-menu-long" (click)="openDialogAjoutProduit()">Ajouter un produit</div>
+        <div class="txt-menu-long" routerLink="/manager/{{supermarche.ownerId}}/{{supermarche.slugId}}/rayons">Rayons</div>          
+        <!-- <div class="txt-menu-long" routerLink="/manager/{{supermarche.ownerId}}/{{supermarche.slugId}}/produits">Produits</div> -->
+    </div>
+</div>

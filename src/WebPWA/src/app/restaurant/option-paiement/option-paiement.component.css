@@ -1,0 +1,438 @@
+.containerPaiement{
+    width: 100%;
+}
+
+.header{
+padding-top: 3%;
+padding-bottom: 3%;
+height: 25%;
+width: 100%;
+border-radius: 10px 10px 0px 0px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+color: white;
+margin-top: 0%;
+background-color: #146356;
+}
+
+.optionsPL{
+height: 50%;
+width: 100%;
+}
+
+.selectCategories{
+width: 100%;
+height: 5%;
+position: relative;
+}
+
+.ligneCategories{
+border: 1px solid #146356;
+width: 90%;
+}
+
+.Select{
+position: absolute;
+background-color: #FFFFEE;
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 24px;
+text-align: center;
+color: #146356;
+margin: 5px;
+font-family: Poppins;
+}
+        mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+        width: 17px;
+        height: 17px;
+      }
+
+.paiement{
+ width: 80%;
+}
+
+.logoPay{
+ width: 45px;
+ height: 45px;
+ margin: 8px 41px 8px 8px;
+}
+
+.logoPayOm{
+ width: 80px;
+ height: 40px;
+ margin: 8px;
+}
+
+.NbCommercial{
+ width: 70%; 
+}
+
+.payerOnline{
+ width: 80%; 
+}
+
+.msgPaiement{
+ width: 70%;
+ font-family: Poppins;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 10px;
+ color: rgba(0, 0, 0, 0.5); 
+}
+
+.livraison{
+ width: 70%;
+}
+
+.checkPay{
+ font-family: Poppins;
+ font-style: normal;
+ font-weight: 600;
+ font-size: 14px;
+ line-height: 36px;   
+ color: rgba(0, 0, 0, 0.5); 
+}
+
+input{
+width: 100%;
+height: 75%;
+border: 1px solid rgb(255, 255, 255);
+border-radius: 100px;
+outline:none;
+background: #FFFFFF;
+box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+text-align: left;
+padding-left: 1rem;
+}
+
+label{
+display: none;
+position: absolute;
+font-size: 13px;
+}
+
+input:focus{
+border: 0.5px solid #7986ff;
+box-shadow: 0 0 1px #146356;
+outline-offset: 0px;
+border-radius: 100px;
+width: 100%;
+height: 70%;
+text-align: left;
+padding-left: 1rem;
+font-size: 13px;
+}
+
+.icons input:not(:placeholder-shown) + label{
+color: #146356;
+display: block;
+left: 8%;
+bottom: 80%;
+}
+
+#icons1-icon-form {
+position: absolute;
+color: #146356;
+font-size: 18px;
+right: 8px;
+}
+
+
+input::placeholder{
+font-family: Poppins;
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+text-transform: capitalize;
+color: rgba(51, 70, 255, 0.5);
+}
+
+.iconsContainer{
+height: 65px;
+width: 150px;
+position: relative;
+}
+
+.icons{
+height: 80%;
+width: 100%;
+position: relative;
+}
+
+.iconsValid{
+height: 10%;
+width: 88%;
+position: absolute;
+top: 85%;
+}
+
+.validation{
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 11px;
+color: #a11c1c;
+font-weight: 500;
+}
+
+#icon-validation{
+color: #a11c1c;
+font-size: 10px;
+margin-right: 3px;
+}
+
+
+#icon-form{
+position: absolute;
+color: #146356;
+font-size: 18px;
+right: 14px;
+background: #FFFFFF;
+}
+
+.footer{
+width: 100%;
+height: 55px;
+margin-bottom:5%;
+}
+
+.confirmerbtn{
+ width: 45%;
+ height: 60%;
+ padding-bottom: 1%;
+ padding-top: 1%;
+ background: #146356;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ border-radius: 25px;
+ font-style: normal;
+ font-weight: 500;
+ font-size: 17px;
+ line-height: 27px;
+ color: white;
+}
+
+@media only screen and (min-width: 961px){
+    .containerPaiement{
+        width: 100%;
+    }
+    
+    .header{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 25%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 0%;
+    background-color: #146356;
+    }
+    
+    .optionsPL{
+    height: 50%;
+    width: 100%;
+    }
+    
+    .selectCategories{
+    width: 100%;
+    height: 5%;
+    position: relative;
+    }
+    
+    .ligneCategories{
+    border: 1px solid #146356;
+    width: 90%;
+    }
+    
+    .Select{
+    position: absolute;
+    background-color: #FFFFEE;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #146356;
+    margin: 5px;
+    font-family: Poppins;
+    }
+    mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+    width: 21px;
+    height: 21px;
+    }
+    
+    .paiement{
+    width: 70%;
+    }
+    
+    .logoPay{
+    width: 60px;
+    height: 60px;
+    margin: 10px 48px 10px 10px;
+    }
+    
+    .logoPayOm{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    }
+
+    .logoPayContainer{
+        width: 100px;
+        height: 50px;
+    }
+    
+    .NbCommercial{
+    width: 70%; 
+    }
+    
+    .payerOnline{
+    width: 70%; 
+    }
+    
+    .msgPaiement{
+    width: 70%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.5); 
+    }
+    
+    .livraison{
+    width: 70%;
+    }
+    
+    .checkPay{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 36px;   
+    color: rgba(0, 0, 0, 0.5); 
+    }
+    
+    input{
+    width: 100%;
+    height: 75%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    outline:none;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+    text-align: left;
+    padding-left: 1rem;
+    }
+    
+    label{
+    display: none;
+    position: absolute;
+    font-size: 13px;
+    }
+    
+    input:focus{
+    border: 0.5px solid #7986ff;
+    box-shadow: 0 0 1px #146356;
+    outline-offset: 0px;
+    border-radius: 100px;
+    width: 100%;
+    height: 70%;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 13px;
+    }
+    
+    .icons input:not(:placeholder-shown) + label{
+    color: #146356;
+    display: block;
+    left: 8%;
+    bottom: 80%;
+    }
+    
+    #icons1-icon-form {
+    position: absolute;
+    color: #146356;
+    font-size: 20px;
+    right: 10px;
+    }
+    
+    
+    input::placeholder{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: rgba(51, 70, 255, 0.5);
+    }
+    
+    .iconsContainer{
+    height: 80px;
+    width: 200px;
+    position: relative;
+    }
+    
+    .icons{
+    height: 80%;
+    width: 100%;
+    position: relative;
+    }
+    
+    .iconsValid{
+    height: 10%;
+    width: 88%;
+    position: absolute;
+    top: 85%;
+    }
+    
+    .validation{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #a11c1c;
+    font-weight: 500;
+    }
+    
+    #icon-validation{
+    color: #a11c1c;
+    font-size: 12px;
+    margin-right: 5px;
+    }
+    
+    
+    #icon-form{
+    position: absolute;
+    color: #146356;
+    font-size: 20px;
+    right: 20px;
+    background: #FFFFFF;
+    }
+    
+    .footer{
+    width: 100%;
+    height: 55px;
+    margin-bottom:5%;
+    }
+    
+    .confirmerbtn{
+    width: 45%;
+    height: 70%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: white;
+    }
+}

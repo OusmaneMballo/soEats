@@ -1,0 +1,42 @@
+<div class="head">
+    <div class="title">
+       Contactez-nous 
+    </div>
+</div>
+<div fxLayoutAlign="center center">
+    <img class="img" src="../../../assets/img/contact_us.png" alt="">
+</div>
+<div>
+    <form [formGroup]="contactForm" (ngSubmit)="sendMessage()" fxLayoutAlign="center center">
+        <div class="champ-form">
+            <div>
+                <input class="champ" type="text" formControlName="prenom" placeholder="Prenom"/>
+            </div>
+            <div>
+                <input class="champ" type="text" formControlName="nom" placeholder="Nom"/>
+            </div>
+            <div>
+                <input class="champ" type="text" formControlName="email" placeholder="Email"/>
+                <p *ngIf="errorInput==true" class="msg-error">Adresse mail invalide!</p>
+            </div>
+            <div>
+                <input class="champ" type="text" formControlName="objet" placeholder="Objet"/>
+            </div>
+            <div>
+                <textarea class="msg" name="" id="" formControlName="message" placeholder="Votre message ici..."></textarea>
+            </div>
+            <div>
+                <input class="btn" type="submit" value="Confirmer" name="" id="">
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="contact" fxLayoutAlign="center center">
+    <div fxLayoutAlign="center center">
+        <mat-icon> mail_outline</mat-icon><span class="cnt-txt">contact@so-eats.com</span>
+    </div>
+    <div  fxLayoutAlign="center center">
+        <mat-icon> ring_volume</mat-icon><span class="cnt-txt">+221 77 197 90 43</span>
+    </div>
+</div>

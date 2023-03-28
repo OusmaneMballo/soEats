@@ -1,0 +1,64 @@
+<body >
+    <mat-toolbar *ngIf="superMarket.name">
+        <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/manager/{{superMarket.ownerId}}/{{superMarket.slugId}}/commandes">keyboard_backspace</mat-icon>
+        <span>{{superMarket.name}}</span>
+    </mat-toolbar>
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <div class="containerDetails">
+            <div class="infoEntete" fxLayout="row" fxLayoutAlign="space-between start">
+                <div class="">
+                    <p>
+                        {{commande.customerFirstname}} {{commande.customerLastname}}
+                    </p>
+                    <p fxLayoutAlign="space-between center">
+                        <span class="material-icons" id="icon-contact">
+                            call
+                        </span>
+                        +{{commande.customerPhoneNumber}}
+                    </p>
+                </div>
+                <div class="" >
+                    <p>
+                        {{commande.orderDate | date: 'dd/MM/yyyy'}} à {{commande.orderDate | date: 'HH:mm'}}
+                    </p>
+                    <p>
+                        {{commande.customerEmail}}
+                    </p>
+                </div>
+            </div>
+            <div class="infoEntete" fxLayout="row" fxLayoutAlign="space-between start">
+                <p>
+                {{commande.customerAdress}}
+                </p>
+            </div>
+            <div  *ngIf="commande.orderProductItems" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div *ngFor="let orderProduct of commande.orderProductItems"  class="containerCategorie" fxLayoutAlign="center center">
+                    <div class="nbProduct" fxLayoutAlign="center center"> {{orderProduct.quantity}}x </div>
+                    <img class="imgCategorie" [src]="orderProduct.product.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                        <p>{{orderProduct.product.name}}</p>
+                        <p>{{orderProduct.product.price}} FCFA</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="ligneCategorie"/>
+            <div fxLayout="row" fxLayoutAlign="start start" >
+                <div class="fontLivraison">Commentaire: </div>
+                <div class="fontPlace" fxLayoutAlign="center center">{{commande.remark}}</div>      
+            </div>
+            <hr class="ligneCategorie"/>
+            <p class="fontLivraison" fxLayoutAlign="center center">
+                Total: {{commande.amount}} FCFA 
+            </p>
+            <hr class="ligneCategorie"/>
+            <div class="infoEntete" fxLayout="column" fxLayoutAlign="center center">
+                <p *ngIf="commande.orderDeliveryMethod == 0" class="fontPlace">
+                    Se faire livrer
+                </p>
+                <p *ngIf="commande.orderDeliveryMethod == 0" class="fontLivraison">
+                    Frais de livraison: {{commande.deliveryPrice}}f CFA
+                </p>
+            </div>
+        </div>
+    </div>
+</body>

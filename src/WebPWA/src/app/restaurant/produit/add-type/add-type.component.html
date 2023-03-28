@@ -1,0 +1,12 @@
+<form class="form" #FormCreateTypeProduct=ngForm  (ngSubmit)="createProductType()" fxLayout='column' fxLayoutAlign="center center"> 
+    <div fxLayout='column' fxLayoutAlign="center center">
+        <mat-form-field appearance="outline">
+            <mat-label>Nom du type</mat-label>
+            <input [(ngModel)]="typeProduct.displayName" name="displayName" matInput required #typeProduct.displayName>
+            <mat-icon matSuffix>class</mat-icon>
+          </mat-form-field>
+    </div>
+    <div class="footer" fxLayoutAlign="center end">
+        <button class="confirmerbtn" mat-raised-button>Confirmer</button>
+    </div>
+</form>

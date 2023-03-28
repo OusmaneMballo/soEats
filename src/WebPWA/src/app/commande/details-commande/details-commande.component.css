@@ -1,0 +1,220 @@
+body{
+    background: #EBEDEE;
+    height: auto;
+}
+
+span {
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+mat-toolbar {
+    background-color: #146356; 
+    color: white;   
+    }
+
+.btn-retour {
+    cursor: pointer;
+    width: 30px;
+    height: 25;
+    font-size: 30px;
+   }
+
+.containerDetails{
+   width: 100%;
+   margin: 20px;
+   background: #FFFFFF;
+   padding-left: 5%;
+   padding-right: 5%;
+}
+
+.infoEntete{  
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+text-transform: capitalize;
+color: rgba(0, 0, 0, 0.7);
+margin: 10px;
+}
+
+#icon-contact{
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 18px;
+}
+
+.containerCategories2{
+    width: 100%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;  
+    line-height: 16px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .containerCategorie{
+    width: 100%;
+    margin: 7px;
+  }
+
+  .imgCategorie{
+    width: 66px;
+    height: 66px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+  }
+
+  #menu{
+    cursor: pointer;
+  }
+  .infosCategorie{
+    width: 70%;
+    height: 63px;
+    margin-left: 15px;
+  }
+
+  .namePriceMenu{
+    width: 100%;
+    height: 25%;
+  }
+
+  .productsMenu{
+    margin: 2px 2px 2px 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;   
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .nbProduct{
+    width: 46px;
+    height: 66px; 
+  }
+
+  .ligneCategories{
+    border: 0.5px solid rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+
+  .fontLivraison{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px; 
+    text-transform: capitalize;  
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .fontPlace{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .selectCategories{
+    width: 100%;
+    height: 5%;
+    position: relative;
+    }
+    
+
+    .Select{
+      position: absolute;
+      background: #FFFFFF;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 5px;
+      font-family: Poppins;
+      }
+
+      ::ng-deep.padding-dialog-details-menu .mat-dialog-container {
+        padding: 0px;
+        width: 443px;
+        height: 550px;
+        background: #FFFFFF;
+      }
+  
+  @media only screen and (min-width: 961px){
+    .containerDetails{
+      margin: 90px;
+   }
+
+   .infoEntete{
+    font-size: 30px;
+    line-height: 48px;
+    margin: 30px;
+    }
+
+    .containerCategories2{
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    .imgCategorie{
+      width: 126px;
+      height: 126px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: 15px;
+    }
+  
+    .infosCategorie{
+      width: 80%;
+      height: 120px;
+      margin-left: 15px;
+    }
+
+    .productsMenu{
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    .nbProduct{
+      width: 126px;
+      height: 126px; 
+    }
+
+    .fontLivraison{
+      font-size: 24px;
+      line-height: 36px; 
+    }
+  
+    .fontPlace{
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    #icon-contact{
+     font-size: 30px;
+  }
+
+  .Select{
+    position: absolute;   
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    background: #FFFFFF;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    font-family: Poppins;
+    }
+  }

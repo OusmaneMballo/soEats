@@ -1,0 +1,133 @@
+
+
+.description{
+    width: 100%;
+    height: 100%;
+    font-family: Poppins-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+  }
+
+  .desc{
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+  
+  }
+
+  #icon-create{
+    color: #146356;
+    margin-left: 82%;
+    font-size: large;
+    cursor: pointer;
+    margin-top: -6%;
+  }
+
+  .ligne{
+      width: 100%;
+      border: 0.5px solid rgba(51, 70, 255, 0.5);
+      margin: 1.5px;
+  }
+
+  ::ng-deep .panelModifModalDesc .mat-dialog-container {
+    width: 304px;
+    height: 256px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    padding: 5px;
+  }
+
+  @media only screen and (min-width: 420px) and (max-width: 961px){
+    .description{
+      height: 63%;
+    }
+  }
+
+
+  @media only screen and (min-width: 961px){
+  .description{
+    width: 100%;
+    height: 90%;
+    font-family: Poppins-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  .desc{
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    font-size: 16px;
+  }
+
+  #icon-create{
+    color: #146356;
+    margin-left: 95%;
+    font-size: x-large;
+    cursor: pointer;
+  }
+
+  .ligne{
+      width: 100%;
+      border: 0.5px solid rgba(51, 70, 255, 0.5);
+      margin: 1.5px;
+  } 
+  
+  ::ng-deep .panelModifModalDesc .mat-dialog-container {
+    width: 504px;
+    height: 356px;
+    background: #FFFFEE;
+    border-radius: 3px;
+    padding: 10px;
+  }
+
+}
+
+  @media only screen and (min-width: 1440px){
+    .description{
+      width: 100%;
+      height: 100%;
+      font-family: Poppins-Light;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 30px;
+      color: #000000;
+    }
+  
+    .desc{
+      width: 100%; 
+      height: 100%;
+      overflow: auto;
+      font-size: 16px;
+    }
+  
+    #icon-create{
+      color: #146356;
+      margin-left: 96%;
+      font-size: x-large;
+      cursor: pointer;
+    }
+  
+    .ligne{
+        width: 100%;
+        border: 0.5px solid rgba(51, 70, 255, 0.5);
+        margin: 1.5px;
+    } 
+  
+
+    ::ng-deep .panelModifModalDesc .mat-dialog-container {
+      width: 504px;
+      height: 356px;
+      background: #FFFFEE;
+      border-radius: 3px;
+      padding: 10px;
+    }
+
+  }

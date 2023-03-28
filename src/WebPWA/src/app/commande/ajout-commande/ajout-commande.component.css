@@ -1,0 +1,409 @@
+mat-toolbar{
+    background-color: #146356; 
+    color: white;   
+}
+
+.title{
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.loader-container{
+    position: absolute; /* postulat de départ */
+    width: 100%;
+    height: 100%;
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%);
+}
+
+.nom-restau{
+    width: 100%;
+    height: 30px;
+    padding-top: 15px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.btn-retour{
+    cursor: pointer;
+    width: 30px;
+    height: 25;
+    font-size: 30px;
+    margin-left: 7px;
+}
+
+.commande{
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form{
+    width: 100%;
+}
+
+.content-form{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.container > div{
+    width: 260px;
+    height: 38px;
+    margin: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.champs{
+    width: 230px;
+    height: 38px;
+    padding-left: 15px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border: none;
+    background-color: #EBEDEE;
+}
+
+input::placeholder{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+input:focus {
+    outline:  none;
+    background-color: #d1d1d1;
+}
+
+hr{
+    width: 100%;
+    height: 0px;
+    border: 0.1px solid rgba(51, 70, 255, 0.15);
+}
+
+.input{
+    width: 100%;
+    background-color: #d1d1d1;
+}
+
+#icon{
+    height: 38px;
+    align-items: center;
+    padding-top: 5px;
+
+    color: rgba(0, 0, 0, 0.5);
+    float: right;
+    position: relative;
+    z-index: 2;
+    margin-top: -35px;
+    margin-right: 6px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border: none;
+    background-color: #EBEDEE;
+}
+.container-radio{
+    display: flex;
+  flex-direction: row;
+}
+
+.container-radio > div{
+    align-items: center;
+}
+
+label{
+    margin: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+select{
+    width: 238px;
+    height: 38px;
+    background: #EBEDEE;
+    border: solid 0px;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+option{
+    background: #EBEDEE;
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.txt{
+    margin-top: 9px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.bouton{
+    margin-top: 12px;
+}
+
+.btn-valider{
+    width: 105px;
+    height: 30px;
+    margin-left: 35%;
+    margin-top: 5px;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: #146356 ;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn-valider > p{
+    font-family: Poppins;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 31px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.msg-error{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 11px;
+    color: rgb(197, 34, 34);
+}
+
+@media only screen and (min-width: 320px){
+    #icon{
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 650px){
+
+    .container{
+        margin-left: 9%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;   
+    }
+
+    .commande{
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .container > div{
+        width: 243px;
+        height: 45px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .champs{
+        width: 213px;
+        height: 45px;
+        padding-left: 15px;
+        border-radius: 12px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: none;
+        background-color: #EBEDEE;
+    }
+
+    #icon{
+        height: 45px;
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+
+    .container-radio{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    label{
+        font-size: 16px;
+    }
+
+    input[type=radio] {
+        border: solide 5px #146356;
+        width: 20px;
+        height: 20px; 
+    } 
+
+    .bouton{
+        margin-top: 10px;  
+    }
+
+    .btn-valider{
+        width: 155px;
+        height: 35px;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+
+    .btn-valider > p{
+        font-size: 19px;
+        line-height: 34px;
+    }
+    
+}
+
+@media only screen and (min-width: 360px){
+    #icon{
+        margin-top: 0px;
+    }
+    .btn-valider{
+        width: 155px;
+        height: 35px;
+        margin-top: 10px;
+        margin-left: 35%;
+        border-radius: 20px;
+    }
+    .btn-valider > p{
+        font-size: 19px;
+        line-height: 34px;
+    }
+}
+
+@media only screen and (min-width: 375px){
+    #icon{
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #icon{
+        margin-top: 0px;
+    }
+
+    .container{
+        margin-left: 2.5%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;   
+    }
+}
+
+@media only screen and (min-width: 860px){
+    .empty{
+        display: none;
+    }
+
+    #icon{
+        height: 45px;
+        width: 40px;
+        padding-top: 10px;
+    }
+
+    .content-form{
+        width: 525px;
+        margin-left: 25%;
+        border-radius: 15px;
+        margin-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #a2aaf552;
+        
+    }
+
+    
+
+    .container > div{
+        width: 299px;
+        margin-top: 20px;
+    }
+
+    .champs{
+        width: 253px;
+        height: 45px;
+        padding-left: 15px;
+        border-radius: 12px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border: none;
+        background-color: #EBEDEE;
+    }
+
+    select{
+        width: 290px;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1198px){
+    .content-form{
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (min-width: 1255px){
+    .content-form{
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (min-width: 1320px){
+    .content-form{
+        margin-left: 34%;
+    }
+}
+
+@media only screen and (min-width: 1560px){
+    .content-form{
+        margin-left: 35%;
+    }
+}
+
+@media only screen and (min-width: 1560px){
+    .content-form{
+        margin-left: 35%;
+    }
+}

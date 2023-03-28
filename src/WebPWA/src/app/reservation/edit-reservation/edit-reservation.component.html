@@ -1,0 +1,150 @@
+
+    <div class="containerReserv" fxLayout='column' fxLayoutAlign="start center">
+        <div class="header" fxLayoutAlign="center center">
+           Modifier la réservation     
+        </div>
+        <form class="form" [formGroup]="editForm"  (submit)="editReservation()" fxLayout="column" fxLayoutAlign="center center">
+        <div class="body" fxLayout="column" fxLayoutAlign="center center">
+          <div  class="input-icons" fxLayout="row wrap"fxLayoutAlign="center center">
+            <div class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center center">
+              <div  class="icons" fxLayout="row wrap" fxLayoutAlign="end center">
+                <span class="material-icons" id="icon-form">
+                  person_outline
+                </span>
+                  <input formControlName="reservatorFirstname" id="" type="text" placeholder="Prénom"/>
+                  <label class="focus-visible-only" for="">Prénom</label>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && editForm.controls.reservatorFirstname.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="editForm.controls.reservatorFirstname.errors.required">
+                  Saisissez votre prénom
+                </div>
+              </div>
+            </div>
+            <div class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center center">
+              <div  class="icons" fxLayout="row wrap" fxLayoutAlign="end center">
+                <span class="material-icons" id="icon-form">
+                  person_outline
+                </span>
+                <input formControlName="reservatorLastname" type="text" placeholder="Nom">
+                <label class="focus-visible-only" for="">Nom</label>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && editForm.controls.reservatorLastname.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="editForm.controls.reservatorLastname.errors.required">
+                  Saisissez votre nom
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="input-icons" fxLayout="row wrap">
+            <div class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center center">
+              <div  class="icons" fxLayout="row wrap" fxLayoutAlign="end center">
+                <span class="material-icons" id="icon-form">
+                  phone
+                </span>
+                <input formControlName="reservatorPhoneNumber" type="text" placeholder="Téléphone">
+                <label class="focus-visible-only" for="">Téléphone</label>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && editForm.controls.reservatorPhoneNumber.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="editForm.controls.reservatorPhoneNumber.errors.required">
+                  Saisissez votre numero téléphone
+                </div>
+                <div class="validation" *ngIf="editForm.controls.reservatorPhoneNumber.errors.pattern">
+                  Le format du numero xx yyy zz ww
+                </div>
+              </div>
+            </div>
+            <div class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center center">
+              <div class="icons" fxLayout="row wrap" fxLayoutAlign="end center">
+                <span class="material-icons" id="icon-form">
+                  email
+                </span>
+                <input formControlName="reservatorEmail" type="email" placeholder="Email">
+                <label class="focus-visible-only" for="">Email</label>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && editForm.controls.reservatorEmail.errors" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="editForm.controls.reservatorEmail.errors.required">
+                  Saisissez votre email
+                </div>
+                <div class="validation" *ngIf="editForm.controls.reservatorEmail.errors.pattern">
+                  Le format de l'email est incorrect
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  class="input-icons" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="icons1Container" fxLayout="row wrap" fxLayoutAlign="center center">
+              <div class="icons1" fxLayoutAlign="end center">
+                  <mat-datepicker-toggle id="icons1-icon-form" matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <input formControlName="reservationDate" placeholder="Date" [matDatepicker]="picker" readonly [min]="today">
+                  <label class="focus-visible-only" for="">Date</label>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && editForm.controls.reservationDate.errors" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="editForm.controls.reservationDate.errors.required">
+                  Obligatoire
+                </div>
+              </div>
+            </div>
+            <div class="icons2Container" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div class="icons2" fxLayoutAlign="end center">
+              <label class="focus-visible-only" for="">Horaire</label>
+              <input type="time" formControlName="reservationTime"  required id="selectHoraire"/>
+            </div>
+            <div class="iconsValid" *ngIf="submitted && editForm.controls.reservationTime.errors" fxLayoutAlign="start center">
+              <span class="material-icons" id="icon-validation">
+                info
+              </span>
+              <div class="validation" *ngIf="editForm.controls.reservationTime.errors.required">
+                Obligatoire
+              </div>
+            </div>
+            </div>
+            <div class="icons2Container" fxLayout="row wrap" fxLayoutAlign="center center">
+              <div class="icons3" fxLayoutAlign="end center">
+                <select formControlName="numberOfPlaces" required id="selectPlace" type="number">
+                  <option value="" disabled selected >Place</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                </select>
+                <label class="focus-visible-only" for="">Place</label>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && editForm.controls.numberOfPlaces.errors" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="editForm.controls.numberOfPlaces.errors.required">
+                  Obligatoire
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer" fxLayoutAlign="space-around center">
+          <button  class="confirmerbtn" mat-raised-button>Modifier</button>
+          <div *ngIf="data.reservationStatus == 0" class="edit-btn" mat-raised-button (click)="close()" fxLayoutAlign="center center">Supprimer</div>
+        </div>
+        </form>
+    </div>

@@ -1,0 +1,187 @@
+.containerDialog{
+    height: 350px;
+    width: 100%;
+}
+
+.headerDialog{
+    height: 10%;
+    width: 100%;
+    font-family: Poppins-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: lowercase;
+    color: #000000;
+    margin-top: 2%;
+}
+
+#iconCancel{
+    color: #146356;
+    font-size: x-large;
+    cursor: pointer;
+    margin-left: 12%;
+    margin-right: 3%;
+}
+
+.bodyDialoglabel{
+    height: 60%;
+    width: 80%;
+    position: relative;
+}
+
+.label{
+    height: 100%;
+    width: 100%;
+}
+
+.bodyDialog{
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    background: #FFFFEE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    margin: 1%;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+#add-logo{
+    font-size: 80px;
+    color: rgba(51, 70, 255, 0.15);
+    cursor: pointer;
+}
+
+.footerDialog{
+   height: 25%;
+   width: 100%;
+   background: #146356;
+   margin-top: 15%;
+}
+
+.bodyDialoglabel > input
+{
+    display: none;
+}
+
+.addLogo{
+    width: 40%;
+    height: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-family: Poppins-SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #146356;
+}
+
+.previewLogo{
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    position: absolute;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 420px) {
+     
+.containerDialog{
+    width: 470px;
+    height: 450px;
+    width: 100%;
+}
+
+.headerDialog{
+    height: 10%;
+    width: 100%;
+    font-family: Poppins-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: lowercase;
+    color: #000000;
+    margin-top: 2%;
+}
+
+#iconCancel{
+    color: #146356;
+    font-size: xx-large;
+    cursor: pointer;
+    margin-left: 12%;
+    margin-right: 3%;
+}
+
+.bodyDialoglabel{
+    height: 65%;
+    width: 80%;
+    position: relative;
+}
+
+.label{
+    height: 100%;
+    width: 100%;
+}
+
+.bodyDialog{
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    background: #FFFFEE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    margin: 1%;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+#add-logo{
+    font-size: 100px;
+    color: rgba(51, 70, 255, 0.15);
+    cursor: pointer;
+}
+
+.footerDialog{
+   height: 20%;
+   width: 100%;
+   background: #146356;
+   margin-top: 15%;
+}
+
+.bodyDialoglabel > input
+{
+    display: none;
+}
+
+.addLogo{
+    width: 40%;
+    height: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-family: Poppins-SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #146356;
+}
+
+.previewLogo{
+    height: 100%;
+    width: 100%;
+    color: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+    position: absolute;
+    cursor: pointer;
+}
+}

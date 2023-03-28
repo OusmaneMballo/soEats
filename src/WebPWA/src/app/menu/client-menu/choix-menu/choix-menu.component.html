@@ -1,0 +1,94 @@
+<div class="header">
+    Menu {{data.name}}
+</div>
+  <form [formGroup]="produitForm" (ngSubmit)="addPanier(data)" fxLayout="column" fxLayoutAlign="start center">
+    <div class="main">
+      <article *ngIf="entrees[0]!=null">
+        <p class="categorie"> Entrée</p>
+        <div class="container" *ngFor="let produit of entrees">
+          <div class="container-prod">
+            <div>
+              <input type="radio" class="bouton" formControlName="entre" value="{{produit.id}}"/>
+            </div>
+            <div>
+              <img class="img-prod" src="{{produit.imageUrl}}" alt=""/>
+            </div>
+            <div>
+              <p class="txt">{{produit.name}}</p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+      </article>
+      <article *ngIf="plats[0]!=null">
+        <p class="categorie"> Plat</p>
+        <div class="container" *ngFor="let produit of plats">
+          <div class="container-prod">
+            <div>
+              <input type="radio" class="bouton" formControlName="plat" value="{{produit.id}}"/>
+            </div>
+            <div>
+              <img class="img-prod" src="{{produit.imageUrl}}" alt=""/>
+            </div>
+            <div>
+              <p class="txt">{{produit.name}}</p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+      </article>
+      <article *ngIf="boissons[0]!=null">
+        <p class="categorie"> Boisson</p>
+        <div class="container" *ngFor="let produit of boissons">
+          <div class="container-prod">
+            <div>
+              <input type="radio" class="bouton" formControlName="boisson" value="{{produit.id}}"/>
+            </div>
+            <div>
+              <img class="img-prod" src="{{produit.imageUrl}}" alt=""/>
+            </div>
+            <div>
+              <p class="txt">{{produit.name}}</p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+      </article>
+      <article *ngIf="desserts[0]!=null">
+        <p class="categorie"> Dessert</p>
+        <div class="container" *ngFor="let produit of desserts">
+          <div class="container-prod">
+            <div>
+              <input type="radio" class="bouton" formControlName="dessert" value="{{produit.id}}"/>
+            </div>
+            <div>
+              <img class="img-prod" src="{{produit.imageUrl}}" alt=""/>
+            </div>
+            <div>
+              <p class="txt">{{produit.name}}</p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+      </article>
+      <article *ngIf="patisseries[0]!=null">
+        <p class="categorie"> Pâtisserie</p>
+        <div class="container" *ngFor="let produit of patisseries">
+          <div class="container-prod">
+            <div>
+              <input type="radio" class="bouton" formControlName="patisserie" value="{{produit.id}}"/>
+            </div>
+            <div>
+              <img class="img-prod" src="{{produit.imageUrl}}" alt=""/>
+            </div>
+            <div>
+              <p class="txt">{{produit.name}}</p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+      </article>
+      </div>
+      <p *ngIf="error=='Invalide'" class="msg-error">Veuillez choisir un produit pour chaque categorie!</p>
+      <button class="btn-valider" ><p>Valider</p></button>
+  </form>

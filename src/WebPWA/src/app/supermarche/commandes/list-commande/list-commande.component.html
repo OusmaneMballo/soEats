@@ -1,0 +1,123 @@
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/manager/{{supermarket.ownerId}}/{{supermarket.slugId}}">keyboard_backspace</mat-icon>
+    <span>{{supermarket.name}}</span>
+</mat-toolbar>
+  <br>
+  <div class="content">
+    <mat-accordion *ngIf="commandes">
+        <mat-expansion-panel hideToggle [expanded]=true>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <h6>
+                        Commandes à traiter  
+                        <span class="material-icons" id="icon-contact">
+                            swap_vert
+                        </span>                
+                    </h6>
+                </mat-panel-title>    
+        </mat-expansion-panel-header>
+        <div class="search" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div  class="icons" fxLayout="row wrap" fxLayoutAlign="center center">
+                <span class="material-icons" id="icon-form">
+                  search
+                </span>
+                <input id="" type="search" placeholder="Rechercher ... " [(ngModel)]="searchCmdAtraiter" autocomplete="off"/>
+            </div>
+        </div>
+          <div>
+            <pagination-controls id="pagination1" (pageChange)="cp = $event"></pagination-controls>
+            <div class="lignep" fxLayout="row wrap">
+                <div *ngFor="let cmd of commandes | filter: searchCmdAtraiter | paginate: {id: 'pagination1', itemsPerPage: 6, currentPage: cp}" class="ligne">
+                    <mat-card   class="example-card">
+                        <mat-card-content>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <div class="col2">{{cmd.customerFirstname}} {{cmd.customerLastname}}</div>
+                                <div class="col1" fxLayoutAlign="end center">{{cmd.orderDate | date: 'dd/MM/yyyy'}} A {{cmd.orderDate | date: 'HH:mm'}}</div>
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <div class="col1" ><img src="../../assets/icons/tele.png" class="icon">   
+                                    {{cmd.customerPhoneNumber}}
+                                </div>
+                                <div class="col1" fxLayoutAlign="center center">
+                                    <div class="details"(click)="details(cmd.id)">
+                                        Détails
+                                    </div>  
+                                </div>
+                            </div>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <div fxLayout="row" fxLayoutAlign="space-around center" class="row2" fxLayoutGap='5px'>
+                                <button class="buttonValider"  (click)="traiterCommande(cmd)"><p class="btntitre">Traiter</p></button>   
+                                <button class="buttonAnnuler"  (click)="annulerCommande(cmd)"><p class="btntitre">Annuler</p></button> 
+                            </div>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </div>  
+    </div>
+    </mat-expansion-panel>
+    </mat-accordion>
+    <br>
+     <mat-accordion *ngIf="commandesTraiter">
+        <mat-expansion-panel hideToggle [expanded]="panelOpenState">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h6>Commandes terminées    
+                    <span class="material-icons" id="icon-contact">
+                        swap_vert
+                     </span>                 
+                </h6>
+          </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <div class="search" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div  class="icons" fxLayout="row wrap" fxLayoutAlign="center center">
+                <span class="material-icons" id="icon-form">
+                  search
+                </span>
+                <input id="" type="search" placeholder="Rechercher ..." [(ngModel)]="searchCmdTraiter" autocomplete="off"/>
+            </div>
+        </div>
+        <div>
+            <div class="lignep"> 
+                <pagination-controls id="pagination2" (pageChange)="cp1 = $event"></pagination-controls>
+                    <div class="lignep" fxLayout="row wrap">
+                        <div *ngFor="let cmd of commandesTraiter | filter: searchCmdTraiter | paginate: {id: 'pagination2', itemsPerPage: 6, currentPage: cp1}" class="ligne">
+                            <mat-card   class="example-card">
+                                <mat-card-content>
+                                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                                        <div class="col2">{{cmd.customerFirstname}} {{cmd.customerLastname}}</div>
+                                        <div class="col1" fxLayoutAlign="end center">{{cmd.orderDate | date: 'dd/MM/yyyy'}} A {{cmd.orderDate | date: 'HH:mm'}}</div>
+                                    </div>
+                                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                                        <div class="col1" ><img src="../../assets/icons/tele.png" class="icon">   
+                                            {{cmd.customerPhoneNumber}}
+                                        </div>
+                                        <div class="col1" fxLayoutAlign="center center">
+                                            <div class="details"(click)="details(cmd.id)" >
+                                                Détails
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions  *ngIf="cmd.orderStatus===1" class="validercard">
+                                    <div fxLayout="row" fxLayoutAlign="center center" class="bascard2">
+                                        <p class="btntitre1" fxLayoutAlign="center center" style="color: aliceblue;">Validée</p> 
+                                    </div>
+                                </mat-card-actions>
+                                <mat-card-actions *ngIf="cmd.orderStatus===2" class="annulercard">
+                                    <div fxLayout="row"  fxLayoutAlign="center center" class="bascard2">
+                                        <p class="buttonAnnuler1 btntitre1" fxLayoutAlign="center center">Annulée</p>   
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </div>      
+            </div>
+        </div>
+    </mat-expansion-panel>
+    </mat-accordion>
+    <br> 
+  </div>
+  
+

@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class="container" fxLayoutAlign="center center">
+    <div *ngIf="listResto" class="grid-container" fxLayout="row wrap" fxLayoutAlign="start">
+        <div *ngFor="let item of listResto" class="grid-item" fxLayoutAlign="center end" >
+            <img  [src]= "item.imageUrl" class="img-restaurant" routerLink="/restaurant/{{item.slugId}}">
+            <div class="footer-restaus"
+            gdAreas="nom-restau detail">
+                <div class="nom-restau" gdArea="nom-restau"fxLayoutAlign="none end">
+                    <p>
+                        {{item.name}}
+                    </p>
+                </div>
+                <div class="detail" gdArea="detail">
+                    <button class="detail-restau"gdArea="detail" mat-raised-button routerLink="/restaurant/{{item.slugId}}">Détails</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

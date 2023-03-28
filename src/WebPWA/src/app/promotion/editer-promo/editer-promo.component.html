@@ -1,0 +1,64 @@
+<div class="header">
+    <p class="txt">Modifier une promotion</p>
+</div>
+<div class="content-form">
+   <form [formGroup]="promoForm" (ngSubmit)="editPromotion()">
+        <div fxLayout="column" fxLayoutAlign="start center" class="champ">
+            <div>
+                <input type="text" formControlName="name" class="nom" id="" placeholder="Nom de la promotion">
+            </div>
+            <div>
+                <ng-select
+                    formControlName="categorie"
+                    class="custom"
+                    [items]="listTypes"
+                    [multiple]="true"
+                    [closeOnSelect]="false"
+                    bindLabel="libelle"
+                    groupBy="type"
+                    bindValue="id"
+                    [(ngModel)]="selectedlistType">
+                    <ng-template ng-optgroup-tmp let-item="item">
+                        {{item.type || 'Unnamed group'}}
+                    </ng-template>
+                </ng-select>
+            </div>
+        </div>
+        <div class="content-reduction">
+            <p class="txt-reduction">Réduction</p>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <div *ngFor="let reduction of reductions" class="val-reduction" [ngStyle]="reduction.style" (click)="changementStyle(reduction.pourcentage)">{{reduction.pourcentage}}%</div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" class="champ">
+                <div>
+                    <input type="text" formControlName="reduction" class="champ-reduction" id="" placeholder="Saisir une réduction">
+                </div>
+            </div>
+        </div>
+       <div class="champ2">
+           <div class="champ-date">
+                <div>
+                    <label for="startDate">Date de début</label>
+                </div>
+                <div>
+                    <mat-datepicker-toggle id="icons1-icon-form" matSuffix [for]="startpicker"></mat-datepicker-toggle>
+                    <mat-datepicker #startpicker></mat-datepicker>
+                    <input formControlName="dateDebut" placeholder="jj/mm/aaaa" [matDatepicker]="startpicker" (dateChange)="serializeDateDebut($event)" readonly>
+                </div>
+           </div>
+           <div class="champ-date">
+                <div>
+                    <label for="endDate">Date de fin</label>
+                </div>
+                <div>
+                    <mat-datepicker-toggle id="icons1-icon-form" matSuffix [for]="endpicker"></mat-datepicker-toggle>
+                    <mat-datepicker #endpicker></mat-datepicker>
+                    <input formControlName="dateFin" placeholder="jj/mm/aaaa" [matDatepicker]="endpicker" (dateChange)="serializeDateFin($event)" readonly>
+                </div>
+           </div>
+       </div>
+       <div>
+           <button class="btn">Modifier</button>
+       </div>
+   </form>
+</div>

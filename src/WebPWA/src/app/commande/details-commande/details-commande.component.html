@@ -1,0 +1,88 @@
+<body >
+<mat-toolbar *ngIf="restaurant.name">
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}/commandes">keyboard_backspace</mat-icon>
+    <span>{{restaurant.name}}</span>
+</mat-toolbar>
+<div fxLayout="row" fxLayoutAlign="start center">
+         <div class="containerDetails">
+              <div class="infoEntete" fxLayout="row" fxLayoutAlign="space-between start">
+                <div class="">
+                     <p>
+                        {{commande.customerFirstname}} {{commande.customerLastname}}
+                     </p>
+                     <p fxLayoutAlign="space-between center">
+                        <span class="material-icons" id="icon-contact">
+                            call
+                        </span>
+                        +{{commande.customerPhoneNumber}}
+                    </p>
+                </div>
+                <div class="" >
+                    <p>
+                        {{commande.orderDate | date: 'dd/MM/yyyy'}} à {{commande.orderDate | date: 'HH:mm'}}
+                    </p>
+                    <p>
+                        {{commande.customerEmail}}
+                   </p>
+                </div>
+              </div>
+              <div class="infoEntete" fxLayout="row" fxLayoutAlign="space-between start">
+                     <p>
+                        {{commande.customerAdress}}
+                     </p>
+              </div>
+              <div  *ngIf="commande.orderProductItems" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div *ngFor="let orderProduct of commande.orderProductItems"  class="containerCategorie" fxLayoutAlign="center center">
+                    <div class="nbProduct" fxLayoutAlign="center center"> {{orderProduct.quantity}}x </div>
+                    <img class="imgCategorie" [src]="orderProduct.product.imageUrl"/> 
+                    <div class="infosCategorie" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                       <p>{{orderProduct.product.name}}</p>
+                       <p>{{orderProduct.product.price}} FCFA</p>
+                    </div>
+                </div>
+              </div>
+              <div *ngIf="commande.orderMenuItems.length" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+                <div class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+                    <hr class="ligneCategories"/>
+                    <p  mat-flat-button class="Select" > &nbsp; &nbsp; &nbsp; MENU &nbsp; &nbsp; &nbsp;</p>
+                </div>
+                <div *ngFor="let orderMenu of commande.orderMenuItems"  class="containerCategorie" fxLayoutAlign="center center">
+                    <div class="nbProduct" fxLayoutAlign="center center"> {{orderMenu.quantity}}x </div>
+                    <img id="menu" class="imgCategorie" [src]="orderMenu.menu.imageUrl" /> 
+                    <div class="infosCategorie" fxLayout='column' fxLayoutAlign="start start">
+                       <div  class="namePriceMenu" fxLayout='row wrop' fxLayoutAlign="space-between start">
+                            <p>{{orderMenu.menu.name}}</p>
+                            <p>{{orderMenu.menu.price}} FCFA</p>
+                       </div>
+                       <div class="productsMenu" fxLayout='column' fxLayoutAlign="start start">
+                        <span *ngFor="let product of orderMenu.menu.products" >
+                            {{product.name}}
+                        </span>   
+                       </div> 
+                    </div>                  
+                </div>
+              </div>
+              <hr class="ligneCategorie"/>
+              <div fxLayout="row" fxLayoutAlign="start start" >
+                <div class="fontLivraison">Commentaire: </div>
+                <div class="fontPlace" fxLayoutAlign="center center">{{commande.remark}}</div>      
+              </div>
+              <hr class="ligneCategorie"/>
+               <p class="fontLivraison" fxLayoutAlign="center center">
+                    Total: {{commande.amount}} FCFA 
+               </p>
+              <hr class="ligneCategorie"/>
+              <div class="infoEntete" fxLayout="column" fxLayoutAlign="center center">
+                <p *ngIf="commande.orderDeliveryMethod == 0" class="fontPlace">
+                    Se faire livrer
+                </p>
+                <p *ngIf="commande.orderDeliveryMethod == 0" class="fontLivraison">
+                    Frais de livraison: {{commande.deliveryPrice}}f CFA
+                </p>
+                <p *ngIf="commande.orderDeliveryMethod == 1" class="fontPlace">
+                    A emporter
+                </p>
+              </div>
+         </div>
+</div>
+</body>

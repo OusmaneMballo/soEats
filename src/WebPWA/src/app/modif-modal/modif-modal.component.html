@@ -1,0 +1,61 @@
+
+<div  *ngIf="data" class="containerModif" fxLayout="column" fxLayoutAlign="center center">
+      <div class="definirMenuIcon" fxLayoutAlign="end center">
+        <span class="material-icons" id="iconCancel" (click)="onClose()">
+           highlight_off
+        </span>
+      </div>
+    <form class="form" [formGroup]="f" *ngIf="f" (submit)="onEditRestaurant(f.value)" fxLayout="column" fxLayoutAlign="center center">
+    <div *ngIf="data.title === 'Telephone'" class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center start">
+        <div  class="icons" fxLayout="row wrap" fxLayoutAlign="center start">
+            <input formControlName="phoneNumber" id="Telephone" type="text" placeholder="{{data.title}}" />
+        </div>
+        <div class="iconsValid" *ngIf="submitted && f.controls.phoneNumber.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+          <span class="material-icons" id="icon-validation">
+            info
+          </span>
+          <div class="validation" *ngIf="f.controls.phoneNumber.errors.required">
+            Champs obligatoire
+          </div>
+          <div class="validation" *ngIf="f.controls.phoneNumber.errors.pattern">
+            Format xx yyy zz ww
+          </div>
+        </div>
+    </div>
+    <div *ngIf="data.title === 'nom-restau'" class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center start">
+        <div  class="icons" fxLayout="row wrap" fxLayoutAlign="center start">
+            <input formControlName="name" id="nom-restau" type="text" placeholder="{{data.title}}"/>
+        </div>
+        <div class="iconsValid" *ngIf="submitted && f.controls.name.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+          <span class="material-icons" id="icon-validation">
+            info
+          </span>
+          <div class="validation" *ngIf="f.controls.name.errors.required">
+            Champs obligatoire
+          </div>
+        </div>
+    </div>
+    <div *ngIf="data.title === 'Adresse'" class="iconsContainer" fxLayout="row wrap" fxLayoutAlign="center start">
+        <div  class="icons" fxLayout="row wrap" fxLayoutAlign="center start">
+            <input formControlName="address" id="Adresse" type="text" placeholder="{{data.title}}"/>
+        </div>
+        <div class="iconsValid" *ngIf="submitted && f.controls.address.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+          <span class="material-icons" id="icon-validation">
+            info
+          </span>
+          <div class="validation" *ngIf="f.controls.address.errors.required">
+            champs obligatoire
+          </div>
+        </div>
+    </div>
+    <div *ngIf="data.title === 'Description'" class="iconstextarea" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div  class="iconstextarea"  fxLayout="row wrap" fxLayoutAlign="center center">
+            <textarea formControlName="description" id="" type="text" placeholder="{{data.title}}..." ></textarea>
+        </div>
+    </div>
+    <div class="containerButtons" fxLayout="row wrap" fxLayoutAlign="center end">
+       
+        <button  class="btn" type="submit" mat-raised-button>Confirmer</button>
+    </div>
+    </form>
+</div>

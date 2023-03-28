@@ -1,0 +1,69 @@
+<mat-toolbar>
+  <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurateurs/{{restaurant.ownerId}}">keyboard_backspace</mat-icon>
+  <span class="title">
+    <div class="nom-restau" fxLayoutAlign="center center">
+      <p>
+        {{restaurant.name}}
+      </p>
+      <span class="material-icons" id="icon-modif-nom-resto" (click)="modifModal(restaurant, 'nom-restau')">
+        create
+      </span>
+    </div>
+  </span>
+</mat-toolbar>
+<div *ngIf="restaurant" class="container-sup" fxLayout="column" fxLayoutAlign="center center" >
+    <div class="container-restau" fxLayout="column" fxLayoutAlign="start end">  
+        <div class="rowProfilDesc"   fxLayoutAlign="start center">
+          <div class="col-35">
+            <app-logo-restaurant [restaurant]="restaurant"></app-logo-restaurant>
+          </div>
+          <div class="col-65">
+            <div class="description-restaurant">
+              <app-description-restaurant [restaurant]="restaurant" class="description-restaurant"></app-description-restaurant>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <hr class="ligne"/>
+        <div class="buttons"  fxLayoutAlign="space-around center">
+          <div class="voirReservation" fxLayout="row" fxLayoutAlign="space-between center">
+            <button class="buttonVoirReservation" mat-raised-button routerLink="/restaurateur/{{restaurant.ownerId}}/{{restaurant.slugId}}/reservations" >Voir vos réservations</button>        
+            <button class="buttonVoirReservation" mat-raised-button routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}/commandes" >Voir vos commandes</button>
+            <button class="buttonVoirReservation" mat-raised-button routerLink="/restaurateur/{{restaurant.ownerId}}/{{restaurant.slugId}}/promotions" >Voir vos Promotions</button>
+          </div>         
+        </div>
+        <hr class="ligne"/>
+        <div class="rowMenuDesc" fxLayout="row wrap">
+          <div class="col-35" >
+            <app-contact-restaurant [restaurant]="restaurant"></app-contact-restaurant>
+          </div>
+          <div class="col-65" >
+            <app-menu-restaurant [restaurant]="restaurant"></app-menu-restaurant>
+          </div>  
+        </div>
+        <div class="rowHoraire" fxLayout="column" fxLayoutAlign="start center">
+          <hr class="ligne"/>
+            <div class="col-35" fxLayout="row">
+              <div class="headerHoraires" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-contact">
+                  pending_actions
+                </span>
+                Horaires
+              </div>
+              <div class="definirHoraire" fxLayoutAlign="end center" mat-button>
+                Définir un horarire  
+                <span class="material-icons" id="icon-add" (click)="openDialog()">
+                    add_circle
+                </span>
+              </div>
+            </div>
+            <div>
+              <app-horaires-restaurant [restaurant]="restaurant"></app-horaires-restaurant>
+            </div>
+        </div>
+        <hr class="ligne"/>
+        <div class="content-images">
+          <app-images-restaurant [restaurant]="restaurant"></app-images-restaurant>
+        </div>
+    </div>
+</div>

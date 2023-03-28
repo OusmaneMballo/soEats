@@ -1,0 +1,496 @@
+
+.content{
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+::ng-deep .ngx-pagination {
+    padding-left: 0px !important;
+}
+
+::ng-deep.annulationreservation .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 20px;
+    width: 400px;
+}
+
+
+::ng-deep .ngx-pagination .current, .btn-info {
+    background: #146356 !important;
+    border: transparent !important;
+    border-radius: 20px !important;
+}
+  
+::ng-deep .ngx-pagination .current:hover {
+    background: #6774eb !important;
+    border-radius: 20px !important; 
+    border: transparent !important;
+}
+.btn-retour{
+    cursor: pointer;
+    width: 30px;
+    height: 25;
+    font-size: 30px;
+}
+.btn-retour:hover{
+    font-size: 33px;
+}
+.btn-retour:active{
+    font-size: 30px;
+}
+.nonconfirme
+{
+    background-color: white;
+    height: 30%;
+
+}
+span{
+    margin-left: auto;
+    margin-right: auto;    
+    }
+    mat-toolbar{
+        background-color: #146356; 
+        color: white;   
+        }
+    
+.mybody
+{
+    background-color: white;
+}
+.confirme
+{
+    background-color: white;
+    height: 30%;
+
+}
+.entete
+{
+    height: 6%;
+    background-color: white;
+    padding-top: 2%;
+    color: #146356; 
+}
+h6
+{
+    background-color: #146356;
+    color: white;  
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 1%;
+
+}
+
+mat-expansion-panel-header
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+mat-icon
+{
+size: 23px;
+color: white;
+}
+mat-panel-title
+{
+    background-color: #146356;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.separator{
+    width: 50%;
+    border: 0.5px solid rgba(51, 70, 255, 0.5);
+}
+mat-card{
+    width: 100%;
+    height: 90% ;
+    padding: 0%;
+    border-radius: 5px 5px 15px 15px;
+}
+.row2{
+    padding: 2%;
+
+}
+img{
+    height:  15px;
+}
+.col1{
+    color: #146356;
+    font-size: 12px;
+}
+
+.col2{
+    color: #146356;
+    font-size: 12px;
+font-weight: 500;
+}
+mat-icon{
+    font-size: 15px;
+}
+.btnvalider{
+    background-color: #146356;
+    color: white;
+    border-radius: 25px;
+    width: 100px;
+    height: 15px;
+}
+.buttonValider{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    background-color: #146356;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.buttonAnnuler1{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+    background-color: #FE043C;
+  
+}
+.buttonValider1{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+    background-color: #146356;
+  
+}
+.buttonAnnuler{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    background-color: #FE043C;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.titre{
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    color: #146356; 
+    font-size: 12px;
+}
+.row{
+    height: 50%;
+    background-color: white;
+}
+.row1{
+    padding-top: 2%; 
+}
+.hautcard{
+    height: 60%;
+    border-radius: 5px 5px 0px 0px;
+}
+.btntitre{
+    font-size: 11px;
+}
+.btntitre1{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+.icon{
+    color: #146356; 
+height: 10px;
+}
+
+.icon1{
+    font-size: 10px;
+    width: 19px;
+}
+.hello{
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 1%;
+   visibility: hidden;
+}
+.separation{
+    height: 4%;
+}
+mat-card-content{
+    background-color: rgba(51, 70, 255, 0.15);
+    margin: 0%;
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 2%;
+}
+mat-card-actions{
+    background-color: #b3baff;
+    margin: 0%;
+    border-radius: 0px 0px 15px 15px;
+}
+.bascard{
+    background-color: rgb(207, 205, 205);
+    height: 40%;
+    padding: 2%;
+    border-radius: 0px 0px 15px 15px;
+}
+.ligne{
+    width: 100% ;
+    padding-left:  0.5%;
+    padding-right: 0.5%;
+    display: list-item;
+    list-style: none;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.ligne1{
+    width: 40px;
+
+   
+}
+.bascard1{
+    background-color: #146356;
+    padding: 1%;
+    border-radius: 0px 0px 15px 15px;
+   }
+.bascard2{
+    padding: 0%;
+    border-radius: 0px 0px 15px 15px;
+   }
+.annulercard{
+    background-color: #FE043C;
+   }
+   .validercard{
+    background-color: #146356;
+   }
+  #iconPeople{
+      font-size: medium;
+      margin-right: 3px;
+  }
+
+@media only screen and (min-width: 961px){
+body{
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+.nonconfirme
+{
+    background-color: white;
+    height: 30%;
+
+}
+span{
+    margin-left: auto;
+    margin-right: auto;    
+    }
+    mat-toolbar{
+        background-color: #146356; 
+        color: white;   
+        }
+.confirme
+{
+    background-color: white;
+    height: 30%;
+
+}
+.entete
+{
+    height: 6%;
+    background-color: white;
+    padding-top: 2%;
+    color: #146356; 
+}
+.separator{
+    width: 100%;
+    border: 0.5px solid rgba(51, 70, 255, 0.5);
+}
+mat-card{
+    width: 100%;
+    height: 90% ;
+    padding: 0%;
+    border-radius: 5px 5px 15px 15px;
+}
+.row2{
+    padding: 2%;
+
+}
+img{
+    height:  15px;
+}
+.col1{
+    color: #146356;
+    font-size: 12px;
+}
+
+.col2{
+    color: #146356;
+    font-size: 12px;
+font-weight: 500;
+}
+mat-icon{
+    font-size: 15px;
+}
+.btnvalider{
+    background-color: #146356;
+    color: white;
+    border-radius: 25px;
+    width: 100px;
+    height: 15px;
+}
+.buttonValider{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    background-color: #146356;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.buttonAnnuler1{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+    background-color: #FE043C;
+  
+}
+.buttonValider1{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+    background-color: #146356;
+  
+}
+.buttonAnnuler{
+    width: 80px;
+    height: 20px;
+    border: hidden;
+    background-color: #FE043C;
+    border-radius: 25px;
+    color: #FFFFFF;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.titre{
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    color: #146356; 
+    font-size: 12px;
+}
+.row{
+    height: 50%;
+    background-color: white;
+}
+.row1{
+    padding-top: 2%; 
+}
+.hautcard{
+    height: 60%;
+    border-radius: 5px 5px 0px 0px;
+}
+.btntitre{
+    font-size: 11px;
+}
+.btntitre1{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+.icon{
+    color: #146356; 
+height: 10px;
+
+}
+.icon1{
+    font-size: 10px;
+    width: 19px;
+}
+.hello{
+    height: 3%;
+    margin: 0%;
+    padding: 0%;
+    padding-bottom: 1%;
+    visibility: visible;
+
+}
+.separation{
+    height: 4%;
+
+}
+mat-card-content{
+    background-color: rgba(51, 70, 255, 0.15);
+    margin: 0%;
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 2%;
+}
+mat-card-actions{
+    background-color: #b3baff;
+    margin: 0%;
+    border-radius: 0px 0px 15px 15px;
+}
+.bascard{
+    background-color: rgb(207, 205, 205);
+    height: 40%;
+    padding: 2%;
+    border-radius: 0px 0px 15px 15px;
+}
+
+
+
+.ligne{
+    width: 33%;
+    padding-left:  0.5%;
+    padding-right: 0.5%;
+    padding-top: 0%;
+    padding-bottom: 1.5%;
+    display: table-cell;  
+}
+
+.lignep{
+    position: relative;
+    padding-top: 0%;
+    padding-bottom: 1%; 
+}
+
+.lignep1{
+    padding-top: 1%;
+    padding-bottom: 0%;    
+}
+
+.ligne1{
+    width: 40px;  
+}
+
+.bascard1{
+    background-color: #146356;
+    padding: 1%;
+    border-radius: 0px 0px 15px 15px;
+   }
+.bascard2{
+    padding: 0%;
+    border-radius: 0px 0px 15px 15px;
+   }
+.annulercard{
+    background-color: #FE043C;
+   }
+   .validercard{
+    background-color: #146356;
+   }
+}

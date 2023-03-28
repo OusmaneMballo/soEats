@@ -1,0 +1,88 @@
+<div class="containerAjoutMenu" >
+     <div class="headerAjoutMenu" fxLayoutAlign="end center">
+        <div class="definirMenu" fxLayoutAlign="center center">Ajouter un menu</div>
+        <div class="definirMenuIcon" fxLayoutAlign="center center">
+          <span class="material-icons" id="iconCancel" (click)="onClose()">
+            cancel
+          </span>
+        </div>
+     </div>
+     <hr class="ligne"/>
+     <div class="bodyAjoutMenu" fxLayout="column" fxLayoutAlign="center center">
+         
+          <div class="rowAjoutMenu" fxLayout="row" fxLayoutAlign="center center">
+            <div class="colImageMenu" fxLayoutAlign="center center" >
+              <img *ngIf="!data.menuImagesUrls[0]" class="containerImg" [src]="urlMenu1" alt="Menu 1">
+              <img *ngIf="data.menuImagesUrls[0]" class="containerImg" [src]="data.menuImagesUrls[0]" (click)="openDialog(data.menuImagesUrls[0])"/>
+            </div>
+            <div class="iconPhotoDelete" fxLayout="column" fxLayoutAlign="end end" >
+              <div class="containerIcons" fxLayoutAlign="space-between center">
+                <label class="label" for="menu1-input">
+                    <span class="material-icons" id="icon-menu">
+                      add_a_photo
+                    </span>
+                </label>
+                <input #file id="menu1-input" type="file" accept="image/*" (change)="onFileSelect($event)"/>
+                <label class="label">
+                  <span class="material-icons" id="icon-menu">
+                    delete
+                  </span>
+                </label>
+              </div>
+              <hr class="ligne"/>
+            </div>
+          </div>
+          <div class="rowAjoutMenu" fxLayout="row" fxLayoutAlign="center center">
+            <div class="colImageMenu" fxLayoutAlign="center center" >
+              <img *ngIf="!data.menuImagesUrls[1]" class="containerImg" [src]="urlMenu1" alt="Menu 2">
+              <img *ngIf="data.menuImagesUrls[1]" class="containerImg" [src]="data.menuImagesUrls[1]" (click)="openDialog(data.menuImagesUrls[1])"/>
+            </div>
+            <div class="iconPhotoDelete" fxLayout="column" fxLayoutAlign="end end" >
+              <div class="containerIcons" fxLayoutAlign="space-between center">
+                <label class="menu" for="menu2-input">
+                    <span class="material-icons" id="icon-menu">
+                      add_a_photo
+                    </span>
+                </label>
+                <input #file id="menu2-input" type="file" accept="image/*" (change)="onFileSelect($event)"/>
+                <label class="label">
+                  <span class="material-icons" id="icon-menu">
+                    delete
+                  </span>
+                </label>
+              </div>
+              <hr class="ligne"/>
+            </div>
+          </div>
+          <div class="rowAjoutMenu" fxLayout="row" fxLayoutAlign="center center">
+            <div class="colImageMenu" fxLayoutAlign="center center">
+              <img *ngIf="!data.menuImagesUrls[2]" class="containerImg" [src]="urlMenu1" alt="Menu 3">
+              <img *ngIf="data.menuImagesUrls[2]" class="containerImg" [src]="data.menuImagesUrls[2]" (click)="openDialog(data.menuImagesUrls[2])"/>
+            </div>
+            <div class="iconPhotoDelete" fxLayout="column" fxLayoutAlign="end end" >
+              <div class="containerIcons" fxLayoutAlign="space-between center">
+                <label class="label" for="menu3-input">
+                    <span class="material-icons" id="icon-menu">
+                      add_a_photo
+                    </span>
+                </label>
+                <input #file id="menu3-input" type="file" accept="image/*" (change)="onFileSelect($event)"/>
+                <label class="label">
+                  <span class="material-icons" id="icon-menu">
+                    delete
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+     </div>
+     <hr class="ligne"/>
+     <div class="footerAjoutMenu" fxLayout="row wrap" fxLayoutAlign="center center">
+         <div class="containerNB" fxLayout="row" >
+            <span class="material-icons" id="icon-info">
+            info
+            </span>
+            <p >Il est obligatoire de mettre au moins 1 photo pour le menu</p>
+         </div>
+    </div>
+</div>

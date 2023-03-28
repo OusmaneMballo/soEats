@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="center center ">
+    <div class="header" fxLayoutAlign="center center">
+        Création catégorie du rayon
+    </div>
+    <div class="body" fxLayoutAlign="center center" fxLayout='column'>
+         <form class="form" #FormCreateResto=ngForm  (ngSubmit)="createCategorie()" fxLayout='column' fxLayoutAlign="center center"> 
+          <div class="formInfoRestau" fxLayout='column' fxLayoutAlign="center center">
+            <mat-form-field appearance="outline">
+              <mat-label>Nom de la catégorie</mat-label>
+              <input [(ngModel)]="categorie.displayName" name="displayName" matInput required #categorie.displayName>
+              <mat-icon matSuffix>store</mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="footer" fxLayoutAlign="center end">
+            <button class="confirmerbtn" mat-raised-button >Confirmer</button>
+          </div>
+        </form>
+    </div>
+</div>

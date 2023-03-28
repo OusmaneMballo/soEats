@@ -1,0 +1,152 @@
+
+.header{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 25%;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    margin-top: 0%;
+    background-color: #146356;
+}
+.body{
+    margin-top: 5%;
+    width: 100%;
+}
+
+.form{
+    width: 100%;  
+}
+
+.formInfoRestau{
+    width: 50%;  
+}
+
+.optionsPL{
+   height: 50%;
+   width: 100%;
+}
+
+  .selectCategories{
+    width: 100%;
+    height: 5%;
+    position: relative;
+  }
+
+  .ligneCategories{
+    border: 1px solid #146356;
+    width: 90%;
+  }
+
+  .Select{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #146356;
+    margin: 5px;
+    font-family: Poppins;
+  }
+  mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+      width: 21px;
+      height: 21px;
+    }
+
+.paiement{
+    width: 70%;
+}
+
+.logoPay{
+    width: 80px;
+    height: 70px;
+    margin: 8px;
+}
+
+.logoPayOm{
+    width: 130px;
+    height: 70px;
+    margin: 8px;
+}
+
+.NbCommercial{
+    width: 70%; 
+}
+
+.payerOnline{
+    width: 70%; 
+}
+
+.msgPaiement{
+    width: 70%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.5); 
+}
+
+.livraison{
+    width: 70%;
+}
+
+.checkPay{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 36px;   
+    color: rgba(0, 0, 0, 0.5); 
+}
+
+.footer{
+   width: 100%;
+   height: 55px;
+   background: #FFFFFF;
+   margin-bottom:5%;
+}
+
+.confirmerbtn{
+    width: 35%;
+    height: 70%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 27px;
+    color: white;
+}
+
+.msg-error{
+    margin-bottom: 0px;
+    margin-top: 2px;
+    font-size: 11px;
+    color: rgb(197, 34, 34);
+}
+
+@media only screen and (min-width: 961px){
+    .confirmerbtn{
+        width: 35%;
+        height: 70%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
+}

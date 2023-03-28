@@ -1,0 +1,135 @@
+.ml{
+    background-color: #FFFFEE;
+}
+.selectCatergorie{
+    width: 30%;
+    position: relative;
+    z-index: 1;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+select{
+    width: 100%;
+    height: 32px;
+    outline:none;
+    background: #FFFFFF;
+    text-align: left;
+    padding-left: 1rem;
+    border: 0.5px solid #7986ff;
+    box-shadow: 0 0 1px #146356;
+    outline-offset: 0px;
+    border-radius: 100px;
+    font-size: 13px;   
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, rgb(57, 75, 236) 50%),
+        linear-gradient(135deg, rgb(57, 75, 236) 50%, transparent 50%);
+      background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+      background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+      background-repeat: no-repeat;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.flex-container > div {
+    background-color: #eeeff6;
+    width: 45%;
+    height: 101px;
+    margin: 10px;
+    padding: 9px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-produit{
+    width: 120%;
+    height: 88%;
+    left: 30px;
+    top: 172px;
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.container > div{
+    text-align: start;
+}
+
+.container1{
+    width: 25%;
+}
+  
+.container2{
+    width: 75%;
+    height: 65px;
+    margin-left: 20px;
+}
+  
+.container-description{
+    height: 45px;
+    text-overflow:clip;
+}
+  
+.txt-nom-prod{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.7);
+}
+  
+.txt-prix{
+    margin-left: 10%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+  
+.txt-description{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+   
+    color: rgba(0, 0, 0, 0.5);
+}
+  
+#icon-logo{
+    color: #146356;
+    font-size: large;
+    float: right;
+    margin-top: 0px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.typeBtn{
+    width: 90px;
+    height: 37px;
+    margin-left: 10px;
+    background: #146356;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border:solid #146356 2px;
+    border-radius: 25px;
+  }

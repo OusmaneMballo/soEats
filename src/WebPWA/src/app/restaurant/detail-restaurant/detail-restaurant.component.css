@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+.cursor{
+  cursor: zoom-in;
+}
+.container-sup{
+  width: 94%;
+  margin: 0 auto;
+}
+
+.title{
+  margin-left: auto;
+  margin-right: auto;    
+}
+
+.nom-restau{
+  width: 100%;
+  background: #146356;
+  font-family: Poppins-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+}
+mat-toolbar{
+  background-color: #146356; 
+  color: white;   
+}
+
+.btn-retour{
+  cursor: pointer;
+  width: 30px;
+  height: 25;
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+  .rowProfilDesc{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 15px;
+    }
+
+  .rowProfilDesc .col-35{
+    width: 40%;
+    height: 100%;
+    margin-right: 3%;
+    margin-bottom: 0%;
+    
+  }
+
+.img-logo{
+  width: 100%;
+  height: 150px;
+  border-radius: 14px;
+}
+
+.description{
+  width: 100%;
+  height: 150px;
+  font-family: Poppins-Light;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.txt-icon{
+  margin-left: 10px;
+}
+.desc{
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+}
+  
+#icon-contact{
+  color: #146356;
+  font-size: 20px;
+}
+
+.icon-phone{
+  margin-top: 0px;
+}
+
+.text-contact{
+  font-family: Poppins;
+  margin-left: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+} 
+.definirHoraire{
+  width: 80%;
+  height: 100%;
+  font-family: Poppins-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: #000000;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.container-restau{
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+  position: relative;
+}
+.content-menu{
+  overflow: auto;
+  width: 100%;
+}
+.rowProfilDesc .col-65{
+  width: 52%;
+  height: 100%;
+} 
+
+.voir-reservation{
+  width: 100%;
+  height: 20%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.img-card{
+  width: 70px;
+  height: 60px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 15px;
+}
+
+.produc-name{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 12px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.card-container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  height: 80px;
+  margin-left: 0px;
+
+}
+.card-container > div {
+  height: 80px;
+  margin: 0px;
+  margin-right: 5px;
+  padding-top: 10px;
+}
+
+.card-price{
+  padding-top: 0px;
+  margin-bottom: 10px;
+  flex-grow: 8;
+  text-align: end;
+}
+
+.menu-login{
+  margin-bottom: 10px;
+  font-family: Poppins-SemiBold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+
+.imageMenu{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.taille-photo{
+  flex: 0 0 auto;
+  width: 29%;
+  height: 115px;
+  border-radius: 20px;
+  margin: 4px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.imgM{
+  flex: 0 0 auto;
+  width: 50%;
+  height: 150px;
+  border-radius: 20px;
+  margin: 2px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.jourtxt{
+  font-family: Poppins;
+  font-weight: bolder;
+  font-size: 14px;
+  color: #000000;
+}
+
+.buttonVoirReservation{
+  width: 100px;
+  height: 30px;
+  background: #146356;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.buttonVoirReservationbtnfermer{
+  width: 100px;
+  height: 30px;
+  background: #b2b2c0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.ligneProfil{
+  width: 100%;
+  border: 0.5px solid rgba(51, 70, 255, 0.5);
+}
+.row-horaire{
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  margin-bottom: 5px;
+}
+.row-horaire > p{
+  text-align: start;
+  margin: 3px;
+  margin-right: 6px;
+}
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-wrap > div {
+  text-align: start;
+  margin-left: 3px;
+}
+
+.heure{
+  font-family: Poppins;
+  font-size: 176x;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.address{
+  font-size: 12px;
+  line-height: 48px;
+  font-weight: lighter;
+  font-family: Poppins;
+  color: #000000;
+}
+::ng-deep.padding-dialog-menu .mat-dialog-container {
+  padding: 0px;
+  background: #FFFFEE;
+  border-radius: 15px;
+  width: 366px;
+  height: 480px;
+}
+
+::ng-deep.padding-dialog .mat-dialog-container {
+  padding: 0px;
+  background: #FFFFEE;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+::ng-deep.padding-dialog-reserver .mat-dialog-container {
+  padding: 0px;
+  background: #FFFFEE;
+  border-radius: 15px;
+  width: 986px;
+  height: 600px;
+}
+
+::ng-deep.voirCard .mat-dialog-container {
+  padding: 0px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  width: 486px;
+  height: 600px;
+  position: relative;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  
+  .description{
+    height: 167px;
+  }
+  .rowProfilDesc{
+    margin-top: 4%;
+    height: 175px;
+  }
+  .rowProfilDesc .col-35{
+    width: 270px;
+    height: 100%;
+  }
+
+  .card-container {
+    width: 100%;
+    height: 95px;
+  }
+
+  .card-container > div {
+    margin-right: 15px;
+  }
+
+  .nom-restau{
+    font-size: 20px;
+  }
+
+  .img-card{
+    width: 85px;
+    height: 75px;
+  }
+
+  .img-logo{
+    width: 240px;
+    height: 170px;
+  }
+  
+  .imgM{
+    width: 30%;
+    height: 180px;
+    border-radius: 20px;
+    margin: 3px;
+    margin-left: 2%;
+  }
+
+
+  .taille-photo{
+    width: 34%;
+    height: 165px;
+  }
+
+  .row-horaire > p{
+    text-align: start;
+    margin: 6px;
+    margin-right: 8px;
+  }
+
+  .jourtxt{
+    font-size: 16px;
+  }
+
+  .heure{
+    font-size: 16px;
+  }
+
+  ::ng-deep.padding-dialog-reserver .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 986px;
+    height: 723px;
+  }
+
+  ::ng-deep.voirCard .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 986px;
+    height: 723px;
+  }
+
+  ::ng-deep.padding-dialog-menu .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 366px;
+    height: 480px;
+  }
+  
+  ::ng-deep.padding-dialog .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+  }
+
+}
+@media only screen and (min-width: 800px){
+
+  .container-restau{
+    margin-top: 0%;
+  }
+
+  .description{
+    margin-top: 3%;
+    height: 167px;
+  }
+  .rowProfilDesc{
+    height: 185px;
+  }
+  .rowProfilDesc .col-35{
+    width: 270px;
+    height: 100%;
+  }
+
+  .card-container {
+    width: 100%;
+    height: 95px;
+  }
+
+  .card-container > div {
+    margin-right: 15px;
+  }
+  
+  .nom-restau{
+    font-size: 24px;
+  }
+
+  .img-card{
+    width: 85px;
+    height: 75px;
+  }
+
+  .img-logo{
+    width: 240px;
+    height: 190px;
+  }
+  
+  .imgM{
+    width: 30%;
+    height: 185px;
+    border-radius: 20px;
+    margin: 3px;
+    margin-left: 2%;
+  }
+
+  .jourtxt{
+    font-size: 20px;
+  }
+
+  .heure{
+    font-size: 20px;
+  }
+
+  .taille-photo{
+    flex: 0 0 auto;
+    width: 20%;
+    height: 172px;
+    margin: 4px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .menu-login{
+    font-size: 25px;
+  }
+
+  .rowProfilDesc .col-65{
+    width: 68%;
+  }
+
+  .buttonVoirReservation{
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .buttonVoirReservationbtnfermer{
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  #icon-contact{
+    color: #146356;
+    font-size: 25px;
+  }
+
+  .text-contact{
+    margin-left: 14px;
+    font-size: 18px;
+  } 
+
+  .material-icons{
+    font-size: 26px;
+  }
+
+  .jourtxt{
+    font-size: 17px;
+  }
+
+  .heure{
+    font-size: 16px;
+  }
+
+  ::ng-deep.padding-dialog-reserver .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 986px;
+    height: 723px;
+  }
+  ::ng-deep.padding-dialog-menu .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 1218px;
+    height: 794px;
+  }
+
+  ::ng-deep.padding-dialog .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 25px;
+    width: 550px;
+    height: 450px;
+  }
+
+  ::ng-deep.voirCard .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 986px;
+    height: 723px;
+  }
+}
+
+@media only screen and (min-width: 1000px){
+
+  .rowProfilDesc{
+    height: 225px;
+  }
+
+  .description{
+    margin-top: 0%;
+    height: 217px;
+  }
+
+  .img-logo{
+    width: 305px;
+    height: 220px;
+  }
+
+  .rowProfilDesc .col-65{
+    margin-left: 2%;
+  }
+
+  .desc{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .row-horaire > p{
+    text-align: start;
+    margin: 10px;
+    margin-right: 12px;
+  }
+
+  .jourtxt{
+    font-size: 23px;
+  }
+
+  .heure{
+    font-size: 22px;
+  }
+
+  .imgM{
+    width: 30%;
+    height: 290px;
+  }
+
+  .taille-photo{
+    flex: 0 0 auto;
+    width: 310px;
+    height: 220px;
+    margin: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  ::ng-deep.padding-dialog-reserver .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 986px;
+    height: 723px;
+  }
+
+  ::ng-deep.voirCard .mat-dialog-container {
+    padding: 0px;
+    background: #FFFFEE;
+    border-radius: 15px;
+    width: 986px;
+    height: 723px;
+  }
+}

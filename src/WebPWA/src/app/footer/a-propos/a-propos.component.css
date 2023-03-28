@@ -1,0 +1,774 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  #banniere{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height:min(80vw, 663px);
+    margin-top: -10%;
+    zoom: 115%;
+    background-image: url('/assets/newBgImg.png');
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bgoverlay {
+    background-color: rgba(0, 0, 0, 0.561);
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+  .txtPrez{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 90%;
+    height: 50%;
+    margin-top: 15%;
+    
+  }
+  .txtPrez > div{
+    width: 95%;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 20px;
+    margin-top: 10%;
+    margin-left: 8%;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .containerApropos {
+      width: 95%;
+  }
+
+  .enteteApropos {
+      width: 100%;
+      height: 350px;   
+  }
+
+  .fontTitle {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase; 
+    color: #3346FF; 
+  }
+
+  .fontText{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.25);
+    width: 70%;
+  }
+
+  .bodyApropos{
+    width: 100%;
+  }
+
+  .bodyVision{
+    width: 100%;
+    margin: 3%;
+  }
+
+  .containerVision{
+    width: 96%;
+    margin: 4%;
+  }
+
+  .titleVision{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #3346FF;
+    margin-bottom: 3%;
+  }
+
+  .textVision{   
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .imgVision{
+    width: 46%;
+    margin: 2%;
+  }
+
+  .imgApproch{
+    width: 46%;
+    margin: 2%;
+  }
+ 
+
+  img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .imgEmploye{
+    width: 60px;
+    height: 60px;
+    margin: 2%;
+    border-radius: 100px;
+    background-color: rgb(165, 168, 172);
+  }
+
+  /* Tablet Styles */
+  @media only screen and (min-width: 400px) and (max-width: 442px){
+    .txtPrez{
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      height: 50%;
+      margin-top: 15%;
+      
+    }
+    .txtPrez > div{
+      width: 95%;
+      margin-top: 7%;
+      margin-left: 8%;
+      font-size: 27px;
+      line-height: 33px;
+    }
+    .containerApropos{
+      width: 85%;
+  }
+
+  .enteteApropos{
+      width: 100%;
+      height: 150px;    
+  }
+
+  .fontTitle{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase; 
+    color: #3346FF; 
+  }
+
+  .fontText{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px; 
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .bodyApropos{
+    width: 100%;
+  }
+
+  .bodyVision{
+    width: 100%;
+    margin: 3%;
+  }
+
+  .containerVision{
+    width: 96%;
+    margin: 4%;
+  }
+
+  .titleVision{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #3346FF;
+    margin-bottom: 3%;
+  }
+
+  .textVision{   
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .imgVision{
+    width: 46%;
+    margin: 2%;
+  }
+
+  .imgApproch{
+    width: 46%;
+    margin: 2%;
+  }
+ 
+
+  img{
+    width: 150px;
+    height: 180px;
+  }
+
+  .imgEmploye{
+    width: 60px;
+    height: 60px;
+    margin: 2%;
+    border-radius: 100px;
+    background-color: rgb(165, 168, 172);
+  }
+  
+  }
+
+    /* Tablet Styles */
+    @media only screen and (min-width: 442px) and (max-width: 862px){
+      .txtPrez{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: 50%;
+        margin-top: 20%;
+        margin-left: 5%;
+        
+      }
+        
+      .txtPrez > div{
+        margin-top: 17%;
+        margin-left: 8%;
+        font-size: 30px;
+        line-height: 38px;
+      }
+
+      
+      .containerApropos{
+        width: 85%;
+    }
+  
+    .enteteApropos{
+        width: 100%;
+        height: 200px;    
+    }
+  
+    .fontTitle{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: uppercase; 
+      color: #3346FF; 
+    }
+  
+    .fontText{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px; 
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .bodyApropos{
+      width: 100%;
+    }
+  
+    .bodyVision{
+      width: 100%;
+      margin: 3%;
+    }
+  
+    .containerVision{
+      width: 96%;
+      margin: 4%;
+    }
+  
+    .titleVision{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #3346FF;
+      margin-bottom: 3%;
+    }
+  
+    .textVision{   
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .imgVision{
+      width: 46%;
+      margin: 2%;
+    }
+  
+    .imgApproch{
+      width: 46%;
+      margin: 2%;
+    }
+   
+  
+    img{
+      width: 150px;
+      height: 180px;
+    }
+  
+    .imgEmploye{
+      width: 20%;
+      height: 80px;
+      margin: 2%;
+      border-radius: 100px;
+      background-color: rgb(165, 168, 172);
+    }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 863px) and (max-width:959px ){
+    .txtPrez{
+      display: flex;
+      justify-content: center;
+      
+      width: 80%;
+      height: 50%;
+      margin-top: 20%;
+      margin-left: 5%;
+      
+    }
+      
+      .txtPrez > div{
+        margin-top: 17%;
+        margin-left: 8%;
+        font-size: 33px;
+        line-height: 45px;
+      }
+
+     
+      .containerApropos{
+        width: 80%;
+    }
+  
+    .enteteApropos{
+        width: 100%;
+        height: 200px;    
+    }
+  
+    .fontTitle{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px;
+      text-transform: uppercase; 
+      color: #3346FF; 
+    }
+  
+    .fontText{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .bodyApropos{
+      width: 100%;
+    }
+  
+    .bodyVision{
+      width: 100%;
+      margin: 3%;
+    }
+  
+    .containerVision{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+  
+    .titleVision{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: #3346FF;
+      margin-bottom: 3%;
+    }
+  
+    .textVision{   
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .imgVision{
+      width: 38%;
+      margin: 4%;
+    }
+  
+    .imgApproch{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+    
+    img{
+      width: 250px;
+      height: 200px;
+    }
+  
+    .imgEmploye{
+      width: 20%;
+      height: 150px;
+      margin: 2%;
+      border-radius: 400px;
+      background-color: rgb(165, 168, 172);
+    }
+  }
+  /*Large screen*/
+  @media screen and (min-width: 960px) and (max-width:1195px ) {
+  
+    .txtPrez{
+      display: flex;
+      justify-content: center;
+      
+      width: 90%;
+      height: 50%;
+      margin-top: 20%;
+      margin-left: 8%;
+      
+    }
+      
+      .txtPrez > div{
+        margin-top: 15%;
+        margin-left: 0%;
+        font-size: 46px;
+        line-height: 68px;
+      }
+
+     
+      .containerApropos{
+        width: 80%;
+    }
+  
+    .enteteApropos{
+        width: 100%;
+        height: 150px;    
+    }
+  
+    .fontTitle{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px;
+      text-transform: uppercase; 
+      color: #3346FF; 
+    }
+  
+    .fontText{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;  
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .bodyApropos{
+      width: 100%;
+    }
+  
+    .bodyVision{
+      width: 100%;
+      margin: 3%;
+    }
+  
+    .containerVision{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+  
+    .titleVision{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: #3346FF;
+      margin-bottom: 3%;
+    }
+  
+    .textVision{   
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .imgVision{
+      width: 38%;
+      margin: 4%;
+    }
+  
+    .imgApproch{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+
+    img{
+      width: 300px;
+      height: 220px;
+    }
+  
+    .imgEmploye{
+      width: 20%;
+      height: 150px;
+      margin: 2%;
+      border-radius: 400px;
+      background-color: rgb(165, 168, 172);
+    }
+  }
+
+  @media screen and (min-width: 1196px) and (max-width:1495px){
+        .txtPrez{
+          width: 75%;
+          height: 50%;
+          margin-top: 20%;
+          margin-left: 8%;
+        }
+      
+      .txtPrez > div{
+        margin-top: 8%;
+        margin-left: 0%;
+        font-size: 52px;
+        line-height: 65px;
+      }
+
+      .containerApropos{
+        width: 80%;
+    }
+  
+    .enteteApropos{
+        width: 100%;
+        height: 150px;    
+    }
+  
+    .fontTitle{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px;
+      text-transform: uppercase; 
+      color: #3346FF; 
+    }
+  
+    .fontText{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;  
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .bodyApropos{
+      width: 100%;
+    }
+  
+    .bodyVision{
+      width: 100%;
+      margin: 3%;
+    }
+  
+    .containerVision{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+  
+    .titleVision{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 60px;
+      text-transform: uppercase;
+      color: #3346FF;
+      margin-bottom: 3%;
+    }
+  
+    .textVision{   
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 25px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .imgVision{
+      width: 38%;
+      margin: 4%;
+    }
+  
+    .imgApproch{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+   
+  
+    img{
+      width: 400px;
+      height: 300px;
+    }
+  
+    .imgEmploye{
+      width: 20%;
+      height: 180px;
+      margin: 2%;
+      border-radius: 400px;
+      background-color: rgb(165, 168, 172);
+    }
+  }
+
+  @media screen and (min-width: 1496px){
+    .txtPrez{
+      width: 75%;
+      height: 50%;
+      margin-top: 20%;
+      margin-left: 8%;
+      
+    }
+      
+    .txtPrez > div{
+      margin-top: 8%;
+      margin-left: 0%;
+      font-size: 52px;
+      line-height: 65px;
+    }
+
+      .containerApropos{
+        width: 80%;
+    }
+  
+    .enteteApropos{
+        width: 100%;
+        height: 300px;    
+    }
+  
+    .fontTitle{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 70px;
+      text-transform: uppercase; 
+      color: #3346FF; 
+    }
+  
+    .fontText{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 30px; 
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .bodyApropos{
+      width: 100%;
+    }
+  
+    .bodyVision{
+      width: 100%;
+      margin: 3%;
+    }
+  
+    .containerVision{
+      width: 38%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+  
+    .titleVision{
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 60px;
+      text-transform: uppercase;
+      color: #3346FF;
+      margin-bottom: 3%;
+    }
+  
+    .textVision{   
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 30px;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  
+    .imgVision{
+      width: 35%;
+      margin: 4%;
+    }
+  
+    .imgApproch{
+      width: 35%;
+      margin: 4%;
+      margin-right: 8%;
+    }
+   
+    img{
+      width: 430px;
+      height: 345px;
+    }
+  
+    .imgEmploye{
+      width: 20%;
+      height: 300px;
+      margin: 2%;
+      border-radius: 1000px;
+    }
+  }

@@ -1,0 +1,318 @@
+.containerModif{
+    width: 100%;
+    height: 100%;
+}
+
+.iconsContainer{
+    height: 60%;
+    width: 100%;
+    position: relative;
+  }
+
+.icons{
+    height: 80%;
+    width: 100%;
+    position: relative;
+  }
+
+  .definirMenuIcon{
+    width: 95%;
+    height: 15%;
+}
+
+#iconCancel{
+    color: #146356;
+    font-size: large;
+    cursor: pointer;
+}
+
+  .form {
+    width: 100%;
+    height: 90%;
+  }
+
+input{
+    width: 100%;
+    height: 65%;
+    margin: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    outline:none;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+input:focus{
+    border: 0.5px solid #7986ff;
+    box-shadow: 0 0 1px #146356;
+    outline-offset: 0px;
+    border-radius: 100px;
+    width: 100%;
+    height: 60%;
+    margin: 8px;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 13px;
+    color: rgb(70, 70, 70);
+    box-shadow: inset 0px 10px 20px rgba(182, 182, 182, 0.25);
+}
+
+.containerButtons{
+    height: 40%;
+    width: 100%;
+}
+
+.btn{
+    width: 45%;
+    height: 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin: 2%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 27px;
+    color: #146356;
+}
+
+textarea{
+    width: 100%;
+    height: 95%;
+    margin: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    outline:none;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+    text-align: left;
+    padding-left: 1rem;
+    font-family: Poppins;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+textarea:focus{
+    border: 0.5px solid #7986ff;
+    box-shadow: 0 0 1px #146356;
+    outline-offset: 0px;
+    border-radius: 5px;
+    width: 100%;
+    height: 90%;
+    margin: 8px;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgb(70, 70, 70);
+    box-shadow: inset 0px 10px 20px rgba(182, 182, 182, 0.25);
+}
+
+.iconstextarea{
+    height: 90%;
+    width: 100%;
+    position: relative;
+}
+
+
+input::placeholder{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(138, 138, 138);
+    text-align: left;
+    font-size: 13px;
+    padding-left: 1rem;
+ }
+
+
+
+ .iconsValid{
+    height: 10%;
+    width: 88%;
+    position: absolute;
+    top: 75%;
+  }
+  
+  .validation{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #a11c1c;
+    font-weight: 500;
+  }
+  
+  #icon-validation{
+    color: #a11c1c;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+
+
+@media only screen and (min-width: 961px){
+    .containerModif{
+        width: 100%;
+        height: 100%;
+    }
+
+    .iconsContainer{
+        height: 60%;
+        position: relative;
+      }
+    
+    .icons{
+        height: 80%;
+        width: 100%;
+        position: relative;
+      }
+    
+    #iconCancel{
+        color: #146356;
+        font-size: x-large;
+        cursor: pointer;
+    }
+    
+    input{
+        width: 100%;
+        height: 60%;
+        margin: 8px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 100px;
+        outline:none;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+        text-align: center;
+        font-family: Poppins;
+        font-style: normal;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 36px;
+        box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    input:focus{
+        border: 0.5px solid #7986ff;
+        box-shadow: 0 0 1px #146356;
+        outline-offset: 0px;
+        border-radius: 100px;
+        width: 100%;
+        height: 55%;
+        margin: 8px;
+        font-size: 20px;
+        color: rgb(70, 70, 70);
+        box-shadow: inset 0px 10px 20px rgba(182, 182, 182, 0.25);
+    }
+    
+    .containerButtons{
+        height: 40%;
+        width: 100%;
+    }
+    
+    .btn{
+        height: 55px;
+        width: 44%;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        margin: 3%;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    textarea{
+        width: 100%;
+        height: 95%;
+        margin: 8px;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        outline:none;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+        text-align: left;
+        padding-left: 1rem;
+        font-family: Poppins;
+        font-style: normal;
+        color: rgba(0, 0, 0, 0.5);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    textarea:focus{
+        border: 0.5px solid #7986ff;
+        box-shadow: 0 0 1px #146356;
+        outline-offset: 0px;
+        border-radius: 15px;
+        width: 100%;
+        height: 90%;
+        margin: 8px;
+        text-align: left;
+        padding-left: 1rem;
+        font-size: 14px;
+        line-height: 25px;
+        color: rgb(70, 70, 70);
+        box-shadow: inset 0px 10px 20px rgba(182, 182, 182, 0.25);
+    }
+
+    .iconstextarea{
+        height: 80%;
+        width: 100%;
+        position: relative;
+    }
+
+input::placeholder{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(138, 138, 138);
+    text-align: left;
+    font-size: 20px;
+    padding-left: 1rem;
+ }
+  
+  .iconsValid{
+    height: 10%;
+    width: 88%;
+    position: absolute;
+    top: 60%;
+  }
+  
+  .validation{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: #a11c1c;
+    font-weight: 500;
+  }
+  
+  #icon-validation{
+    color: #a11c1c;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+}
+
+

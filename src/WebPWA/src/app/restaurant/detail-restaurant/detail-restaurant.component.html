@@ -1,0 +1,116 @@
+<mat-toolbar>
+  <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/">keyboard_backspace</mat-icon>
+  <span class="title">
+    <div class="nom-restau" fxLayoutAlign="center center">
+      <p>
+        {{restaurant.name}}
+      </p>
+    </div>
+  </span>
+</mat-toolbar>
+  <div *ngIf="restaurant" class="container-sup" fxLayout="column" fxLayoutAlign="center center" >
+      <div class="container-restau" fxLayout="column" fxLayoutAlign="start end">  
+          <div class="rowProfilDesc"   fxLayoutAlign="start center">
+            <div class="col-35">
+              <div *ngIf="restaurant.imageUrl">
+                <img class="img-logo" [src]="restaurant.imageUrl"/>
+              </div>
+              <div *ngIf="!restaurant.imageUrl" class="logo-r">
+                <div class="img-logo" fxLayoutAlign="center center">
+                    Photo du restaurant
+                </div>
+              </div>
+            </div>
+            <div class="col-65">
+              <div class="description-restaurant">
+                <div class="description">
+                    <div class="desc">
+                      {{restaurant.description}}
+                     </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="ligneProfil"/>
+          <div class="voir-reservation" fxLayout="row" fxLayoutAlign="space-around center" >
+            <div>
+              <button class="buttonVoirReservation" mat-raised-button (click)="openDialog()">Réserver</button>
+            </div>
+            <div *ngIf="commander">
+              <button class="buttonVoirReservation" mat-raised-button (click)="verificationContenuPanier(restaurant)"  >Commander</button>
+            </div>
+           <div *ngIf="commander==false">
+              <button class="buttonVoirReservationbtnfermer" mat-raised-button (click)="restaurantFermer()" >Commander</button>
+            </div> 
+          </div>
+          <hr class="ligneProfil"/>
+          <div class="voir-reservation menu-login" fxLayout="row" fxLayoutAlign="start center" >
+              <span class="material-icons" id="icon-contact">
+                room
+              </span>
+              <p class="txt-icon">
+                  Où nous trouver ? : {{restaurant.address}}
+              </p>
+          </div>
+          <hr class="ligneProfil"/>
+          <div class="voir-reservation" fxLayout="row" fxLayoutAlign="space-between center" >
+            <div fxLayout="row">
+              <span class="material-icons icon-phone" id="icon-contact">
+                menu_book
+              </span>
+              <p class="text-contact">Carte du restaurant</p>
+            </div>
+          </div>
+      </div>
+      <hr class="ligneProfil"/>
+      <br/>
+      <div class="card-container" *ngFor="let product of produits">
+        <div>
+            <img src="{{product.imageUrl}}" class="img-card" alt=""/>
+        </div>
+        <div class="produc-name"> {{product.name}} </div>
+        <div class="card-price">{{product.price}} FCFA</div>
+      </div>
+      <br/>
+      <hr class="ligneProfil"/>
+      <span *ngIf="produits[0] != null">
+        <div class="voir-reservation"  fxLayout="row" fxLayoutAlign="center center">
+          <div >
+            <button class="buttonVoirReservation" mat-raised-button routerLink="/restaurant/{{restaurant.slugId}}/carte">Voir la carte</button>
+          </div>
+        </div>
+      </span>
+      <hr class="ligneProfil"/>
+      <div class="menu-login" fxLayout="row" fxLayoutAlign="center center">
+        <span class="material-icons" id="icon-contact">
+          pending_actions
+        </span>
+        <span class="txt-icon">
+          Horaires
+        </span>
+      </div>
+    <div *ngIf="tabNormalizeHoraire!=null">
+      <app-horaires-restaurant [restaurant]="restaurant"></app-horaires-restaurant>
+    </div>
+    <div *ngIf="tabNormalizeHoraire==null"  class="horairesVide" fxLayoutAlign="center center">
+      <mat-icon>mood_bad</mat-icon>
+      Horaires d'ouverture non définit !
+    </div>
+    <hr class="ligneProfil"/>
+    <br/>
+    <div class="menu-login" fxLayout="row" fxLayoutAlign="center center">
+      <span class="material-icons" id="icon-contact">
+        <mat-icon>view_module</mat-icon>
+      </span>
+      <span class="txt-icon">
+        Notre restaurant en images
+      </span>
+    </div>
+    <div fxLayout="row" class="content-menu">
+      <div *ngIf="restaurant.photosUrls[0]" class="imageMenu">
+        <img *ngFor="let photosUrl of restaurant.photosUrls" class="taille-photo cursor" [src]="photosUrl.imageUrl" (click)="openDialogImage(photosUrl.imageUrl)"/>
+      </div>
+    </div>
+    
+  </div>

@@ -1,0 +1,247 @@
+::ng-deep .panelAddPromo .mat-dialog-container {
+    padding: 0 0;
+    overflow:hidden;
+    height: 600px;
+    width: 520px;
+    background-color: #FFFFEE;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    padding-top: 7px;
+    text-align: center;
+    color: #146356;
+    border: rgba(0, 0, 0, 0.25) solid 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.txt{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+/* .content-form{
+    margin-top:40px;
+} */
+
+.inputs{
+    width: 160px;
+    height: 35px;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    padding: 5px;
+    padding-left: 10px;
+    color: rgba(51, 70, 255, 0.5);
+}
+.box-photo{
+    width: 157px;
+    height: 119px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.icon-photo{
+    color:rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.positionPhoto{
+    margin-left: 5%;
+}
+.file{
+    display: none;
+}
+
+
+input, select{
+
+    width: 160px;
+    height: 35px;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    padding: 5px;
+    padding-left: 10px;
+    color: rgba(51, 70, 255, 0.5);
+}
+
+.nom{
+    width: 450px;
+    height: 45px;
+    margin-bottom:25px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 5px;
+    padding-left: 5px;
+}
+input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.custom {            
+    width: 450px;
+    height: 45px;
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 5px;
+    
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.custom ::ng-deep .ng-dropdown-panel-items {           
+    background-color: #FFFFFF;
+    padding: 5px;
+    padding-left: 25px;
+}
+
+::ng-deep .ng-select{
+    overflow-y: none;
+}
+
+::ng-deep .ng-dropdown-panel-items{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+::ng-deep .ng-optgroup{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+::ng-deep .ng-option-label{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+    margin-left: 10px;
+}
+::ng-deep .ng-value{
+    height: 25px;
+    margin-right: 3px;
+    background-color: #EBEDEE;
+    border-radius: 100px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+::ng-deep .ng-value-label{
+    padding: 2px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+::ng-deep .left{
+    color: #36454C;
+}
+
+::ng-deep .mat-focus-indicator{
+    color: #146356;
+}
+
+.champ{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+}
+
+.champ2{
+    display: flex;
+    justify-content: space-around;
+}
+
+.champ2 > div{
+    margin-left: 0px;
+}
+
+.content-reduction{
+    width: 468px;
+    height: 162px;
+    text-align: center;
+    padding-top: 5px;
+    margin: auto;
+    background: rgba(235, 237, 238, 0.863);
+    border-radius: 10px;
+}
+
+.txt-reduction{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.val-reduction{
+    width: 65px;
+    height: 30px;
+    text-align: center;
+    padding-top: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.champ-reduction{
+    width: 270px;
+    margin-top: 5px;
+    margin-left: 0px;
+    box-shadow: none;
+}
+
+
+
+.champ-date{
+    display: flex;
+    flex-direction: column;
+}
+
+.champ-date > div{
+    margin-left: 0px;
+}
+
+label{
+    color: #146356;
+    margin-left: 15px;
+}
+
+.btn{
+    width: 110px;
+    height: 35px;
+    /* margin-top: 35px; */
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    /* padding-bottom: 30px;
+    padding-top: 15px;*/
+    margin-left: 40%; 
+    color: #FFFFFF
+}
+
+

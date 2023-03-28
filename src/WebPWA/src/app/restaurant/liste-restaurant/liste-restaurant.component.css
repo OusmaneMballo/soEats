@@ -1,0 +1,460 @@
+
+.container {
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    width: 100%;  
+}
+
+.grid-item {
+    width: 47%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 45%;
+    margin: 1.5%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.img-restaurant {
+    width: 100%;
+    height: 170px;
+    min-width: 100%;
+    border-radius: 15px;
+}
+
+
+.footer-restaus{
+    width: 100%;
+    height: 35%;
+    background: rgba(51, 70, 255, 0.75);
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    z-index: 1;
+}
+
+.nom-restau{
+    width: 200%; 
+    height: 65%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-top: 2px;
+    margin-left: 8px;
+    font-family: Poppins-Regular;
+}
+
+.detail{
+    width: 70px;
+    height: 70%;
+    justify-self: end;
+    align-self: end;
+    z-index: 1;
+    position:absolute;
+}
+
+.detail-restau{
+    width: 100%;
+    height: 65%;
+    border-radius: 100px 0px 0px 100px;
+    color: #146356;
+    font-family: Poppins-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+    z-index: 1;
+}
+
+.showmore{
+    width: 95%;
+    height: 60px;
+}
+
+.showMore{
+    width: 33%;
+    height: 50%;
+    color: #ffffff;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    font-family: Poppins-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 17px;
+}
+
+@media only screen and (min-width: 420px) and (max-width: 700px) {
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+     
+    }
+    
+    .grid-container {
+        width: 100%;
+        margin-left: 13%; 
+    }
+    
+    .grid-item {
+        width: 40%;
+        overflow: hidden;
+        height: 0;
+        padding-top: 37%;
+        margin: 1.5%;
+        border-radius: 15px;
+        position: relative;
+    }
+    
+    .img-restaurant {
+        min-width: 100%;
+        min-height: 250px;
+        border-radius: 15px;
+    }
+    
+    
+    .footer-restaus{
+        width: 100%;
+        height: 35%;
+        background: rgba(51, 70, 255, 0.75);
+        border-radius: 0px 0px 15px 15px;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .nom-restau{
+        width: 200%; 
+        height: 65%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 18px;
+        color: #FFFFFF;
+        margin-top: 2px;
+        margin-left: 8px;
+        font-family: Poppins-Regular;
+    }
+    
+    .detail{
+        width: 90px;
+        height: 70%;
+        justify-self: end;
+        align-self: end;
+        z-index: 1;
+        position:absolute;
+    }
+    
+    .detail-restau{
+        width: 100%;
+        height: 65%;
+        border-radius: 100px 0px 0px 100px;
+        color: #146356;
+        font-family: Poppins-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        z-index: 1;
+    }
+    
+    .showmore{
+        width: 95%;
+        height: 60px;
+    }
+    
+    .showMore{
+        width: 30%;
+        height: 50%;
+        color: #ffffff;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        font-family: Poppins-Regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 17px;
+    }
+   
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .grid-container{
+        width: 86%;
+    }
+    
+    .grid-item {
+        width: 31%;
+        overflow: hidden;
+        height: 0;
+        padding-top: 30%;
+        border-radius: 25px;
+        background-color:rgb(224, 224, 224);
+        margin: 1%;
+        position: relative;
+    }
+
+    .img-restaurant {
+        min-width: 100%;
+        min-height: 255px;
+        border-radius: 25px;
+    }
+    
+    .footer-restaus{
+        width: 100%;
+        height: 35%;
+        background: rgba(51, 70, 255, 0.75);
+        border-radius: 0px 0px 18px 18px;
+        z-index: 2;
+        position:absolute;
+    }
+    .nom-restau{
+        font-family: Poppins-Regular;
+        width: 200%; 
+        height: 57%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+    
+    .detail{
+        width: 110px;
+        height: 60%;
+        justify-self: end;
+        align-self: end;
+    }
+    
+    .detail-restau{
+        width: 100%;
+        height: 65%;
+        border-radius: 100px 0px 0px 100px;
+        color: #146356;
+        font-family: Poppins-Light;
+        font-style: normal;
+        font-size: 17px;
+        line-height: 23px;
+        z-index: 2;
+    }
+
+    .showmore{
+        width: 86%;
+        height: 90px;
+    }
+
+    .showMore{
+        width: 18%;
+        height: 50%;
+        color: #ffffff;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        font-family: Poppins-Regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 25px;
+    }
+   
+}
+
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 1000px) {
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+    
+    .grid-container{
+        width: 86%;
+    }
+    
+    .grid-item {
+        width: 31%;
+        overflow: hidden;
+        height: 0;
+        padding-top: 30.25%;
+        border-radius: 25px;
+        background-color:rgb(224, 224, 224);
+        margin: 1%;
+        position: relative;
+    }
+
+    .img-restaurant {
+        min-width: 100%;
+        min-height: 390px;
+        border-radius: 25px;
+       
+    }
+    
+    .footer-restaus{
+        width: 100%;
+        height: 35%;
+        background: rgba(51, 70, 255, 0.75);
+        border-radius: 0px 0px 25px 25px;
+        z-index: 1;
+        position:absolute;
+    }
+
+    .nom-restau{
+        font-family: Poppins-Regular;
+        width: 200%; 
+        height: 50%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+        margin-left: 9%;
+    }
+    
+    .detail{
+        width: 140px;
+        height: 55%;
+        justify-self: end;
+        align-self: end;
+        position: absolute;
+    }
+    
+    .detail-restau{
+        width: 100%;
+        height: 68%;
+        border-radius: 100px 0px 0px 100px;
+        color: #146356;
+        font-family: Poppins-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .showmore{
+        width: 86%;
+        height: 100px;
+    }
+    .showMore{
+        width: 18%;
+        height: 50%;
+        color: #ffffff;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        font-family: Poppins-Regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+    }
+        
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+    .container {
+        max-width: 2500px;
+        margin: 0 auto;
+      }
+    
+    .grid-container{
+        width: 86%;
+    }
+    
+    .grid-item {
+        width: 31%;
+        overflow: hidden;
+        height: 0;
+        padding-top: 30.25%;
+        border-radius: 25px;
+        background-color:rgb(224, 224, 224);
+        margin: 1%;
+        position: relative;
+    }
+
+    .img-restaurant {
+        min-width: 100%;
+        min-height: 470px;
+        border-radius: 25px;
+       
+    }
+    
+    .footer-restaus{
+        width: 100%;
+        height: 35%;
+        background: rgba(51, 70, 255, 0.75);
+        border-radius: 0px 0px 25px 25px;
+        z-index: 1;
+        position:absolute;
+    }
+
+    .nom-restau{
+        font-family: Poppins-Regular;
+        width: 200%; 
+        height: 50%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 36px;
+        color: #FFFFFF;
+        margin-left: 9%;
+    }
+    
+    .detail{
+        width: 180px;
+        height: 55%;
+        justify-self: end;
+        align-self: end;
+        position: absolute;
+    }
+    
+    .detail-restau{
+        width: 100%;
+        height: 68%;
+        border-radius: 100px 0px 0px 100px;
+        color: #146356;
+        font-family: Poppins-Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    
+    .showmore{
+        width: 86%;
+        height: 100px;
+    }
+    .showMore{
+        width: 18%;
+        height: 50%;
+        color: #ffffff;
+        background: #146356;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        font-family: Poppins-Regular;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+    }
+        
+}
+

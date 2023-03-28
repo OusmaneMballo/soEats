@@ -1,0 +1,44 @@
+<body>
+    <mat-toolbar *ngIf="supermarche.name">
+        <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour"
+            routerLink="/manager/{{supermarche.ownerId}}/{{supermarche.slugId}}">keyboard_backspace</mat-icon>
+        <span class="title">
+            <div class="nom-restau" fxLayoutAlign="center center" id="icon-modif-nom-resto">
+                {{supermarche.name}}
+            </div>
+        </span>
+    </mat-toolbar>
+    <div *ngIf="rayons" class="container" fxLayout="column" fxLayoutAlign="start center">
+        <div class="search" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div class="icons" fxLayout="row wrap" fxLayoutAlign="center center">
+                <span class="material-icons" id="icon-form">
+                    search
+                </span>
+                <input id="" type="search" placeholder="Rechercher un rayon" [(ngModel)]="searchText"
+                    autocomplete="off" />
+            </div>
+        </div>
+        <div class="containerMenu" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div *ngFor="let r of rayons | filter: searchText" class="menu" fxLayout="row wrap"
+                fxLayoutAlign="start center">
+                <div class="containerLeft" fxLayout="row wrap" fxLayoutAlign="end center">
+                    <div class="menus" fxLayoutAlign="center center">
+                        <div class="infoMenu">
+                            <div class="nameMenu">{{r.displayName}}</div>
+                            <div *ngIf="r.products" class="productCountMenu">{{r.products.length}} produits</div>
+                        </div>
+                        <div class="modifier" fxLayoutAlign="end center">
+                            <span class="material-icons" id="icon-menu" (click)="openDialogModifMenu(r, cardId)">
+                                edit
+                            </span>
+                            <span class="material-icons" id="icon-menu" (click)="supprimerRayon(r)">
+                                delete
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <img [src]="r.imageUrl" class="img" (click)="openDialogDetailsRayon(r, supermarche.id)">
+            </div>
+        </div>
+    </div>
+</body>

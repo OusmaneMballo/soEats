@@ -1,0 +1,18 @@
+<div *ngIf="restaurant.imageUrl" class="logo-r">
+    <img class="img-logo" [src]="restaurant.imageUrl"/>
+    <div class="modifPhoto" fxLayout="row" fxLayoutAlign="space-between center">
+        <span class="material-icons" id="icon-logo" (click)="openDialog()">
+            add_a_photo
+        </span>
+    </div>
+</div>
+<div *ngIf="!restaurant.imageUrl" class="logo-r">
+    <div class="img-logo" fxLayoutAlign="center center">
+        Photo du restaurant
+    </div>
+    <div class="modifPhoto" fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="material-icons" id="icon-logo" (click)="openDialog()">
+                add_a_photo
+            </span>
+    </div>
+</div>

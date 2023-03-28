@@ -1,0 +1,106 @@
+.content{
+    height: 90%;
+}
+.menu-txt{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: justify;
+    color: #146356;
+}
+
+.user-name{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: justify;
+    color: #146356;
+    cursor: none;
+}
+.btn-connexion{
+    width: 90%;
+    height: 35px;
+    margin-left: 14px;
+    margin-top: 5px;
+    background: #146356;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+}
+
+.txt-connexion{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 36px;
+    margin-left: 25%;
+    text-align: justify;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.flex-container-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80%;
+}
+
+.flex-container-login > div {
+    text-align: center;
+    margin-left: 15px;
+}
+
+.btn-deconnexion{
+    width: 90%;
+    height: 35px;
+    margin-bottom: 19px;
+    background: #146356;
+    padding: 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.txt-deconnexion{   
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 33px;
+    margin-left: 20%;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80%;
+}
+
+.flex-container > div {
+    text-align: center;
+    margin-left: 15px;
+}
+#logo{
+    float: left;
+    width: min(60px);
+    height: min(65px);
+    background-attachment: local;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px){
+    #logo{
+        width: min(70px);
+        height: min(75px);
+    }
+}

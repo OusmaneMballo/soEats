@@ -1,0 +1,77 @@
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}">keyboard_backspace</mat-icon>
+    <span>{{restaurant.name}}</span>
+</mat-toolbar>
+  <br>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" class="content-btn">
+    <div class="buttons">
+        <button class="buttonAddPromo" mat-raised-button (click)="openDialogAjoutPromo()" >Ajouter <mat-icon>add_circle</mat-icon></button>
+    </div>
+    <div class="search">
+        <div  class="icons" fxLayoutAlign="center center">
+            <span class="material-icons" id="icon-form">
+                search
+            </span>
+            <input id="" type="search" placeholder="Rechercher ... " [(ngModel)]="searchCmdAtraiter" autocomplete="off"/>
+        </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <pagination-controls id="pagination1" (pageChange)="cp = $event"></pagination-controls>
+    <table>
+        <tr><th colspan="7" class="title">Liste des promotions en cours</th></tr>
+        <tr>
+            <th>Nom_Promo</th>
+            <th>Type de produit</th>
+            <th>Catégories</th>
+            <th>Réduction</th>
+            <th>Dates</th>
+            <th colspan="2">Actions</th>
+        </tr>
+        <tr *ngFor="let promo of promotionsCurrent | filter: searchCmdAtraiter | paginate: {id: 'pagination1', itemsPerPage: 8, currentPage: cp}">
+            <td>{{promo.name}}</td>
+            <td *ngIf="promo.productType!=null">{{promo.productType.displayName}}</td>
+            <td *ngIf="promo.productType==null">-</td>
+            <td *ngIf="promo.categorie==-1">-</td>
+            <td *ngIf="promo.categorie==0">Entrée</td>
+            <td *ngIf="promo.categorie==1">Boisson</td>
+            <td *ngIf="promo.categorie==2">Plat</td>
+            <td *ngIf="promo.categorie==3">Dessert</td>
+            <td *ngIf="promo.categorie==4">Patisserie</td>
+            <td>{{promo.reduction}}%</td>
+            <td>{{promo.startDate | date: 'dd/MM/yyyy'}} - {{promo.endDate | date: 'dd/MM/yyyy'}}</td>
+            <td class="cel-action" (click)="deletePromotion(promo)"><mat-icon id="icon">delete</mat-icon></td>
+            <td class="cel-action" (click)="openDialogEditPromo(promo)"><mat-icon id="icon">create</mat-icon></td>
+        </tr>
+    </table>
+  </div>
+  <br>
+  <div>
+    <pagination-controls id="pagination2" (pageChange)="cp1 = $event"></pagination-controls>
+    <table>
+        <tr><th colspan="7" class="title">Liste des promotions dépassées</th></tr>
+        <tr>
+            <th>Nom_Promo</th>
+            <th>Type de produit</th>
+            <th>Catégories</th>
+            <th>Réduction</th>
+            <th>Dates</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let promo of promotionsHold | filter: searchCmdAtraiter | paginate: {id: 'pagination2', itemsPerPage: 8, currentPage: cp1}">
+            <td>{{promo.name}}</td>
+            <td *ngIf="promo.productType!=null">{{promo.productType.displayName}}</td>
+            <td *ngIf="promo.productType==null">-</td>
+            <td *ngIf="promo.categorie==-1">-</td>
+            <td *ngIf="promo.categorie==0">Entrée</td>
+            <td *ngIf="promo.categorie==1">Boisson</td>
+            <td *ngIf="promo.categorie==2">Plat</td>
+            <td *ngIf="promo.categorie==3">Dessert</td>
+            <td *ngIf="promo.categorie==4">Patisserie</td>
+            <td>{{promo.reduction}}%</td>
+            <td>{{promo.startDate | date: 'dd/MM/yyyy'}} - {{promo.endDate | date: 'dd/MM/yyyy'}}</td>
+            <td class="cel-action" (click)="deletePromotion(promo)"><mat-icon id="icon">delete</mat-icon></td>
+        </tr>
+    </table>
+  </div>

@@ -1,0 +1,209 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  #banniere{
+    width: 100%;
+    height:100%;
+    margin-top: -8%;
+    zoom: 135%;
+    background-attachment: local; 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bgoverlay {
+    background-color: rgba(0, 0, 0, 0.561);
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+  
+  #banniere div{
+    text-align: center;
+  }
+  .txtPrez{
+    width: 50%;
+    margin: auto;
+    height: 80px;
+    margin-top: 45px;  
+  }
+
+  .txtPrez > div{
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-size: 10px;
+    margin-left: 8px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 18px;
+  }
+
+  .content-store{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .content-store > div{
+    width: 40%;
+    height: 35px;
+    background-color: #0c0b0b;
+    color: #FFFFFF;
+    margin: 10px;
+    padding: auto;
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: 9px;
+    font-family: Poppins;
+    border-radius: 6px;
+  }
+
+  .app-mobile{
+    width: 90px;
+    height: 180px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .appStore-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .txt-store{
+    font-weight: bold;
+  }
+
+
+  .qr-code{
+    width: 150px;
+    height: 210px;
+    margin-bottom: 10px;
+  }
+  @media only screen and (min-width: 500px){
+    .txtPrez{
+      margin-top: 50px;
+    }
+    .txtPrez > div{
+      font-size: 15px;
+      margin-left: 8px;
+      line-height: 22px;
+    }
+    #left_banniere{
+      font-size: 80%;
+      padding-top: 11px;
+    }
+
+    .content-store > div{
+      width: 45%;
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  } 
+
+  @media only screen and (min-width: 550px){
+    .content-store > div{
+      width: 38%;
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+    /* Tablet Styles */
+    @media only screen and (min-width: 600px){
+      .txtPrez{
+        margin-top: 80px;
+      }
+      .txtPrez > div{
+        font-size: 15px;
+        margin-left: 8px;
+        line-height: 25px;
+      }
+      .content-store > div{
+        width: 32%;
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      .app-mobile{
+        width: 110px;
+        height: 210px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      
+    }
+
+    @media only screen and (min-width: 680px){
+      .content-store > div{
+        width: 150px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 800px){
+    /* #banniere{
+      height:min(50vw, 500px);
+    } */
+     
+  
+  }
+  /* @media screen and (min-width: 900px){
+    .txtPrez{
+      margin-top: 60px;
+      margin-left: 0px;
+    }
+    .content-app-store{
+      margin-top: 10px;
+    }
+    .content-app-store > div{
+      height: 230px;
+      margin: 0px;
+    }
+    .content-store > div{
+      width: 90%;
+      height: 40px;
+      margin-left: 90px;
+      font-size: 11px;
+    }
+
+    .qr-code{
+      width: 350px;
+      height: 400px;
+    }
+  } */
+  /*Large screen*/
+  @media screen and (min-width: 900px){
+  
+    .txtPrez{
+      margin-top: 80px;
+    }
+    .txtPrez > div{
+      font-size: 18px;
+      margin-left: 8px;
+      line-height: 27px;
+    }
+
+  }
+
+  @media screen and (min-width: 1200px){
+    .txtPrez{
+      margin-top: 95px;
+    }
+  }
+
+  @media screen and (min-width: 1500px){
+    .txtPrez{
+      margin-top: 125px;
+    }
+  }

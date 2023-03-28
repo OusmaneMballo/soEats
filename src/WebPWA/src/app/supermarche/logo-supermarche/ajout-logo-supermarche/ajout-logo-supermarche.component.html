@@ -1,0 +1,23 @@
+<div class="containerDialog" fxLayout="column" fxLayoutAlign="center center ">
+    <div class="headerDialog" fxLayoutAlign="end center">
+        Photo du supermarché
+        <span class="material-icons" id="iconCancel" (click)="onClose()">
+            highlight_off
+        </span>
+    </div>
+    <div class="bodyDialoglabel" fxLayoutAlign="center center">
+        <label class="label" fxLayoutAlign="center center" for="file-input">
+            <div class="bodyDialog" fxLayoutAlign="center center">
+                <span *ngIf="!imgURL" class="material-icons" id="add-logo">
+                    add_a_photo
+                </span>
+                <img *ngIf="imgURL" class="previewLogo" [src]="imgURL"/>
+            </div>
+        </label>
+        <input #file id="file-input" type="file" accept="image/*" (change)="preview(file.files)" />
+    </div>
+    <div class="footerDialog" fxLayoutAlign="center center">
+        <button class="addLogo" mat-raised-button (click)="addLogo()">Enregistrer</button>
+    </div>
+</div>
+

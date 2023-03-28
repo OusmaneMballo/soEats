@@ -1,0 +1,48 @@
+<div class="containerContact">
+    <div *ngIf="supermarche" class="contact" fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            fmd_good
+        </span>
+        <div class="text-contact">
+            <p>{{supermarche.address}}</p>
+        </div>
+        <span class="material-icons" id="icon-create" (click)="modifModal(supermarche, 'Adresse')">
+            create
+        </span>
+    </div>
+    <hr class="ligne"/>
+    <div class="contact" fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            call
+        </span>
+        <div class="text-contact" >
+            <p>{{supermarche.phoneNumber}}</p>
+       </div>
+       <span class="material-icons" id="icon-create" (click)="modifModal(supermarche, 'Telephone')">
+        create
+       </span>
+    </div>
+    <hr class="ligne" />
+    <div class="contact"  fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            mail_outline
+        </span>
+        <div class="text-contact" >
+            <p>{{supermarche.email}}</p>
+       </div>
+    </div>
+    <hr class="ligne" />
+    <div class="contact"  fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            local_shipping
+        </span>
+        <div class="text-contact" >
+            <!-- <p *ngIf="supermarche.typeDeliveryMethod === 0">Livrer par mes soins</p> -->
+            <p>Livrer par SoEats</p>
+       </div>
+       <!-- <span class="material-icons" id="icon-create" (click)="modifPaiementModal(supermarche)">
+        create
+       </span> -->
+    </div>
+    <hr class="last-ligne"/>
+</div>

@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "owner": "so-eats",
+    "name": "So Eats",
+    "slug": "So-Eats",
+    "version": "1.0.54",
+    "orientation": "portrait",
+    "icon": "./assets/icon-96x96.png",
+    "splash": {
+      "image": "./assets/icon-512x512.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.soeats.app",
+      "buildNumber": "1.0.54"
+    },
+    "android": {
+      "package": "com.soeats.app",
+      "versionCode": 54,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-96x96.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "softwareKeyboardLayoutMode" : "pan"
+    },
+    "web": {
+      "favicon": "./assets/icon-96x96.png"
+    }
+  }
+}

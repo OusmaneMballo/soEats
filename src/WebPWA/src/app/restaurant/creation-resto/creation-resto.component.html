@@ -1,0 +1,79 @@
+<div>
+  <p class="txt-info">
+    <img src="../../assets/icons/excl.png">
+    Attention! le restaurant ou le supermarché ne sera pas affiché aux clients si la configuration n'est pas complète.
+  </p>
+</div>
+<div class="flex-container" fxLayout="row wrap" fxLayoutAlign="center center">
+  <div class="buttonCreateRestau">
+    <button class="confirmer" mat-raised-button (click)="openDialog()">Créer votre restaurant</button>
+  </div>
+  <div class="buttonCreateRestau">
+    <button class="confirmer" mat-raised-button routerLink="/restaurateur/{{ownerId}}/reports">Rapports </button>
+  </div>
+  <!-- <div  class="buttonCreateRestau">
+    <button class="confirmer" mat-raised-button (click)="openDialogUpdateCategorie()">Ajouter une catégorie </button>
+  </div>
+  <div  class="buttonCreateRestau">
+    <button class="confirmer" mat-raised-button (click)="openDialogCategorie()">Ajout Image Catégorie</button>
+  </div> -->
+</div>
+<div *ngIf="listResto; else elseblock" fxLayoutAlign="center center" class="resto">
+  <div class="grid-container" fxLayout="row wrap" fxLayoutAlign="start">
+    <div *ngFor="let item of content" class="grid-item" fxLayoutAlign="center end">
+      <div class="child1" *ngIf="item.imageUrl">
+        <span routerLink="/restaurateurs/{{item.ownerId}}/{{item.slugId}}"><img [src]="item.imageUrl"
+            class="img-restaurant"></span>
+      </div>
+      <div class="child2">
+        <span class="pourcentage">{{item.pourcentage}}%</span>
+        <mat-card-content>
+          <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [diameter]="50"
+            [value]="item.pourcentage">
+          </mat-progress-spinner>
+        </mat-card-content>
+        <mat-card hidden></mat-card>
+      </div>
+      <div class="footer-restaus" gdAreas="nom-restau detail">
+        <div class="nom-restau" fxLayoutAlign="none center">
+          <p>
+            {{item.name}}
+          </p>
+        </div>
+        <div class="detail-restau" fxLayoutAlign="none center">
+          <spane routerLink="/restaurateurs/{{item.ownerId}}/{{item.slugId}}">
+            <mat-icon>settings</mat-icon>
+          </spane>
+          <span (click)="supprimerRestaurant(item.id)">
+            <mat-icon>delete</mat-icon>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div fxLayoutAlign="center center">
+  <div class="showmore" fxLayoutAlign="end center">
+    <button class="confirmer" (click)="getRestaurants()" [hidden]="counter>=listResto.length" mat-raised-button>Voir
+      Plus</button>
+    <button class="confirmer" (click)="hidenRestaurant()" [hidden]="!(counter>listResto.length && listResto.length>=6)"
+      mat-raised-button>Voir Moins</button>
+  </div>
+</div>
+<ng-template #elseblock>
+
+  <body>
+    <div fxLayout='row'>
+      <div class="creation" fxLayoutAlign="end end">
+        <button class="confirmer" mat-raised-button (click)="openDialog()">Créer votre restaurant</button>
+      </div>
+    </div>
+    <div fxLayout='row' fxLayoutAlign="center center">
+      <img src="../../assets/img/sittingmen.png" class="img">
+    </div>
+    <div fxLayout='row' fxLayoutAlign="center center" class="message">
+      Désolé votre liste est vide
+    </div>
+  </body>
+</ng-template>

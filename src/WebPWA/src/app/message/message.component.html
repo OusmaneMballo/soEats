@@ -1,0 +1,84 @@
+<div class="bg">
+  <h1 mat-dialog-title></h1>
+  <div mat-dialog-content>
+    <div style="margin-top: 35px;">
+      <div *ngIf="data.val === 'error'" class="error">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Oups!.. données saisies invalide!</span><br>
+          <span >Bon format h:min (12:30)</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'errorProduit'" class="error">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Erreur!</span><br>
+          <span >Toutes les champs sont obligatoires</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'errorAddProduit'" class="error">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Oups!</span><br>
+          <span >Produit non ajouté</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'errorPrixProduit'" class="error">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Erreur!</span><br>
+          <span >Prix incorrecte</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'errorDeleteProduit'" class="error">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Erreur!</span><br>
+          <span >Produit non supprimé</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'creneau1'" class="warn">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Veuillez saisir le créneau 1</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'creneau2'" class="warn">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span>Veuillez saisir tous les champs du créneau 2</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'day_error'" class="warn">
+        <mat-icon>error_outline</mat-icon>
+        <div class="txt">
+          <span >Veuillez choisir le jour correspondant...</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'taille'" class="warn">
+        <mat-icon>remove_circle_outline</mat-icon>
+        <div class="txt">
+          <span >Veuillez saisir au moins un créneau valide!</span><br>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'success'" class="success">
+        <mat-icon> insert_emoticon</mat-icon>
+        <div>
+          <span class="txt">Horaire ajouté avec succés!</span>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'successProduit'" class="success">
+        <mat-icon> insert_emoticon</mat-icon>
+        <div>
+          <span class="txt">Produit ajouté avec succés!</span>
+        </div>
+      </div>
+      <div *ngIf="data.val === 'successDeleteProduit'" class="success">
+        <mat-icon> insert_emoticon</mat-icon>
+        <div>
+          <span class="txt">Produit supprimé avec succés!</span>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>

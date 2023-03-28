@@ -1,0 +1,16 @@
+<div class="containerPaiement" fxLayout="column" fxLayoutAlign="end center ">
+    <div class="header" fxLayoutAlign="center center">
+        Raison d'annulation
+    </div>
+    <form class="form" [formGroup]="f" (submit)="onEditRestaurant(f.value)"  fxLayout="column" fxLayoutAlign="center center">
+        <div fxLayout='column' fxLayoutAlign="center center">
+            <div  fxLayout='column' fxLayoutAlign="center center">
+            <br/>
+                <textarea formControlName="raisonannulation" type ="text" ></textarea>  
+            </div>
+            <div class="footer" fxLayoutAlign="center end">
+                <button class="confirmerbtn" mat-raised-button [disabled]="disable" >Confirmer</button>
+            </div>
+        </div>
+    </form>
+</div>

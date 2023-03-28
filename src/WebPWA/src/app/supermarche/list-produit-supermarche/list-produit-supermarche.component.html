@@ -1,0 +1,77 @@
+<div class="content">
+    <div *ngIf="loaderService.isLoading | async">
+        <mat-spinner class="loader-container" style="color: primary;"></mat-spinner>
+    </div>
+    <mat-toolbar>
+        <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/manager/{{supermarche.ownerId}}/{{supermarche.slugId}}">keyboard_backspace</mat-icon>
+        <span class="title">
+          <div class="nom-restau" fxLayoutAlign="center center">
+            <p>
+              {{supermarche.name}}
+            </p>
+          </div>
+        </span>
+    </mat-toolbar>
+    <div>
+        <div>
+            <form class="example-form">
+                <!-- <div  class="header" fxLayout="row" >
+                    <div  [formGroup]="categories" class="selectCatergorie" fxLayoutAlign="end center">
+                        <select  formControlName="categorie" id="selectPlace" type="number" (change)="changeEvent(categories.value.categorie)">
+                          <option value="Tous" [selected]="true">Tous</option>
+                          <option value="Entree">Entrée</option>
+                          <option value="Plat">Plat</option>
+                          <option value="Boisson">Boisson</option>
+                          <option value="Dessert">Dessert</option>
+                          <option value="Patisserie">Patisserie</option>
+                        </select>
+                    </div>
+                    <div class="search">
+                        <div class="child1">
+                            <input type="text"
+                            class="recherche"
+                            placeholder="Rechercher un produit"
+                            [formControl]="control"
+                            [(ngModel)]="searchText" >
+                        </div>
+                        <div class="icons-search child2">
+                            <span class="material-icons" id="icon-form">
+                                search
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <pagination-controls class="pagination" id="pagination" (pageChange)="cp = $event"></pagination-controls>
+                <!-- <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="typeBtn" (click)="openDialogTypeProduct(prod)">Ajouter un type</button>
+                    <button class="typeBtn" (click)="openDialogAddTypeProduct()">Creer un type</button>
+                </div> -->
+                <div class="flex-container" >
+                    <div class="container" *ngFor="let produit of prod | filter: searchText | paginate: {id: 'pagination', itemsPerPage: 9, currentPage: cp}">
+                        <!-- <div class="container1" (click)="openDialogEditProduit(produit)">
+                            <img src="{{produit.imageUrl}}" class="img-produit" alt="">
+                        </div> -->
+                        <div class="container2">
+                            <div>
+                                <p class="txt-nom-prod">{{produit.name}} <span class="txt-prix">{{produit.price}} FCFA</span></p>
+                            </div>
+                            <div class="container-description">
+                                <p class="txt-description">
+                                    {{produit.description}}
+                                </p>
+                            </div>
+                            <span class="material-icons" id="icon-logo" (click)="suppressionProduitByIdProduitAndIdCard(produit)">
+                                delete
+                            </span>
+                            <!-- <span class="material-icons" id="icon-logo" (click)="openDialogEditProduit(produit)">
+                                edit
+                            </span> -->
+                        </div>
+                    </div>
+                </div> 
+            </form>
+        </div>
+
+    </div>
+</div>

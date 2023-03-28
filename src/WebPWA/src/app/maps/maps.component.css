@@ -1,0 +1,52 @@
+.map-wrapper{ 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.map-border{
+    border: #171be95e solid 5px;
+}
+
+#map{
+    height: 35vh;
+    width: 53vh;
+}
+
+@media only screen and (min-width: 600px){
+    #map{
+        height: 40vh;
+        width: 96vh;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    #map{
+        height: 60vh;
+        width: 116vh;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    #map{
+        height: 60vh;
+        width: 132vh;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    #map{
+        height: 60vh;
+        width: 147vh;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    #map{
+        height: 60vh;
+        width: 190vh;
+    }
+}

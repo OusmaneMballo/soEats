@@ -1,0 +1,18 @@
+<div class="menu" fxLayout="row">
+    <div class="menu-login" fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            menu_book
+        </span>
+        Carte du restaurant
+    </div>
+</div>
+<div class="button-menu-content">
+    <div class="flex-container-menu-button">
+        <div class="txt-menu-long" (click)="openDialogAjoutProduit()">Ajouter un produit</div>
+        <div class="txt-menu-long" routerLink="/restaurateur/{{restaurant.ownerId}}/{{restaurant.slugId}}/produits">Produits</div>
+    </div>
+    <div class="flex-container-menu-button">
+        <div class="txt-menu-long" (click)="openDialogComposerMenu()">Composer un menu</div>
+        <div class="txt-menu-long" routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}/menus">Menus</div>          
+    </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="containerContact">
+    <div *ngIf="restaurant" class="contact" fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            fmd_good
+        </span>
+        <div class="text-contact">
+            <p>{{restaurant.address}}</p>
+        </div>
+        <span class="material-icons" id="icon-create" (click)="modifModal(restaurant, 'Adresse')">
+            create
+        </span>
+    </div>
+    <hr class="ligne"/>
+    <div class="contact" fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            call
+        </span>
+        <div class="text-contact" >
+            <p>{{restaurant.phoneNumber}}</p>
+       </div>
+       <span class="material-icons" id="icon-create" (click)="modifModal(restaurant, 'Telephone')">
+        create
+       </span>
+    </div>
+    <hr class="ligne" />
+    <div class="contact"  fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            mail_outline
+        </span>
+        <div class="text-contact" >
+            <p>{{restaurant.email}}</p>
+       </div>
+    </div>
+    <!-- <hr class="ligne" />
+    <div class="contact"  fxLayoutAlign="start center">
+        <span class="material-icons iconStar">
+            hotel_class
+        </span>
+        <div class="text-contact" >
+            <p>Notes:</p>
+        </div>
+        <span class="material-icons iconStar">
+            star_rate
+        </span>
+        <span class="material-icons iconStar">
+            star_rate
+        </span>
+        <span class="material-icons iconStar">
+            star_rate
+        </span>
+    </div> -->
+    <hr class="ligne" />
+    <div class="contact"  fxLayoutAlign="start center">
+        <span class="material-icons" id="icon-contact">
+            local_shipping
+        </span>
+        <div class="text-contact" >
+            <p *ngIf="restaurant.typeDeliveryMethod === 0">Livrer par mes soins</p>
+            <p *ngIf="restaurant.typeDeliveryMethod === 1">Livrer par SoEats</p>
+       </div>
+       <span class="material-icons" id="icon-create" (click)="modifPaiementModal(restaurant)">
+        create
+       </span>
+    </div>
+    <hr class="last-ligne"/>
+</div>

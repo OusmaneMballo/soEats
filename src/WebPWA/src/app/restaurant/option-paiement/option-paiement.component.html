@@ -1,0 +1,30 @@
+
+<div class="containerPaiement" fxLayout="column" fxLayoutAlign="end center ">
+  <div class="header" fxLayoutAlign="center center">
+    Options de livraison
+  </div>
+  <form class="form" [formGroup]="f" *ngIf="f" (submit)="onEditRestaurant(f.value)" fxLayout="column" fxLayoutAlign="center center">
+  <div class="optionsPL" fxLayout='column' fxLayoutAlign="center center">
+      <div class="optionsPL" fxLayout='column' fxLayoutAlign="center center">
+        <br/>
+          <mat-radio-group formControlName="typeDeliveryMethod"
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group">          
+          <div class="paiement" fxLayout='row' fxLayoutAlign="start center" >
+            <mat-radio-button class="example-radio-button" [color]="'primary'" [value]="0" [checked]="data.typeDeliveryMethod === 0">
+              <div class="checkPay"> &nbsp; Livrer par mes soins</div>
+            </mat-radio-button>
+          </div>
+          <div class="paiement" fxLayout='row' fxLayoutAlign="start center" >
+            <mat-radio-button class="example-radio-button" [color]="'primary'" [value]="1" [checked]="data.typeDeliveryMethod === 1">
+              <div class="checkPay"> &nbsp; Déléguer la livraison à SoEats</div>
+            </mat-radio-button>
+          </div>
+        </mat-radio-group>
+      </div>
+    <div class="footer" fxLayoutAlign="center end">
+      <button class="confirmerbtn" mat-raised-button >Confirmer</button>
+    </div>
+  </div>
+  </form>
+</div>

@@ -1,0 +1,463 @@
+.containerReserv{
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    padding-top: 3%;
+    padding-bottom: 3%; 
+    height: 10%;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+    background-color: #146356;
+}
+
+.form {
+  width: 100%;
+  height: 90%;
+}
+
+.body {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    width: 95%;
+    height: 80%;
+    margin: 5%;
+}
+
+.footer{
+    width: 100%;
+    height: 10%;
+}
+
+.confirmerbtn{
+    width: 40%;
+    height: 55%;
+    background: #146356;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    color: white;
+}
+
+input{
+    width: 100%;
+    height: 65%;
+    margin: 8px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 100px;
+    outline:none;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+    text-align: left;
+    padding-left: 1rem;
+}
+
+label{
+    display: none;
+    position: absolute;
+    font-size: 13px;
+}
+
+input:focus{
+    border: 0.5px solid #7986ff;
+    box-shadow: 0 0 1px #146356;
+    outline-offset: 0px;
+    border-radius: 100px;
+    width: 100%;
+    height: 60%;
+    margin: 8px;
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 13px;
+}
+
+.icons input:not(:placeholder-shown) + label{
+    color: #146356;
+    display: block;
+    left: 8%;
+    bottom: 80%;
+}
+
+.icons1 input:not(:placeholder-shown) + label{
+    color: #146356;
+    display: block;
+    left: 13%;
+    bottom: 80%; 
+}
+
+#icons1-icon-form {
+  position: absolute;
+  color: #146356;
+  font-size: 20px;
+  right: 10px;
+}
+
+
+input::placeholder{
+font-family: Poppins;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+text-transform: capitalize;
+color: rgba(51, 70, 255, 0.5);
+}
+
+select{
+width: 100%;
+height: 65%;
+margin: 8px;
+border: 1px solid rgb(255, 255, 255);
+border-radius: 100px;
+outline:none;
+background: #FFFFFF;
+box-shadow: 0px 5px 5px rgba(105, 105, 105, 0.25);
+text-align: left;
+padding-left: 1rem;     
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+background-image:
+    linear-gradient(45deg, transparent 50%, rgb(57, 75, 236) 50%),
+    linear-gradient(135deg, rgb(57, 75, 236) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+select:required:invalid {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    text-transform: capitalize;
+    color: rgba(51, 70, 255, 0.5);
+  }
+
+  option[value=""][disabled] {
+    display: none;
+  }
+
+  option {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #146356;
+  }
+
+  select:valid + label{
+    color: #146356;
+    display: block;
+    left: 18%;
+    bottom: 80%;
+  }
+
+.input-icons{
+  height: 33%;
+  width: 100%;
+}
+
+.iconsContainer{
+  height: 50%;
+  width: 100%;
+  position: relative;
+}
+
+.icons{
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+
+.iconsValid{
+  height: 10%;
+  width: 88%;
+  position: absolute;
+  top: 85%;
+}
+
+.validation{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  color: #a11c1c;
+  font-weight: 500;
+}
+
+#icon-validation{
+  color: #a11c1c;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+
+#icon-form{
+    position: absolute;
+    color: #146356;
+    font-size: 20px;
+    right: 20px;
+    background: #FFFFFF;
+}
+
+.icons1Container{
+  height: 50%;
+  width: 60%;
+  position: relative;
+}
+
+.icons1{
+    height: 80%;
+    width: 100%;
+    position: relative;
+  }
+
+  .icons2Container{
+    height: 50%;
+    width: 40%;
+    position: relative;
+  }
+
+  .icons2{
+    height: 80%;
+    width: 100%;
+  }
+
+  .icons3{
+    height: 80%;
+    width: 100%;
+  }
+
+  #selectHoraire{
+    border-radius: 5px;
+  }
+
+  #selectPlace{
+    border-radius: 15px;
+  }
+
+
+@media only screen and (min-width: 550px) and (max-width: 960px) {
+  .icons input:not(:placeholder-shown) + label{
+    left: 4%;
+    bottom: 80%;
+  }
+  .icons1 input:not(:placeholder-shown) + label{
+      left: 7%;
+      bottom: 80%;
+  }
+  select:valid + label{
+    left: 10%;
+  }
+  .confirmerbtn{
+    width: 25%;
+    height: 40%;
+    font-size: 20px;
+  }
+
+  #icon-form{
+    font-size: x-large;
+    margin-left: 85%;
+}
+
+#icons1-icon-form {
+  font-size: x-large;
+}
+
+select{
+    background-position:
+      calc(100% - 22px) calc(1em + 6px),
+      calc(100% - 15px) calc(1em + 6px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      7px 7px,
+      7px 7px,
+      1px 1.5em;
+  }
+
+}
+
+@media only screen and (min-width: 961px){
+    .header{
+        height: 20%;
+        font-size: 35px;
+    }
+
+    .body{
+        height: 60%;
+    }
+
+    .footer{
+        height: 20%;
+     }
+     
+     .confirmerbtn{
+         width: 20%;
+         height: 50%;
+         font-size: 24px;
+     }
+
+     input{
+        height: 55%;
+        margin: 15px;
+        padding-left: 1.5rem;
+        }
+        
+        
+        input:focus{
+        height: 50%;
+        margin: 15px;
+        font-size: 16px;
+        padding-left: 1.5rem;
+        }
+
+        label{
+          font-size: 17px;
+        }
+    
+        .icons1 input:not(:placeholder-shown) + label{
+            left: 9%;
+            bottom: 80%;
+        }
+      
+
+          input::placeholder{
+          font-size: 16px;
+          }
+
+          select{
+            height: 55%;
+            margin: 15px;
+              background-position:
+                calc(100% - 25px) calc(1em + 6px),
+                calc(100% - 15px) calc(1em + 6px),
+                calc(100% - 2.5em) 0.5em;
+              background-size:
+                10px 10px,
+                10px 10px,
+                1px 1.5em;
+                font-size: 16px;
+                padding-left: 1.5rem;
+            }
+
+            select:required:invalid {
+              font-size: 16px;
+            }
+        
+          
+            option {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          
+            select:valid + label{
+              left: 18%;
+              bottom: 80%;
+            }
+
+            .input-icons{
+              height: 100%;
+              width: 100%;
+            }
+            
+
+            .iconsContainer{
+              height: 100%;
+              width: 50%;
+              position: relative;
+            }
+            
+            .icons{
+              height: 90%;
+              width: 100%;
+              position: relative;
+            }
+            
+            .iconsValid{
+              height: 10%;
+              width: 88%;
+              position: absolute;
+              top: 85%;
+            }
+            
+            .validation{
+              font-family: Poppins;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 15px;
+              color: #a11c1c;
+              font-weight: 500;
+            }
+            
+            #icon-validation{
+              color: #a11c1c;
+              font-size: 16px;
+              margin-right: 5px;
+            }
+            
+            .icons1Container{
+              height: 100%;
+              width: 50%;
+              position: relative;
+            }
+            
+            .icons1{
+                height: 80%;
+                width: 100%;
+                position: relative;
+              }
+            
+              .icons2Container{
+                height: 100%;
+                width: 20%;
+                position: relative;
+              }
+            
+            #icon-form{
+                font-size: x-large;
+                right: 30px;
+            }
+            
+              #icons1-icon-form {
+                font-size: x-large;
+                right: 20px;
+              }
+            
+              .icons2{
+                height: 80%;
+                width: 100%;
+              }
+            
+              .icons3{
+                height: 80%;
+                width: 100%;
+              }
+            
+            }

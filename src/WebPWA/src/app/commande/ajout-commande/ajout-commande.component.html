@@ -1,0 +1,82 @@
+
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" (click)="retour()">keyboard_backspace</mat-icon>
+    <span class="title">
+      <div class="nom-restau" fxLayoutAlign="center center">
+        <p>
+          Commande
+        </p>
+      </div>
+    </span>
+</mat-toolbar>
+
+<h3 class="commande">Informations du client</h3>
+<div class="content-form" fxLayoutAlign="start center">
+    <form [formGroup]="commandForm" (ngSubmit)="addCommande()">
+        <div class="container" fxLayoutAlign="center center">
+            <div>
+                <input class="champs" type="text" formControlName="prenom" placeholder="Prénom"/>
+                <mat-icon id="icon">perm_identity</mat-icon>
+            </div>
+            <div>
+                <input class="champs" type="text" formControlName="nom" placeholder="Nom"/>
+                <mat-icon id="icon">perm_identity</mat-icon>
+            </div>
+        </div>
+        <div class="container" fxLayoutAlign="center center">
+            <div *ngIf="loaderService.isLoading | async">
+                <mat-spinner class="loader-container" style="color: primary;"></mat-spinner>
+            </div>
+            <div>
+                <input class="champs" type="text" formControlName="adresse"  placeholder="Adresse"/>
+                <mat-icon id="icon">room</mat-icon>
+            </div>
+            <div>
+                <input class="champs" type="text" formControlName="telephone" placeholder="Téléphone"/>
+                <mat-icon id="icon"> stay_current_portrait</mat-icon>
+            </div>
+            <div>
+                <input class="champs" type="text" formControlName="email" placeholder="Email"/>
+                <mat-icon id="icon"> mail_outline</mat-icon>
+            </div>
+            <div class="empty">
+                <!--div a ne pas effacer-->
+            </div>
+        </div>
+        <hr/>
+        <h3 class="commande">Mode de livraison</h3>
+        <div class="container-radio" fxLayoutAlign="center center">
+            <div>
+                <label for="emporter">A emporter</label>
+            </div>
+            <div>
+                <input class="bouton" type="radio" formControlName="livraison" value="1" (change)="radioChange()" id="emporter"/>
+            </div>
+            <div>
+                <label for="livrer">Se faire livrer</label>
+            </div>
+            <div>
+                <input class="bouton" type="radio" formControlName="livraison" value="0" (change)="radioChange()" id="livrer"/>
+            </div>
+        </div>
+        <div *ngIf="tarifLivraison" fxLayoutAlign="center center">
+            <select formControlName="zone" (change)="selectEven($event)">
+                <option value="" selected disabled>Zone de livraison</option>
+                <optgroup *ngFor="let zone of zones" label="Zone {{zone.zoneId}}">
+                    <!-- changement de la zone par lieu -->
+                    <option *ngFor="let lieu of zone.zones" value="{{lieu}}">{{lieu}}</option>
+                </optgroup>
+            </select>
+        </div>
+        <p *ngIf="sommeTotal" class="txt">
+            Frais de livraison : <strong> {{fraisZone}} F CFA, </strong>
+        </p>
+        <p *ngIf="sommeTotal" class="txt">
+            Total à payer : <strong> {{sommeTotal}} F CFA, </strong>
+        </p>
+        <hr/>
+        <button class="btn-valider" [disabled]="disable"><p>Valider</p></button>
+        <p class="msg-error">{{errorMessage}}</p>
+    </form>
+</div>
+

@@ -1,0 +1,58 @@
+<h2 mat-dialog-title class="head bg">Définir un horaire</h2>
+<mat-dialog-content class="mat-typography bg">
+    <div  class="warning">
+        <div class="warnBtn"><mat-icon mat-button >info</mat-icon></div>
+        <div class="txtwarning">
+            les créneaux non configurés sont considérés comme fermés
+        </div>
+    </div>
+    <div class="content">
+        <form [formGroup]="horaireForm" (ngSubmit)="addHoraire()">
+            <div class="sel">
+                <div>
+                    <select formControlName="jour" id="" class="semaine" (change)="horaireDuJour($event)">
+                        <option value="" class="days" selected disabled>Jours</option>
+                        <option *ngFor="let day of days" value="{{day.id}}" class="days">{{day.name}}</option>
+                    </select>
+                </div>
+                <!--Créneau 1-->
+            </div>
+            <div class="flex-container">
+                <!--Créneau 1-->
+                <div>
+                    <label for="creneau1" class="creneau">Créneau 1</label>
+                </div>
+            </div>
+            <div class="flex_input">
+                <div>
+                    <input type="time" [(ngModel)]="slot1.startTime" formControlName="slot1StartTime" class="champInput1"  id="creneau1" placeholder="00:00"/>
+                </div>
+                <div>
+                    <input type="time" [(ngModel)]="slot1.endTime" formControlName="slot1EndTime" class="champInput1" placeholder="00:00"/>
+                </div>
+            </div>
+            <!--Créneau 2-->
+            <!-- <div class="flex-container">
+                
+                <div>
+                    <label for="creneau2" class="creneau">Créneau 2</label>
+                </div>
+            </div>
+            <div class="flex_input">
+                <div>
+                    <input type="time" [(ngModel)]="slot2.startTime" formControlName="slot2StartTime" class="champInput1" id="creneau2" placeholder="00:00"/>
+                </div>
+                <div>
+                    <input type="time" [(ngModel)]="slot2.endTime" formControlName="slot2EndTime" class="champInput1" placeholder="00:00"/>
+                </div>
+            </div> -->
+            <div class="flex-container">
+                <button class="btnSave"><p class="btnText">Valider</p></button>
+            </div>
+        </form>
+        <br/>
+    </div>
+</mat-dialog-content>
+
+
+

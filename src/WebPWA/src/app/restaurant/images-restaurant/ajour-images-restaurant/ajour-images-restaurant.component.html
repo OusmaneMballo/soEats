@@ -1,0 +1,48 @@
+<div class="containerAjoutMenu" >
+    <div class="headerAjoutMenu" fxLayoutAlign="end center">
+       <div class="definirMenu" fxLayoutAlign="center center">Votre restaurant en images</div>
+       <div class="definirMenuIcon" fxLayoutAlign="center center">
+         <span class="material-icons" id="iconCancel" (click)="onClose()">
+         highlight_off
+         </span>
+       </div>
+    </div>
+    <hr class="ligne"/>
+    <div class="bodyAjoutMenu" fxLayout="row wrap" fxLayoutAlign="start center">
+         <div *ngFor="let i of [1, 2, 3, 4, 5]" class="rowAjoutMenu" fxLayout="row" fxLayoutAlign="center center">
+           <div class="colImageMenu" fxLayoutAlign="center center" >
+             <div *ngIf="!data.photosUrls[i-1]" fxLayoutAlign="center center" >Image {{i}}</div>
+             <img *ngIf="data.photosUrls[i-1]" class="containerImg" [src]="data.photosUrls[i-1].imageUrl" (click)="openDialog(data.photosUrls[i-1].imageUrl)"/>
+           </div>
+           <div class="iconPhotoDelete" fxLayout="column" fxLayoutAlign="end end">
+             <div class="containerIcons" fxLayoutAlign="space-between center">
+              <label class="label" for="menu1-input">
+                  <span *ngIf="!data.photosUrls[i-1]" class="material-icons" id="icon-menu">
+                    add_a_photo
+                  </span>
+                  <span *ngIf="data.photosUrls[i-1]" class="material-icons" id="icon-menu" (click)="UpdatePhoto(data.photosUrls[i-1].id)" >
+                    edit
+                  </span>
+              </label>
+              <input #file id="menu1-input" type="file" accept="image/*" (change)="onFileSelectForUpdatePhotoOrAddPhoto($event)"/>
+              <label class="label" *ngIf="data.photosUrls[i-1]">
+                <span class="material-icons" id="icon-menu" (click)="deletePhoto(data.photosUrls[i-1].id)">
+                  delete
+                </span>
+              </label>
+             </div>            
+             <hr class="ligne"/>
+           </div>
+         </div>
+    </div>
+    <hr class="ligne"/>
+    <div class="footerAjoutMenu" fxLayout="row wrap" fxLayoutAlign="center center">
+        <div class="containerNB" fxLayout="row" >
+           <span class="material-icons" id="icon-info">
+           info
+           </span>
+           <p >Il est obligatoire de mettre au moins 1 photo du restaurant</p>
+        </div>
+   </div>
+</div>
+

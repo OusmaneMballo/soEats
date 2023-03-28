@@ -1,0 +1,116 @@
+<div class="containerComposerMenu" fxLayout="column" fxLayoutAlign="start center">  
+        <div class="headerAjoutMenu" fxLayoutAlign="end center">
+           <div class="definirMenu" fxLayoutAlign="center center">Composer un menu</div>
+           <div class="definirMenuIcon" fxLayoutAlign="center center">
+             <span class="material-icons" id="iconCancel" (click)="onClose()">
+             highlight_off
+             </span>
+           </div>
+        </div>
+        <hr class="ligne"/>
+      <form class="form" [formGroup]="menu" (submit)="onSaveMenu(menu.value)" fxLayout="column" fxLayoutAlign="start center"> 
+        <div class="containerInfoMenu" fxLayout="row wrap" fxLayoutAlign="start center">
+         <div class="bodyDialoglabel" fxLayoutAlign="center center">
+           <label class="label" fxLayoutAlign="center center" for="file-input">
+               <div class="bodyDialog" fxLayoutAlign="center center">
+                   <span *ngIf="!data.imageUrl"  class="material-icons" id="add-logo">
+                       add_a_photo
+                   </span>
+                   <img *ngIf="imgURL" class="previewLogo" [src]="imgURL"/>
+               </div>
+           </label>
+           <input #file id="file-input" type="file" accept="image/*" (change)="preview(file.files)" />
+        </div>
+         <div class="containerInput" fxLayout="row wrap" fxLayoutAlign="center end">
+            <div class="input" fxLayout="column" fxLayoutAlign="center center">
+              <div  class="icons" fxLayoutAlign="center center" >
+                <input formControlName="MenuName" id="MenuName" type="text" placeholder="Nom"/>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && menu.controls.MenuName.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="menu.controls.MenuName.errors.required">
+                  Champs obligatoire
+                </div>
+              </div>
+            </div>
+            <div class="input" fxLayout="column" fxLayoutAlign="center center">
+              <div  class="icons" fxLayoutAlign="center center">
+                <input formControlName="MenuPrice" id="MenuPrice" type="text" placeholder="Prix"/> 
+                <p class="fcfa">FCFA</p>
+              </div>
+              <div class="iconsValid" *ngIf="submitted && menu.controls.MenuPrice.errors" fxLayout="row wrap" fxLayoutAlign="start center">
+                <span class="material-icons" id="icon-validation">
+                  info
+                </span>
+                <div class="validation" *ngIf="menu.controls.MenuPrice.errors.required">
+                  Champs obligatoire
+                </div>
+                <div class="validation" *ngIf="menu.controls.MenuPrice.errors.pattern">
+                  Le prix invalide 
+                </div>
+              </div>
+            </div>
+         </div>
+        </div>
+       <div class="containerCheckbox" fxLayout="column" fxLayoutAlign="end start">
+            <nav mat-tab-nav-bar class="tabsCategories" backgroundColor="primary">
+                <a *ngIf="show == 'Entree'" class="showOK" fxLayoutAlign="center center" (click)="showCategorie('Entree')" >Entree</a>
+                <a *ngIf="show != 'Entree'" class="noShow" fxLayoutAlign="center center" (click)="showCategorie('Entree')">Entree</a>
+                <a  *ngIf="show == 'Plat'" class="showOK" fxLayoutAlign="center center" (click)="showCategorie('Plat')">Plat</a>
+                <a  *ngIf="show != 'Plat'" class="noShow" fxLayoutAlign="center center" (click)="showCategorie('Plat')">Plat</a>
+                <a  *ngIf="show == 'Dessert'" class="showOK" fxLayoutAlign="center center" (click)="showCategorie('Dessert')">Dessert</a>
+                <a  *ngIf="show != 'Dessert'" class="noShow" fxLayoutAlign="center center" (click)="showCategorie('Dessert')">Dessert</a>
+                <a  *ngIf="show == 'Boisson'" class="showOK" fxLayoutAlign="center center" (click)="showCategorie('Boisson')">Boisson</a>
+                <a  *ngIf="show != 'Boisson'" class="noShow" fxLayoutAlign="center center" (click)="showCategorie('Boisson')">Boisson</a>
+                <a  *ngIf="show == 'Patisserie'" class="showOK" fxLayoutAlign="center center" (click)="showCategorie('Patisserie')">Patisserie</a>
+                <a  *ngIf="show != 'Patisserie'" class="noShow" fxLayoutAlign="center center" (click)="showCategorie('Patisserie')">Patisserie</a>
+            </nav>
+            
+           <div  class="containerProduct" fxLayout="column" fxLayoutAlign="start center" >   
+                      <div *ngIf="show=='Entree'" class="products">
+                        <mat-selection-list  #list  fxLayout="row wrap" formControlName="productsMenuEntree"   (ngModelChange)="onNgModelChangeEntree($event)">
+                          <mat-list-option class="listProducts" *ngFor="let p of productEntree" [value]="p"  color="primary" [selected]="selectedProduitEntree(p)">
+                              <span fxLayout="row" fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                          </mat-list-option>
+                        </mat-selection-list> 
+                      </div>                  
+                      <div *ngIf="show=='Plat'" class="products">
+                       <mat-selection-list  #list fxLayout="row wrap" formControlName="productsMenuPlat"   (ngModelChange)="onNgModelChangePlat($event)" >
+                          <mat-list-option class="listProducts" *ngFor="let p of productPlat" [value]="p" color="primary" [selected]="selectedProduitPlat(p)">
+                               <span fxLayout="row " fxLayoutAlign="start center" ><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                          </mat-list-option>
+                       </mat-selection-list> 
+                      </div>           
+                      <div *ngIf="show=='Dessert'" class="products">
+                       <mat-selection-list  #list  fxLayout="row wrap" formControlName="productsMenuDessert" (ngModelChange)="onNgModelChangeDessert($event)">
+                          <mat-list-option class="listProducts" *ngFor="let p of productDessert" [value]="p"  color="primary" [selected]="selectedProduitDessert(p)">
+                              <span fxLayout="row " fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" ><div class="p">{{p.name}}</div></span>
+                          </mat-list-option>
+                       </mat-selection-list> 
+                      </div>   
+                      <div *ngIf="show=='Boisson'"  class="products">
+                       <mat-selection-list  #list  fxLayout="row wrap" formControlName="productsMenuBoisson" (ngModelChange)="onNgModelChangeBoisson($event)">
+                          <mat-list-option class="listProducts" *ngFor="let p of productBoisson" [value]="p"  color="primary" [selected]="selectedProduitBoisson(p)">
+                              <span fxLayout="row " fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                          </mat-list-option>
+                       </mat-selection-list> 
+                      </div>
+                      <div *ngIf="show=='Patisserie'"  class="products">
+                       <mat-selection-list  #list  fxLayout="row wrap" formControlName="productsMenuPatisserie" (ngModelChange)="onNgModelChangePatisserie($event)">
+                          <mat-list-option class="listProducts" *ngFor="let p of productPatisserie" [value]="p"  color="primary" [selected]="selectedProduitPatisserie(p)">
+                              <span fxLayout="row " fxLayoutAlign="start center"><img class="image" [src]="p.imageUrl" > <div class="p">{{p.name}}</div></span>
+                          </mat-list-option>
+                       </mat-selection-list> 
+                      </div>         
+          </div>
+          <div *ngIf="loaderService.isLoading | async">
+            <mat-spinner class="loader-container"  style="color: primary;"></mat-spinner>
+          </div>
+       </div>
+       <div class="footer" fxLayout="row wrap" fxLayoutAlign="center start">
+           <button  class="confirmerbtn" mat-raised-button >Confirmer</button>
+       </div>  
+    </form>
+   </div>

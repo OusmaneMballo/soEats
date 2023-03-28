@@ -1,0 +1,71 @@
+
+<div class="headerDetails" fxLayoutAlign="center center">
+    <div> </div>
+    <h5 class="name" routerLink="{{url}}">{{name}}</h5>
+</div>
+<div *ngIf="panier" class="container" fxLayout='row' fxLayoutAlign="center center">
+    <div class="containerDetails" >
+        <div  *ngIf="panier.orderItem" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+          <div *ngFor="let orderProduct of panier.orderItem"  class="containerCategorie" fxLayoutAlign="center start">
+              <img class="imgCategorie" [src]="orderProduct.Product.imageUrl"/> 
+              <div class="infosCategorie" fxLayout='row' fxLayoutAlign="space-between start">
+                 <div  class="productname" >{{orderProduct.Product.name}}</div>
+                 <div  class="prix" >{{orderProduct.Product.price}} FCFA</div>
+                 <div class="nbProduct" fxLayoutAlign="space-around center">
+                    <span class="material-icons" id="icon" (click)="augmenterQuantiteProduit(orderProduct.Product)">
+                        add
+                    </span> 
+                    &nbsp; {{orderProduct.Quantity}} &nbsp;
+                    <span class="material-icons" id="icon" (click)="diminuerQuantiteProduit(orderProduct)">
+                        remove
+                    </span> 
+                </div>
+              </div>
+          </div>
+        </div>
+        <div *ngIf="panier.orderMenuItem.length" fxLayout='column' class="containerCategories2" fxLayoutAlign="start center">
+          <div class="selectCategories" fxLayout='column' fxLayoutAlign="center center">
+              <hr class="ligneCategories"/>
+          </div>
+          <div *ngFor="let orderMenu of panier.orderMenuItem"  class="containerCategorie" fxLayoutAlign="center start">
+              <img id="menu" class="imgCategorie" [src]="orderMenu.Menu.imageUrl" />
+              <div class="containerCategoriess"fxLayout='column' >
+                  <div class="infosCategorie" fxLayout='row' fxLayoutAlign="space-between start">
+                    <div class="productname"  >
+                        {{orderMenu.Menu.name}}
+                    </div>
+                     <div class="prix">{{orderMenu.Menu.price}} FCFA</div>
+                     <div class="nbProduct" fxLayoutAlign="space-around center">
+                        <span class="material-icons" id="icon" (click)="augmenterQuantiteMenu(orderMenu.Menu)">
+                            add
+                        </span> 
+                        &nbsp;{{orderMenu.Quantity}} &nbsp;
+                        <span class="material-icons" id="icon" (click)="diminuerQuantiteMenu(orderMenu)">
+                            remove
+                        </span>
+                     </div>
+                  </div>
+                  <div class="productsMenu" fxLayout='column' >
+                    <span *ngFor="let product of orderMenu.Menu.products" >
+                        {{product.name}}
+                    </span>   
+                  </div>  
+              </div>               
+          </div>
+        </div>
+   </div>
+</div>
+<div *ngIf="!panier" class="container" fxLayout='row' fxLayoutAlign="center center">
+    <div class="containerDetails" fxLayoutAlign="center center">
+           <div class="panierVide">
+            Votre panier est vide
+           </div>
+   </div> 
+</div>
+<div *ngIf="panier" class="footer" fxLayout='row wrap' fxLayoutAlign="space-around center">
+    <div class="total" fxLayoutAlign="center center">TOTAL</div>
+    <div class="fcfa" fxLayoutAlign="center center">{{global.prixTotal}} FCFA</div> 
+</div>
+<div *ngIf="panier" class="footerButton" fxLayoutAlign="center center">
+    <button  class="confirmerbtn" mat-raised-button (click)="addOrder()">Confirmer</button>
+</div>

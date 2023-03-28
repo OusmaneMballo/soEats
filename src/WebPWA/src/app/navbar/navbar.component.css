@@ -1,0 +1,76 @@
+.nav{
+  background-color: #146356; 
+  color: white;
+}
+
+.shodow{
+  position: relative;
+  margin-bottom: 4px;
+  box-shadow: 0px 5px 5px #146356b7;
+}
+
+#logo{
+    float: left;
+    width: min(60px);
+    height: min(65px);
+    margin-left: 25px;
+    background-attachment: local;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.panier{
+    width: 100%;
+    margin: 20px;
+}
+
+#shopping{
+   background-color: rgb(255, 255, 255);
+   color: #146356;
+   width: 30px;
+   height: 30px;
+   border-radius: 5px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   cursor: pointer;
+}
+
+::ng-deep.padding-dialog-panier .mat-dialog-container {
+  padding: 0px;
+  width: 500px;
+  height: 450px;
+  background: #FFFFFF;
+  border-radius: 15px;
+}
+
+@media only screen and (min-width: 961px){
+    
+  .panier{
+    width: 100%;
+    margin: 20px;
+}
+
+#shopping{
+   background-color: rgb(255, 255, 255);
+   color: #146356;
+   width: 40px;
+   height: 40px;
+   border-radius: 5px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   cursor: pointer;
+}
+
+
+::ng-deep.padding-dialog-panier .mat-dialog-container {
+  padding: 0px;
+  width: 500px;
+  height: 550px;
+  background: #FFFFFF;
+  border-radius: 15px;
+}
+  
+ }
+
+
+
+  

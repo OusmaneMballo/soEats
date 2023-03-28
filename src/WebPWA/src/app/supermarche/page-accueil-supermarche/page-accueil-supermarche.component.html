@@ -1,0 +1,68 @@
+<mat-toolbar>
+    <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/supermarketmanager/{{supermarche.ownerId}}">keyboard_backspace</mat-icon>
+    <span class="title">
+      <div class="nom-restau" fxLayoutAlign="center center">
+        <p>
+          {{supermarche.name}}
+        </p>
+        <span class="material-icons" id="icon-modif-nom-resto" (click)="modifModal(supermarche, 'nom-restau')">
+          create
+        </span>
+      </div>
+    </span>
+  </mat-toolbar>
+  <div *ngIf="supermarche" class="container-sup" fxLayout="column" fxLayoutAlign="center center" >
+      <div class="container-restau" fxLayout="column" fxLayoutAlign="start end">  
+          <div class="rowProfilDesc"   fxLayoutAlign="start center">
+            <div class="col-35">
+              <app-logo-supermarche [supermarche]="supermarche"></app-logo-supermarche>
+            </div>
+            <div class="col-65">
+              <div class="description-restaurant">
+                <app-description-supermarche [supermarche]="supermarche" class="description-restaurant"></app-description-supermarche>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <hr class="ligne"/>
+          <div class="buttons"  fxLayoutAlign="space-around center">
+            <div class="voirReservation" fxLayout="row" fxLayoutAlign="space-between center">
+              <button class="buttonVoirReservation" mat-raised-button routerLink="/manager/{{supermarche.ownerId}}/{{supermarche.slugId}}/commandes" >Voir vos commandes</button>
+              <button class="buttonVoirReservation" mat-raised-button routerLink="/manager/{{supermarche.ownerId}}/{{supermarche.slugId}}/promotions" >Voir vos Promotions</button>
+            </div>         
+          </div>
+          <hr class="ligne"/>
+          <div class="rowMenuDesc" fxLayout="row wrap">
+            <div class="col-35" >
+              <app-contact-supermarche [supermarche]="supermarche"></app-contact-supermarche>
+            </div>
+            <div class="col-65" >
+              <app-menu-supermarche [supermarche]="supermarche"></app-menu-supermarche>
+            </div>  
+          </div>
+          <div class="rowHoraire" fxLayout="column" fxLayoutAlign="start center">
+            <hr class="ligne"/>
+              <div class="col-35" fxLayout="row">
+                <div class="headerHoraires" fxLayoutAlign="start center">
+                  <span class="material-icons" id="icon-contact">
+                    pending_actions
+                  </span>
+                  Horaires
+                </div>
+                <div class="definirHoraire" fxLayoutAlign="end center" mat-button>
+                  Définir un horarire  
+                  <span class="material-icons" id="icon-add" (click)="openDialog()">
+                      add_circle
+                  </span>
+                </div>
+              </div>
+              <div>
+                <app-horaires-supermarche [supermarche]="supermarche"> </app-horaires-supermarche>
+              </div>
+          </div>
+          <hr class="ligne"/>
+          <div class="content-images">
+            <app-images-supermarche [supermarche]="supermarche"></app-images-supermarche>
+          </div>
+      </div>
+  </div>

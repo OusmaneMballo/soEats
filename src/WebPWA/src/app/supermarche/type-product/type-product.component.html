@@ -1,0 +1,29 @@
+<!-- <div>
+    <form>
+        <div fxLayout="row" >
+            <div class="selectCatergorie" fxLayoutAlign="space-evenly center">
+                <select id="selectPlace" (change)="selectType($event)">
+                  <option value="Type" [selected]="true" disabled>Types</option>
+                  <option *ngFor="let type of productTypes" value="{{type.id}}">{{type.displayName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex-container" >
+            <div class="container" *ngFor="let produit of products" (click)="onSelected(produit.object)" [ngStyle]="produit.bgColor">
+                <div class="container1">
+                    <img src="{{produit.object.imageUrl}}" class="img-produit" alt="">
+                </div>
+                <div class="container2">
+                    <div>
+                        <p class="txt-nom-prod">{{produit.object.name}}</p>
+                    </div>
+                    <div class="container-description">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxLayoutAlign="space-evenly center" (click)="setType()">
+            <button class="typeBtn">Enregistrer</button>
+        </div> 
+    </form>     
+</div> -->

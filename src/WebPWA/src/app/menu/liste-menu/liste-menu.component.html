@@ -1,0 +1,42 @@
+
+    <body>
+        <mat-toolbar *ngIf="restaurant.name">
+            <mat-icon fxLayout="row" fxLayoutAlign="start center" class="btn-retour" routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}">keyboard_backspace</mat-icon>
+            <span class="title">
+              <div class="nom-restau" fxLayoutAlign="center center"  id="icon-modif-nom-resto">                
+                  {{restaurant.name}}
+              </div>           
+            </span>
+        </mat-toolbar>
+        <div *ngIf="menus" class="container" fxLayout="column" fxLayoutAlign="start center">
+            <div class="search" fxLayout="row wrap" fxLayoutAlign="center center">
+                <div  class="icons" fxLayout="row wrap" fxLayoutAlign="center center">
+                    <span class="material-icons" id="icon-form">
+                      search
+                    </span>
+                    <input id="" type="search" placeholder="Rechercher un menu" [(ngModel)]="searchText" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="containerMenu"  fxLayout="row wrap" fxLayoutAlign="start center">
+                <div *ngFor="let m of menus | filter: searchText" class="menu" fxLayout="row wrap" fxLayoutAlign="start center">
+                    <div class="containerLeft" fxLayout="row wrap" fxLayoutAlign="end center">
+                        <div  class="menus"  fxLayoutAlign="center center">
+                             <div class="infoMenu">
+                                 <div class="nameMenu">{{m.name}}</div>
+                                 <div *ngIf="m.productIds" class="productCountMenu">{{m.productIds.length}} produits</div>
+                             </div>
+                             <div class="modifier" fxLayoutAlign="end center" >
+                                <span class="material-icons" id="icon-menu" (click)="openDialogModifMenu(m, cardId)">
+                                    edit
+                                </span>
+                                <span class="material-icons" id="icon-menu" (click)="deleteMenu(m.id)" routerLink="/restaurateurs/{{restaurant.ownerId}}/{{restaurant.slugId}}/menus">
+                                    delete
+                                </span>
+                             </div>
+                        </div>
+                    </div>
+                    <img  [src]= "m.imageUrl" class="img" (click)="openDialogDetailsMenu(m, cardId)">
+                </div>
+            </div>
+        </div>
+    </body>

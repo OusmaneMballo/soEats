@@ -1,0 +1,26 @@
+
+<div class="headerRestau" fxLayoutAlign="end center">
+    <div class="imagesRestau" fxLayout="row">
+        <div class="images-login" fxLayoutAlign="start center">
+            <span class="material-icons" id="icon-contact">
+                apps
+            </span>
+            Images du supermarché
+        </div>
+        <div class="images-definir" fxLayoutAlign="end center">
+            <span class="material-icons" id="icon-add" (click)="openDialogImages()">
+                add_circle
+            </span>
+        </div>
+    </div>
+</div>
+
+    <div *ngIf="!supermarche.photosUrls[0]" class="imageMenuVide" fxLayoutAlign="center center">
+        Vos photos s'afficheront ici.
+    </div>
+
+    <div *ngIf="supermarche.photosUrls" class="images">
+       <div class="imagesParcours" *ngFor="let i of [1, 2, 3, 4, 5]" >
+          <img *ngIf="supermarche.photosUrls[i-1]" class="img" [src]="supermarche.photosUrls[i-1].imageUrl" (click)="openDialogImage(supermarche.photosUrls[i-1].imageUrl)"/>
+       </div>
+    </div>
